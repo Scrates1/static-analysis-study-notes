@@ -1,0 +1,123 @@
+{
+  "links": [],
+  "images": [],
+  "cards": [
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22emptyFunctionBodyChecker.js%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22class%20EmptyFunctionBodyChecker%20extends%20Checker%7B%5Cn%20%20%20%20constructor(resultManager)%7B%5Cn%20%20%20%20%20%20%20%20super(resultManager%2C%20'EmptyFunctionBodyChecker')%20%20%20%20%20%20%20%20%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22emptyFunctionBodyChecker.js%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Ns9wR%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "emptyFunctionBodyChecker.js",
+        "mode": "javascript",
+        "code": "class EmptyFunctionBodyChecker extends Checker{\n    constructor(resultManager){\n        super(resultManager, 'EmptyFunctionBodyChecker')        \n    }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "emptyFunctionBodyChecker.js",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Ns9wR",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22%20%20triggerAtFunctionDefinition(analyzer%2C%20scope%2C%20node%2C%20state%2C%20info)%20%7B%5Cn%20%20%20%20%20%20if%20(!node%20%7C%7C%20!node.name)%20return%5Cn%20%20%20%20%20%20if%20(!node.body)%20return%5Cn%20%20%20%20%20%20if%20(node.body.body.length%20%3D%3D%3D%200)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20const%20finding%20%3D%20%7B...%7D%20%2F%2F%E6%89%BE%E5%88%B0%E7%A9%BA%E5%87%BD%E6%95%B0%E5%90%8E%EF%BC%8C%E5%88%B6%E4%BD%9C%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84finding%E7%BB%93%E6%9E%84%EF%BC%8C%E8%BF%9B%E8%A1%8C%E8%AE%B0%E5%BD%95%5Cn%20%20%20%20%20%20%20%20%20%20this.resultManager.newFinding(finding%2CEmptyFunctionBodyStrategy.outputStrategyId)%20%2F%2FoutputStrategyId%20%E9%9C%80%E8%A6%81%E6%8C%87%E5%AE%9A%EF%BC%8C%E8%A7%81%E4%B8%8B%E6%96%87%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%5Cn%20%20%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22__widthMode%22%3A%22normal%22%2C%22id%22%3A%22cj8UT%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22widthMode%22%3A%22normal%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "javascript",
+        "code": "  triggerAtFunctionDefinition(analyzer, scope, node, state, info) {\n      if (!node || !node.name) return\n      if (!node.body) return\n      if (node.body.body.length === 0) {\n          const finding = {...} //找到空函数后，制作你自己的finding结构，进行记录\n          this.resultManager.newFinding(finding,EmptyFunctionBodyStrategy.outputStrategyId) //outputStrategyId 需要指定，见下文\n      }\n    \n  }",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "__widthMode": "normal",
+        "id": "cj8UT",
+        "margin": {
+          "top": true,
+          "bottom": true
+        },
+        "widthMode": "normal"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22class%20EmptyFunctionBodyStrategy%20extends%20OutputStrategy%7B%5Cn%20%20%20%5Cn%20%20%20%20static%20outputStrategyId%20%3D%20'EmptyFunctionBodyStrategy'%20%5Cn%5Cn%20%20%20%20constructor()%20%7B%5Cn%20%20%20%20%20%20super()%5Cn%20%20%20%20%20%20this.outputFilePath%20%3D%20'report.txt'%5Cn%20%20%20%20%7D%5Cn%20%20%5Cn%20%20%20%20outputFindings(resultManager%2C%20outputFilePath%2C%20config%2C%20printf)%7B%5Cn%20%20%20%20%20%20const%20allFindings%20%3D%20resultManager.getFindings()%5Cn%20%20%20%20%20%20const%20finding%20%3D%20allFindings%5BEmptyFunctionBodyStrategy.outputStrategyId%5D%5Cn%20%20%20%20%20%20console.log(finding)%20%5Cn%20%20%20%20%20%20%2F%2F%E5%8F%AF%E4%BB%A5%E7%94%A8outputFilePath%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6%E7%AD%89%5Cn%20%20%20%20%20%20const%20reportFilePath%20%3D%20pathMod.join(Config.reportDir%2C%20outputFilePath)%5Cn%20%20%20%20%20%20FileUtil.writeJSONfile(reportFilePath%2C%20finding)%5Cn%20%20%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22rRk8A%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "javascript",
+        "code": "class EmptyFunctionBodyStrategy extends OutputStrategy{\n   \n    static outputStrategyId = 'EmptyFunctionBodyStrategy' \n\n    constructor() {\n      super()\n      this.outputFilePath = 'report.txt'\n    }\n  \n    outputFindings(resultManager, outputFilePath, config, printf){\n      const allFindings = resultManager.getFindings()\n      const finding = allFindings[EmptyFunctionBodyStrategy.outputStrategyId]\n      console.log(finding) \n      //可以用outputFilePath输出到文件等\n      const reportFilePath = pathMod.join(Config.reportDir, outputFilePath)\n      FileUtil.writeJSONfile(reportFilePath, finding)\n    }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "rRk8A",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20%5C%22checkerId%5C%22%3A%20%5C%22EmptyFunctionBodyChecker%5C%22%2C%5Cn%20%20%5C%22checkerPath%5C%22%3A%20%5C%22src%2Fchecker%2FemptyFunctionBodyChecker.js%5C%22%2C%5Cn%20%20%5C%22description%5C%22%3A%20%5C%22%E5%AF%BB%E6%89%BE%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E7%A9%BA%E5%87%BD%E6%95%B0%5C%22%2C%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22M42M0%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  \"checkerId\": \"EmptyFunctionBodyChecker\",\n  \"checkerPath\": \"src/checker/emptyFunctionBodyChecker.js\",\n  \"description\": \"寻找代码中的空函数\",\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "M42M0",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    }
+  ]
+}

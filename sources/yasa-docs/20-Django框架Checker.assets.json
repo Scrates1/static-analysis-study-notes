@@ -1,0 +1,397 @@
+{
+  "links": [],
+  "images": [],
+  "cards": [
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22DjangoTaintChecker%20(Django%E7%89%B9%E5%AE%9A%E9%80%BB%E8%BE%91)%5Cn%20%20%20%20%E2%86%93%20%E7%BB%A7%E6%89%BF%5CnPythonTaintAbstractChecker%20(Python%E9%80%9A%E7%94%A8%E6%B1%A1%E7%82%B9%E9%80%BB%E8%BE%91)%5Cn%20%20%20%20%E2%86%93%20%E7%BB%A7%E6%89%BF%5CnTaintChecker%20(%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90%E5%9F%BA%E7%B1%BB)%5Cn%20%20%20%20%E2%86%93%20%E7%BB%A7%E6%89%BF%5CnChecker%20(Checker%E5%9F%BA%E7%B1%BB)%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22F0SfP%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "DjangoTaintChecker (Django特定逻辑)\n    ↓ 继承\nPythonTaintAbstractChecker (Python通用污点逻辑)\n    ↓ 继承\nTaintChecker (污点分析基类)\n    ↓ 继承\nChecker (Checker基类)",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "F0SfP"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%221.%20%E8%AF%86%E5%88%ABurls.py%E6%96%87%E4%BB%B6%5Cn%20%20%20%E2%86%93%5Cn2.%20%E8%A7%A3%E6%9E%90urlpatterns%E9%85%8D%E7%BD%AE%5Cn%20%20%20%E2%86%93%5Cn3.%20%E6%8F%90%E5%8F%96%E8%B7%AF%E7%94%B1%E5%AE%9A%E4%B9%89%EF%BC%88path%2Fre_path%2Furl%EF%BC%89%5Cn%20%20%20%E2%86%93%5Cn4.%20%E8%AF%86%E5%88%AB%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%2F%E7%B1%BB%5Cn%20%20%20%E2%86%93%5Cn5.%20%E6%8F%90%E5%8F%96URL%E5%8F%82%E6%95%B0%E5%90%8D%5Cn%20%20%20%E2%86%93%5Cn6.%20%E5%88%9B%E5%BB%BAEntryPoint%E5%B9%B6%E6%A0%87%E8%AE%B0Source%5Cn%20%20%20%E2%86%93%5Cn7.%20%E6%B1%A1%E7%82%B9%E6%B5%81%E8%BF%BD%E8%B8%AA%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22tAj3x%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "1. 识别urls.py文件\n   ↓\n2. 解析urlpatterns配置\n   ↓\n3. 提取路由定义（path/re_path/url）\n   ↓\n4. 识别视图函数/类\n   ↓\n5. 提取URL参数名\n   ↓\n6. 创建EntryPoint并标记Source\n   ↓\n7. 污点流追踪",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "tAj3x"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22const%20registerFile%20%3D%20new%20Set%3Cstring%3E()%20%20%20%2F%2F%20%E6%B3%A8%E5%86%8C%E7%9A%84urls.py%E6%96%87%E4%BB%B6%E9%9B%86%E5%90%88%5Cnclass%20DjangoTaintChecker%20extends%20PythonTaintAbstractChecker%20%7B%5Cn%20%20%2F%2F%20%E6%A0%B8%E5%BF%83%E6%96%B9%E6%B3%95%5Cn%20%20triggerAtCompileUnit()%20%20%20%20%20%20%2F%2F%20%E8%AF%86%E5%88%ABurls.py%E6%96%87%E4%BB%B6%5Cn%20%20triggerAtPreDeclaration()%20%20%20%2F%2F%20%E5%A4%84%E7%90%86urlpatterns%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%5Cn%20%20triggerAtAssignment()%20%20%20%20%20%20%20%20%2F%2F%20%E5%A4%84%E7%90%86urlpatterns%E8%B5%8B%E5%80%BC%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22Dwblf%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "const registerFile = new Set<string>()   // 注册的urls.py文件集合\nclass DjangoTaintChecker extends PythonTaintAbstractChecker {\n  // 核心方法\n  triggerAtCompileUnit()      // 识别urls.py文件\n  triggerAtPreDeclaration()   // 处理urlpatterns变量声明\n  triggerAtAssignment()        // 处理urlpatterns赋值\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "Dwblf"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22triggerAtCompileUnit(analyzer%3A%20any%2C%20scope%3A%20any%2C%20node%3A%20any%2C%20state%3A%20any%2C%20info%3A%20any)%20%7B%5Cn%20%20const%20fileName%20%3D%20node.loc%3F.sourcefile%5Cn%20%20if%20(!fileName)%20return%5Cn%20%20%2F%2F%201.%20%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E5%90%A6%E4%B8%BAurls.py%5Cn%20%20if%20(!fileName.endsWith('%2Furls.py'))%20return%5Cn%20%20%5Cn%20%20%2F%2F%202.%20%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AF%BC%E5%85%A5%E4%BA%86Django%E7%9B%B8%E5%85%B3%E6%A8%A1%E5%9D%97%5Cn%20%20node.body.forEach((exp%3A%20any)%20%3D%3E%20%7B%5Cn%20%20%20%20if%20(exp.type%20%3D%3D%3D%20'VariableDeclaration')%20%7B%5Cn%20%20%20%20%20%20if%20(exp.init.type%20!%3D%3D%20'ImportExpression')%20return%5Cn%20%20%20%20%20%20const%20str%20%3D%20AstUtil.prettyPrint(exp)%5Cn%20%20%20%20%20%20%2F%2F%20%E6%A3%80%E6%9F%A5%E5%AF%BC%E5%85%A5%E8%AF%AD%E5%8F%A5%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%ABdjango.urls%5Cn%20%20%20%20%20%20if%20(str.includes('django')%20%26%26%20str.includes('urls')%20%26%26%20%5Cn%20%20%20%20%20%20%20%20%20%20(str.includes('re_path')%20%7C%7C%20str.includes('path')))%20%7B%5Cn%20%20%20%20%20%20%20%20registerFile.add(fileName)%20%20%2F%2F%20%E6%B3%A8%E5%86%8C%E8%AF%A5%E6%96%87%E4%BB%B6%5Cn%20%20%20%20%20%20%7D%20else%20if%20(str.includes('django')%20%26%26%20str.includes('conf')%20%26%26%20%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20str.includes('urls')%20%26%26%20str.includes('url'))%20%7B%5Cn%20%20%20%20%20%20%20%20registerFile.add(fileName)%20%20%2F%2F%20%E5%85%BC%E5%AE%B9%E6%97%A7%E7%89%88%E6%9C%ACdjango.conf.urls.url%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D)%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22fZoSA%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "triggerAtCompileUnit(analyzer: any, scope: any, node: any, state: any, info: any) {\n  const fileName = node.loc?.sourcefile\n  if (!fileName) return\n  // 1. 检查文件名是否为urls.py\n  if (!fileName.endsWith('/urls.py')) return\n  \n  // 2. 检查是否导入了Django相关模块\n  node.body.forEach((exp: any) => {\n    if (exp.type === 'VariableDeclaration') {\n      if (exp.init.type !== 'ImportExpression') return\n      const str = AstUtil.prettyPrint(exp)\n      // 检查导入语句是否包含django.urls\n      if (str.includes('django') && str.includes('urls') && \n          (str.includes('re_path') || str.includes('path'))) {\n        registerFile.add(fileName)  // 注册该文件\n      } else if (str.includes('django') && str.includes('conf') && \n                 str.includes('urls') && str.includes('url')) {\n        registerFile.add(fileName)  // 兼容旧版本django.conf.urls.url\n      }\n    }\n  })\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "fZoSA"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20urls.py%5Cnfrom%20django.urls%20import%20path%2C%20re_path%5Cnfrom%20django.conf.urls%20import%20url%20%20%23%20%E6%97%A7%E7%89%88%E6%9C%AC%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22AVTcP%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# urls.py\nfrom django.urls import path, re_path\nfrom django.conf.urls import url  # 旧版本",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "AVTcP"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22%2F%2F%20%E5%A4%84%E7%90%86%20urlpatterns%20%3D%20%5B...%5D%E5%92%8Curlpatterns%20%2B%3D%20%5B...%5D%5CntriggerAtAssignment(analyzer%3A%20any%2C%20scope%3A%20any%2C%20node%3A%20any%2C%20state%3A%20any%2C%20info%3A%20any)%3A%20boolean%20%7C%20undefined%20%7B%5Cn%20%20const%20fileName%20%3D%20node.loc%3F.sourcefile%5Cn%20%20if%20(!fileName)%20return%5Cn%20%20if%20(registerFile.size%20%3D%3D%3D%200%20%7C%7C%20!registerFile.has(fileName))%20%7B%5Cn%20%20%20%20return%5Cn%20%20%7D%5Cn%5Cn%20%20if%20(node.left.name%20%3D%3D%3D%20'urlpatterns')%20%7B%5Cn%20%20%20%20const%20%7B%20right%20%7D%20%3D%20node%5Cn%20%20%20%20this.collectDjangoEntrypointAndSource(analyzer%2C%20scope%2C%20state%2C%20right)%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22bG5PM%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "// 处理 urlpatterns = [...]和urlpatterns += [...]\ntriggerAtAssignment(analyzer: any, scope: any, node: any, state: any, info: any): boolean | undefined {\n  const fileName = node.loc?.sourcefile\n  if (!fileName) return\n  if (registerFile.size === 0 || !registerFile.has(fileName)) {\n    return\n  }\n\n  if (node.left.name === 'urlpatterns') {\n    const { right } = node\n    this.collectDjangoEntrypointAndSource(analyzer, scope, state, right)\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "bG5PM"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20urls.py%5Cnurlpatterns%20%3D%20%5B%5Cn%20%20%20%20path('user%2F%3Cint%3Aid%3E'%2C%20views.user_detail)%2C%5Cn%5D%5Cn%5Cn%23%20%E5%A2%9E%E9%87%8F%E6%B7%BB%E5%8A%A0%E8%B7%AF%E7%94%B1%5Cnurlpatterns%20%2B%3D%20%5B%5Cn%20%20%20%20path('admin%2F'%2C%20admin.site.urls)%2C%5Cn%5D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22M9CUl%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# urls.py\nurlpatterns = [\n    path('user/<int:id>', views.user_detail),\n]\n\n# 增量添加路由\nurlpatterns += [\n    path('admin/', admin.site.urls),\n]",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "M9CUl"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22collectDjangoEntrypointAndSource(analyzer%3A%20any%2C%20scope%3A%20any%2C%20state%3A%20any%2C%20value%3A%20any)%20%7B%5Cn%20%20const%20elementGroups%3A%20any%5B%5D%20%3D%20%5B%5D%5Cn%20%20%2F%2F%201.%20%E4%BB%8EAST%E8%8A%82%E7%82%B9%E4%B8%AD%E6%8F%90%E5%8F%96%E6%89%80%E6%9C%89%E8%B7%AF%E7%94%B1%E5%85%83%E7%B4%A0%5Cn%20%20this.extractElementsFromNode(elementGroups%2C%20value)%5Cn%20%20%5Cn%20%20%2F%2F%202.%20%E9%81%8D%E5%8E%86%E6%AF%8F%E4%B8%AA%E8%B7%AF%E7%94%B1%E5%85%83%E7%B4%A0%5Cn%20%20for%20(const%20element%20of%20elementGroups)%20%7B%5Cn%20%20%20%20if%20(element.type%20%3D%3D%3D%20'CallExpression'%20%26%26%20element.callee)%20%7B%5Cn%20%20%20%20%20%20const%20%7B%20callee%20%7D%20%3D%20element%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%2F%2F%203.%20%E8%AF%86%E5%88%AB%E8%B7%AF%E7%94%B1%E5%87%BD%E6%95%B0%E5%90%8D%EF%BC%88path%2Fre_path%2Furl%EF%BC%89%5Cn%20%20%20%20%20%20let%20methodName%3A%20string%20%7C%20null%20%3D%20null%5Cn%20%20%20%20%20%20if%20(callee.type%20%3D%3D%3D%20'MemberAccess'%20%26%26%20callee.property%3F.name)%20%7B%5Cn%20%20%20%20%20%20%20%20%2F%2F%20%E5%A4%84%E7%90%86%20django.urls.path%20%E5%BD%A2%E5%BC%8F%5Cn%20%20%20%20%20%20%20%20methodName%20%3D%20callee.property.name%5Cn%20%20%20%20%20%20%7D%20else%20if%20(callee.type%20%3D%3D%3D%20'Identifier')%20%7B%5Cn%20%20%20%20%20%20%20%20%2F%2F%20%E5%A4%84%E7%90%86%E7%9B%B4%E6%8E%A5%E5%AF%BC%E5%85%A5%E7%9A%84%20path%20%E5%BD%A2%E5%BC%8F%5Cn%20%20%20%20%20%20%20%20methodName%20%3D%20callee.name%20%7C%7C%20null%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%2F%2F%204.%20%E5%8F%AA%E5%A4%84%E7%90%86path%2Fre_path%2Furl%E4%B8%89%E7%A7%8D%E8%B7%AF%E7%94%B1%E5%87%BD%E6%95%B0%5Cn%20%20%20%20%20%20if%20(methodName%20!%3D%3D%20'path'%20%26%26%20methodName%20!%3D%3D%20're_path'%20%26%26%20methodName%20!%3D%3D%20'url')%20%7B%5Cn%20%20%20%20%20%20%20%20continue%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%2F%2F%205.%20%E8%8E%B7%E5%8F%96%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%5Cn%20%20%20%20%20%20if%20(element.arguments%20%26%26%20element.arguments.length%20%3E%3D%202)%20%7B%5Cn%20%20%20%20%20%20%20%20%2F%2F%20%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%9A%E8%B7%AF%E7%94%B1%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E5%A6%82%20'user%2F%3Cint%3Aid%3E'%5Cn%20%20%20%20%20%20%20%20const%20targetSrcName%20%3D%20this.extractParamNames(element.arguments%5B0%5D.value)%5Cn%20%20%20%20%20%20%20%20%2F%2F%20%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%9A%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%E6%88%96%E7%B1%BB%5Cn%20%20%20%20%20%20%20%20const%20viewFunction%20%3D%20element.arguments%5B1%5D%5Cn%20%20%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%20%20%2F%2F%206.%20%E6%A0%B9%E6%8D%AE%E8%A7%86%E5%9B%BE%E7%B1%BB%E5%9E%8B%E5%88%86%E5%88%AB%E5%A4%84%E7%90%86%5Cn%20%20%20%20%20%20%20%20if%20(viewFunction.type%20%3D%3D%3D%20'Identifier'%20%7C%7C%20viewFunction.type%20%3D%3D%3D%20'MemberAccess')%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%2F%2F%20%E5%87%BD%E6%95%B0%E8%A7%86%E5%9B%BE%5Cn%20%20%20%20%20%20%20%20%20%20this.collectFuncViewEntrypointAndSource(%5Cn%20%20%20%20%20%20%20%20%20%20%20%20analyzer%2C%20scope%2C%20state%2C%20viewFunction%2C%20targetSrcName%5Cn%20%20%20%20%20%20%20%20%20%20)%5Cn%20%20%20%20%20%20%20%20%7D%20else%20if%20(viewFunction.type%20%3D%3D%3D%20'CallExpression'%20%26%26%20viewFunction.callee)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%2F%2F%20%E7%B1%BB%E8%A7%86%E5%9B%BE%EF%BC%88%E9%80%9A%E8%BF%87as_view()%E8%B0%83%E7%94%A8%EF%BC%89%5Cn%20%20%20%20%20%20%20%20%20%20if%20(viewFunction.callee.type%20%3D%3D%3D%20'MemberAccess'%20%26%26%20%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20viewFunction.callee.property.name%20%3D%3D%3D%20'as_view')%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20this.collectClassViewEntrypointAndSource(%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20analyzer%2C%20scope%2C%20state%2C%20viewFunction%2C%20targetSrcName%5Cn%20%20%20%20%20%20%20%20%20%20%20%20)%5Cn%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22fZZVk%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "collectDjangoEntrypointAndSource(analyzer: any, scope: any, state: any, value: any) {\n  const elementGroups: any[] = []\n  // 1. 从AST节点中提取所有路由元素\n  this.extractElementsFromNode(elementGroups, value)\n  \n  // 2. 遍历每个路由元素\n  for (const element of elementGroups) {\n    if (element.type === 'CallExpression' && element.callee) {\n      const { callee } = element\n      \n      // 3. 识别路由函数名（path/re_path/url）\n      let methodName: string | null = null\n      if (callee.type === 'MemberAccess' && callee.property?.name) {\n        // 处理 django.urls.path 形式\n        methodName = callee.property.name\n      } else if (callee.type === 'Identifier') {\n        // 处理直接导入的 path 形式\n        methodName = callee.name || null\n      }\n      \n      // 4. 只处理path/re_path/url三种路由函数\n      if (methodName !== 'path' && methodName !== 're_path' && methodName !== 'url') {\n        continue\n      }\n      \n      // 5. 获取路由参数\n      if (element.arguments && element.arguments.length >= 2) {\n        // 第一个参数：路由字符串，如 'user/<int:id>'\n        const targetSrcName = this.extractParamNames(element.arguments[0].value)\n        // 第二个参数：视图函数或类\n        const viewFunction = element.arguments[1]\n        \n        // 6. 根据视图类型分别处理\n        if (viewFunction.type === 'Identifier' || viewFunction.type === 'MemberAccess') {\n          // 函数视图\n          this.collectFuncViewEntrypointAndSource(\n            analyzer, scope, state, viewFunction, targetSrcName\n          )\n        } else if (viewFunction.type === 'CallExpression' && viewFunction.callee) {\n          // 类视图（通过as_view()调用）\n          if (viewFunction.callee.type === 'MemberAccess' && \n              viewFunction.callee.property.name === 'as_view') {\n            this.collectClassViewEntrypointAndSource(\n              analyzer, scope, state, viewFunction, targetSrcName\n            )\n          }\n        }\n      }\n    }\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "fZZVk"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20urls.py%5Cnurlpatterns%20%3D%20%5B%5Cn%20%20%20%20%23%20%E5%87%BD%E6%95%B0%E8%A7%86%E5%9B%BE%5Cn%20%20%20%20path('user%2F%3Cint%3Aid%3E'%2C%20views.user_detail)%2C%5Cn%20%20%20%20%23%20%E7%B1%BB%E8%A7%86%E5%9B%BE%5Cn%20%20%20%20path('article%2F%3Cint%3Apk%3E'%2C%20ArticleView.as_view())%2C%5Cn%20%20%20%20%23%20%E6%AD%A3%E5%88%99%E8%B7%AF%E7%94%B1%5Cn%20%20%20%20re_path(r'%5Earticles%2F(%3FP%3Cyear%3E%5B0-9%5D%7B4%7D)%2F%24'%2C%20views.year_archive)%2C%5Cn%5D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22E6oTZ%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# urls.py\nurlpatterns = [\n    # 函数视图\n    path('user/<int:id>', views.user_detail),\n    # 类视图\n    path('article/<int:pk>', ArticleView.as_view()),\n    # 正则路由\n    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive),\n]",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "E6oTZ"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22extractParamNames(route%3A%20string)%3A%20string%5B%5D%20%7B%5Cn%20%20%2F%2F%20%E5%8C%B9%E9%85%8D%20%3Ctype%3Aparam%3E%20%E6%88%96%20%3Cparam%3E%20%E6%A0%BC%E5%BC%8F%5Cn%20%20%2F%2F%20%E4%BE%8B%E5%A6%82%EF%BC%9A'user%2F%3Cint%3Aid%3E'%20%E5%8C%B9%E9%85%8D%E5%88%B0%20'id'%5Cn%20%20%2F%2F%20%20%20%20%20%20'article%2F%3Cslug%3Aslug%3E'%20%E5%8C%B9%E9%85%8D%E5%88%B0%20'slug'%5Cn%20%20const%20regex%20%3D%20%2F%3C(%3F%3A(%3F%3A%5C%5Cw%2B)%3A)%3F(%5C%5Cw%2B)%3E%2Fg%5Cn%20%20const%20params%3A%20string%5B%5D%20%3D%20%5B%5D%5Cn%20%20let%20match%3A%20RegExpExecArray%20%7C%20null%5Cn%20%20while%20((match%20%3D%20regex.exec(route))%20!%3D%3D%20null)%20%7B%5Cn%20%20%20%20params.push(match%5B1%5D)%20%20%2F%2F%20%E6%8F%90%E5%8F%96%E5%8F%82%E6%95%B0%E5%90%8D%5Cn%20%20%7D%5Cn%20%20return%20params%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22ja4XE%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "extractParamNames(route: string): string[] {\n  // 匹配 <type:param> 或 <param> 格式\n  // 例如：'user/<int:id>' 匹配到 'id'\n  //      'article/<slug:slug>' 匹配到 'slug'\n  const regex = /<(?:(?:\\w+):)?(\\w+)>/g\n  const params: string[] = []\n  let match: RegExpExecArray | null\n  while ((match = regex.exec(route)) !== null) {\n    params.push(match[1])  // 提取参数名\n  }\n  return params\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "ja4XE"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20%E8%B7%AF%E7%94%B1%EF%BC%9A'user%2F%3Cint%3Aid%3E%2Fprofile%2F%3Cstr%3Aname%3E'%5Cn%23%20%E6%8F%90%E5%8F%96%E5%8F%82%E6%95%B0%EF%BC%9A%5B'id'%2C%20'name'%5D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22j2SaZ%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# 路由：'user/<int:id>/profile/<str:name>'\n# 提取参数：['id', 'name']",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "j2SaZ"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22collectFuncViewEntrypointAndSource(%5Cn%20%20analyzer%3A%20any%2C%5Cn%20%20scope%3A%20any%2C%5Cn%20%20state%3A%20any%2C%5Cn%20%20viewFunction%3A%20ASTObject%2C%5Cn%20%20targetSrcName%3A%20string%5B%5D%5Cn)%20%7B%5Cn%20%20%2F%2F%201.%20%E8%A7%A3%E6%9E%90%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%5Cn%20%20const%20ep%20%3D%20analyzer.processInstruction(scope%2C%20viewFunction%2C%20state)%5Cn%20%20if%20(ep.vtype%20%3D%3D%3D%20'fclos')%20%7B%5Cn%20%20%20%20%2F%2F%202.%20%E5%88%9B%E5%BB%BAEntryPoint%5Cn%20%20%20%20analyzer.entryPoints.push(completeEntryPoint(ep))%5Cn%20%20%20%20%5Cn%20%20%20%20%2F%2F%203.%20%E5%A6%82%E6%9E%9C%E8%B7%AF%E7%94%B1%E4%B8%AD%E6%9C%89%E5%8F%82%E6%95%B0%EF%BC%8C%E6%A0%87%E8%AE%B0%E4%B8%BA%E6%B1%A1%E7%82%B9%E6%BA%90%5Cn%20%20%20%20if%20(targetSrcName.length%20%3E%200)%20%7B%5Cn%20%20%20%20%20%20const%20targetName%20%3D%20targetSrcName%5B0%5D%20%20%2F%2F%20%E5%8F%96%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E5%90%8D%5Cn%20%20%20%20%20%20%2F%2F%204.%20%E5%9C%A8%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%8C%B9%E9%85%8D%E7%9A%84%E5%8F%82%E6%95%B0%5Cn%20%20%20%20%20%20for%20(const%20param%20of%20ep.fdef.parameters)%20%7B%5Cn%20%20%20%20%20%20%20%20if%20(param.id.name%20%3D%3D%3D%20targetName)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%2F%2F%205.%20%E6%B7%BB%E5%8A%A0%E6%B1%A1%E7%82%B9%E6%BA%90%EF%BC%8C%E5%90%8E%E7%BB%AD%E5%9C%A8%E5%A4%84%E7%90%86%E8%AF%A5%E5%8F%82%E6%95%B0%E6%97%B6%E5%88%99%E4%BC%9A%E8%A2%AB%E6%A0%87%E8%AE%B0%E4%B8%BA%E6%B1%A1%E7%82%B9%5Cn%20%20%20%20%20%20%20%20%20%20this.sourceScope.value.push(%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20path%3A%20param.id.name%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20kind%3A%20'PYTHON_INPUT'%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20scopeFile%3A%20extractRelativePath(param%3F.loc%3F.sourcefile%2C%20Config.maindir)%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20scopeFunc%3A%20ep.fdef%3F.id%3F.name%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20locStart%3A%20param.loc.start.line%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20locEnd%3A%20param.loc.end.line%2C%5Cn%20%20%20%20%20%20%20%20%20%20%7D)%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22fDq5K%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "collectFuncViewEntrypointAndSource(\n  analyzer: any,\n  scope: any,\n  state: any,\n  viewFunction: ASTObject,\n  targetSrcName: string[]\n) {\n  // 1. 解析视图函数，获取函数定义\n  const ep = analyzer.processInstruction(scope, viewFunction, state)\n  if (ep.vtype === 'fclos') {\n    // 2. 创建EntryPoint\n    analyzer.entryPoints.push(completeEntryPoint(ep))\n    \n    // 3. 如果路由中有参数，标记为污点源\n    if (targetSrcName.length > 0) {\n      const targetName = targetSrcName[0]  // 取第一个参数名\n      // 4. 在函数参数中查找匹配的参数\n      for (const param of ep.fdef.parameters) {\n        if (param.id.name === targetName) {\n          // 5. 添加污点源，后续在处理该参数时则会被标记为污点\n          this.sourceScope.value.push({\n            path: param.id.name,\n            kind: 'PYTHON_INPUT',\n            scopeFile: extractRelativePath(param?.loc?.sourcefile, Config.maindir),\n            scopeFunc: ep.fdef?.id?.name,\n            locStart: param.loc.start.line,\n            locEnd: param.loc.end.line,\n          })\n        }\n      }\n    }\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "fDq5K"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20urls.py%5Cnurlpatterns%20%3D%20%5B%5Cn%20%20%20%20path('user%2F%3Cint%3Aid%3E'%2C%20views.user_detail)%2C%5Cn%5D%5Cn%5Cn%23%20views.py%5Cndef%20user_detail(request%2C%20id)%3A%20%20%23%20id%E5%8F%82%E6%95%B0%E4%BC%9A%E8%A2%AB%E6%A0%87%E8%AE%B0%E4%B8%BA%E6%B1%A1%E7%82%B9%E6%BA%90%5Cn%20%20%20%20user%20%3D%20User.objects.get(id%3Did)%20%20%23%20%E6%B1%A1%E7%82%B9%E6%B5%81%E8%BF%BD%E8%B8%AA%5Cn%20%20%20%20return%20render(request%2C%20'user.html'%2C%20%7B'user'%3A%20user%7D)%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22QBcAc%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# urls.py\nurlpatterns = [\n    path('user/<int:id>', views.user_detail),\n]\n\n# views.py\ndef user_detail(request, id):  # id参数会被标记为污点源\n    user = User.objects.get(id=id)  # 污点流追踪\n    return render(request, 'user.html', {'user': user})",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "QBcAc"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22collectClassViewEntrypointAndSource(%5Cn%20%20analyzer%3A%20any%2C%5Cn%20%20scope%3A%20any%2C%5Cn%20%20state%3A%20any%2C%5Cn%20%20viewFunction%3A%20ASTObject%2C%5Cn%20%20targetSrcName%3A%20string%5B%5D%5Cn)%20%7B%5Cn%20%20%2F%2F%201.%20%E6%8F%90%E5%8F%96%E7%B1%BB%E5%AF%B9%E8%B1%A1%5Cn%20%20const%20clsObj%20%3D%20viewFunction.callee.object%5Cn%20%20const%20clsSymVal%20%3D%20analyzer.processInstruction(scope%2C%20clsObj%2C%20state)%5Cn%20%20%5Cn%20%20%2F%2F%202.%20%E5%AE%9A%E4%B9%89HTTP%E6%96%B9%E6%B3%95%E9%9B%86%E5%90%88%5Cn%20%20const%20httpMethods%20%3D%20new%20Set(%5B'get'%2C%20'post'%2C%20'put'%2C%20'delete'%2C%20'patch'%2C%20'head'%2C%20'options'%5D)%5Cn%20%20%5Cn%20%20%2F%2F%203.%20%E4%BB%8E%E7%B1%BB%E4%B8%AD%E6%8F%90%E5%8F%96%E6%89%80%E6%9C%89HTTP%E6%96%B9%E6%B3%95%5Cn%20%20const%20entrypoints%20%3D%20Object.entries(clsSymVal.value)%5Cn%20%20%20%20.filter((%5Bkey%2C%20value%5D%3A%20%5Bstring%2C%20any%5D)%20%3D%3E%20%5Cn%20%20%20%20%20%20httpMethods.has(key)%20%26%26%20value.vtype%20%3D%3D%3D%20'fclos'%5Cn%20%20%20%20)%5Cn%20%20%20%20.map((%5B%2C%20value%5D%3A%20%5Bstring%2C%20any%5D)%20%3D%3E%20value)%5Cn%20%20%5Cn%20%20%2F%2F%204.%20%E5%A6%82%E6%9E%9C%E6%9C%89URL%E5%8F%82%E6%95%B0%EF%BC%8C%E4%B8%BA%E6%AF%8F%E4%B8%AAHTTP%E6%96%B9%E6%B3%95%E6%A0%87%E8%AE%B0%E6%B1%A1%E7%82%B9%E6%BA%90%5Cn%20%20if%20(targetSrcName.length%20%3E%200)%20%7B%5Cn%20%20%20%20const%20targetName%20%3D%20targetSrcName%5B0%5D%5Cn%20%20%20%20for%20(const%20ep%20of%20entrypoints%20as%20any%5B%5D)%20%7B%5Cn%20%20%20%20%20%20%2F%2F%20%E5%9C%A8%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%8C%B9%E9%85%8D%E7%9A%84%E5%8F%82%E6%95%B0%5Cn%20%20%20%20%20%20for%20(const%20param%20of%20ep.fdef.parameters)%20%7B%5Cn%20%20%20%20%20%20%20%20if%20(param.id.name%20%3D%3D%3D%20targetName)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20this.sourceScope.value.push(%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20path%3A%20param.id.name%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20kind%3A%20'PYTHON_INPUT'%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20scopeFile%3A%20extractRelativePath(param%3F.loc%3F.sourcefile%2C%20Config.maindir)%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20scopeFunc%3A%20ep.fdef%3F.id%3F.name%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20locStart%3A%20param.loc.start.line%2C%5Cn%20%20%20%20%20%20%20%20%20%20%20%20locEnd%3A%20param.loc.end.line%2C%5Cn%20%20%20%20%20%20%20%20%20%20%7D)%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%2F%2F%20%E5%88%9B%E5%BB%BAEntryPoint%5Cn%20%20%20%20%20%20analyzer.entryPoints.push(completeEntryPoint(ep))%5Cn%20%20%20%20%7D%5Cn%20%20%7D%20else%20%7B%5Cn%20%20%20%20%2F%2F%20%E6%B2%A1%E6%9C%89URL%E5%8F%82%E6%95%B0%EF%BC%8C%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BAEntryPoint%5Cn%20%20%20%20for%20(const%20ep%20of%20entrypoints%20as%20any%5B%5D)%20%7B%5Cn%20%20%20%20%20%20analyzer.entryPoints.push(completeEntryPoint(ep))%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22jNCsO%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "collectClassViewEntrypointAndSource(\n  analyzer: any,\n  scope: any,\n  state: any,\n  viewFunction: ASTObject,\n  targetSrcName: string[]\n) {\n  // 1. 提取类对象\n  const clsObj = viewFunction.callee.object\n  const clsSymVal = analyzer.processInstruction(scope, clsObj, state)\n  \n  // 2. 定义HTTP方法集合\n  const httpMethods = new Set(['get', 'post', 'put', 'delete', 'patch', 'head', 'options'])\n  \n  // 3. 从类中提取所有HTTP方法\n  const entrypoints = Object.entries(clsSymVal.value)\n    .filter(([key, value]: [string, any]) => \n      httpMethods.has(key) && value.vtype === 'fclos'\n    )\n    .map(([, value]: [string, any]) => value)\n  \n  // 4. 如果有URL参数，为每个HTTP方法标记污点源\n  if (targetSrcName.length > 0) {\n    const targetName = targetSrcName[0]\n    for (const ep of entrypoints as any[]) {\n      // 在方法参数中查找匹配的参数\n      for (const param of ep.fdef.parameters) {\n        if (param.id.name === targetName) {\n          this.sourceScope.value.push({\n            path: param.id.name,\n            kind: 'PYTHON_INPUT',\n            scopeFile: extractRelativePath(param?.loc?.sourcefile, Config.maindir),\n            scopeFunc: ep.fdef?.id?.name,\n            locStart: param.loc.start.line,\n            locEnd: param.loc.end.line,\n          })\n        }\n      }\n      // 创建EntryPoint\n      analyzer.entryPoints.push(completeEntryPoint(ep))\n    }\n  } else {\n    // 没有URL参数，直接创建EntryPoint\n    for (const ep of entrypoints as any[]) {\n      analyzer.entryPoints.push(completeEntryPoint(ep))\n    }\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "jNCsO"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22python%22%2C%22code%22%3A%22%23%20urls.py%5Cnurlpatterns%20%3D%20%5B%5Cn%20%20%20%20path('article%2F%3Cint%3Apk%3E'%2C%20ArticleView.as_view())%2C%5Cn%5D%5Cn%5Cn%23%20views.py%5Cnclass%20ArticleView(View)%3A%5Cn%20%20%20%20def%20get(self%2C%20request%2C%20pk)%3A%20%20%23%20pk%E5%8F%82%E6%95%B0%E4%BC%9A%E8%A2%AB%E6%A0%87%E8%AE%B0%E4%B8%BA%E6%B1%A1%E7%82%B9%E6%BA%90%5Cn%20%20%20%20%20%20%20%20article%20%3D%20Article.objects.get(pk%3Dpk)%5Cn%20%20%20%20%20%20%20%20return%20render(request%2C%20'article.html'%2C%20%7B'article'%3A%20article%7D)%5Cn%20%20%20%20%5Cn%20%20%20%20def%20post(self%2C%20request%2C%20pk)%3A%20%20%23%20pk%E5%8F%82%E6%95%B0%E4%BC%9A%E8%A2%AB%E6%A0%87%E8%AE%B0%E4%B8%BA%E6%B1%A1%E7%82%B9%E6%BA%90%5Cn%20%20%20%20%20%20%20%20%23%20...%5Cn%20%20%20%20%20%20%20%20pass%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22opGDt%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "python",
+        "code": "# urls.py\nurlpatterns = [\n    path('article/<int:pk>', ArticleView.as_view()),\n]\n\n# views.py\nclass ArticleView(View):\n    def get(self, request, pk):  # pk参数会被标记为污点源\n        article = Article.objects.get(pk=pk)\n        return render(request, 'article.html', {'article': article})\n    \n    def post(self, request, pk):  # pk参数会被标记为污点源\n        # ...\n        pass",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "opGDt"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20%5C%22checkerId%5C%22%3A%20%5C%22taint_flow_python_django_input%5C%22%2C%5Cn%20%20%5C%22checkerPath%5C%22%3A%20%5C%22checker%2Ftaint%2Fpython%2Fdjango-taint-checker.ts%5C%22%2C%5Cn%20%20%5C%22description%5C%22%3A%20%5C%22python%20Django%E6%A1%86%E6%9E%B6%20entrypoint%E9%87%87%E9%9B%86%E4%BB%A5%E5%8F%8A%E6%A1%86%E6%9E%B6source%E6%B7%BB%E5%8A%A0%5C%22%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22fEfJl%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  \"checkerId\": \"taint_flow_python_django_input\",\n  \"checkerPath\": \"checker/taint/python/django-taint-checker.ts\",\n  \"description\": \"python Django框架 entrypoint采集以及框架source添加\"\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "fEfJl"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20%5C%22checkerPackId%5C%22%3A%20%5C%22taint-flow-python-default%5C%22%2C%5Cn%20%20%5C%22checkerIds%5C%22%3A%20%5B%5Cn%20%20%20%20%5C%22taint_flow_python_input%5C%22%2C%5Cn%20%20%20%20%5C%22taint_flow_python_django_input%5C%22%2C%5Cn%20%20%20%20%5C%22callgraph%5C%22%2C%5Cn%20%20%20%20%5C%22sanitizer%5C%22%5Cn%20%20%5D%2C%5Cn%20%20%5C%22description%5C%22%3A%20%5C%22python%E6%B1%A1%E7%82%B9%E8%BF%BD%E8%B8%AA-%E5%AF%B9%E5%A4%96%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E7%9A%84%E8%A7%84%E5%88%99%E5%8C%85%5C%22%5Cn%7D%2C%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%7B%22from%22%3A99%2C%22to%22%3A141%2C%22bold%22%3Atrue%7D%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22otBmu%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  \"checkerPackId\": \"taint-flow-python-default\",\n  \"checkerIds\": [\n    \"taint_flow_python_input\",\n    \"taint_flow_python_django_input\",\n    \"callgraph\",\n    \"sanitizer\"\n  ],\n  \"description\": \"python污点追踪-对外默认使用的规则包\"\n},",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [
+          {
+            "from": 99,
+            "to": 141,
+            "bold": true
+          }
+        ],
+        "__spacing": "both",
+        "id": "otBmu",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    }
+  ]
+}

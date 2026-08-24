@@ -1,0 +1,1312 @@
+{
+  "links": [
+    "https://github.com/antgroup/YASA-UAST/blob/main/specification/specification.md",
+    "https://github.com/antgroup/YASA-UAST/"
+  ],
+  "images": [],
+  "cards": [
+    {
+      "type": "block",
+      "name": "board",
+      "value": "data:%7B%22diagramData%22%3A%7B%22head%22%3A%7B%22version%22%3A%222.0.0%22%2C%22theme%22%3A%7B%22name%22%3A%22default%22%7D%2C%22rough%22%3A%7B%22name%22%3A%22default%22%7D%7D%2C%22body%22%3A%5B%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fpng%2F107856586%2F1743164666380-98a80f17-02a7-4662-858e-b3bbd0ab46b9.png%22%2C%22naturalWidth%22%3A350%2C%22naturalHeight%22%3A234%2C%22uploadInfo%22%3A%7B%22hash%22%3A%22315486e96444fcad246ea94d4a97c39d201333e843e507885d29be8e8e45c243%22%2C%22fileName%22%3A%22image.png%22%2C%22fileType%22%3A%22image%2Fpng%22%2C%22fileSize%22%3A23578%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fyuque.antfin.com%2F5adc810c-2382-4266-86e4-711d074b7d7d%22%2C%22state%22%3A-2%7D%2C%22firstInsertRatio%22%3A0.5%7D%2C%22width%22%3A249%2C%22height%22%3A166.47428571428574%2C%22x%22%3A-651%2C%22y%22%3A-390.49999999999994%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%225517e51f-3788-4039-a37e-b212d60292cf%22%2C%22zIndex%22%3A0%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fpng%2F107856586%2F1743164674953-5c698ed9-e399-4eb5-9a6a-43da231af9a4.png%22%2C%22naturalWidth%22%3A350%2C%22naturalHeight%22%3A240%2C%22uploadInfo%22%3A%7B%22hash%22%3A%22850980cbb6a09709d53b83e9a3650fe00aa9c82cfabce74e363b83b6d9250419%22%2C%22fileName%22%3A%22image.png%22%2C%22fileType%22%3A%22image%2Fpng%22%2C%22fileSize%22%3A22072%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fyuque.antfin.com%2F29d119cd-9a0a-4e55-9f88-d62e9cfba4c3%22%2C%22state%22%3A-2%7D%2C%22firstInsertRatio%22%3A0.5%7D%2C%22width%22%3A249%2C%22height%22%3A170.74285714285716%2C%22x%22%3A-651%2C%22y%22%3A-181.77633116883112%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%22006403b9-2bce-4ca4-9a8b-a96804956efc%22%2C%22zIndex%22%3A1%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fpng%2F107856586%2F1743164684439-f3dc6173-9450-43f9-aaa7-bb0b51fcbafd.png%22%2C%22naturalWidth%22%3A352%2C%22naturalHeight%22%3A202%2C%22uploadInfo%22%3A%7B%22hash%22%3A%221b2cd39d6547b97c9707fbce961f4e62bee57321057fcd0f64f4c129d9e9f3d8%22%2C%22fileName%22%3A%22image.png%22%2C%22fileType%22%3A%22image%2Fpng%22%2C%22fileSize%22%3A20715%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fyuque.antfin.com%2F1d75def1-c84c-4a63-adf6-4ae80e61c9bb%22%2C%22state%22%3A-2%7D%2C%22firstInsertRatio%22%3A0.5%7D%2C%22width%22%3A249%2C%22height%22%3A142.89204545454547%2C%22x%22%3A-651%2C%22y%22%3A31.215909090909122%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%22b368c383-11ca-48a1-ae79-796017b97e83%22%2C%22zIndex%22%3A2%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fpng%2F107856586%2F1743164734754-3e28ee66-eaa1-4785-93b4-b03f555fd2e6.png%22%2C%22naturalWidth%22%3A150%2C%22naturalHeight%22%3A134%2C%22uploadInfo%22%3A%7B%22hash%22%3A%22de073ad2598dc47f2405c22fe3da833db94c217fc811657343f31245e98b2318%22%2C%22fileName%22%3A%22image.png%22%2C%22fileType%22%3A%22image%2Fpng%22%2C%22fileSize%22%3A2682%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fyuque.antfin.com%2F5a71139e-19e7-41c6-be8a-01987ecb443c%22%2C%22state%22%3A-2%7D%2C%22firstInsertRatio%22%3A0.5%7D%2C%22width%22%3A46.16631458595111%2C%22height%22%3A41.241907696782995%2C%22x%22%3A-383.33315729297556%2C%22y%22%3A-123.50825148882615%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%22c38e7d40-253f-470d-8e23-b442113079dc%22%2C%22zIndex%22%3A3%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3BCompileUnit%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%226da2258a-8ecb-4668-88b7-5cef6dc2d9b6%22%2C%22x%22%3A111.5%2C%22y%22%3A-389.69254603001974%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22zIndex%22%3A4%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EClassDefinition%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%2243d261c2-a5af-456c-90a8-58594d806702%22%2C%22x%22%3A111.5%2C%22y%22%3A-270.69254603001974%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A5%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EVariableDeclaration%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3Ename%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22ee088101-6d72-4df8-879c-667fc302c483%22%2C%22x%22%3A-145%2C%22y%22%3A-164.69254603001974%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A6%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3EFunctionDefinition%3C%2Fspan%3E%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E_CTOR_%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%2299f2fb7c-ccb4-410d-a5e0-c776e418f836%22%2C%22x%22%3A111.5%2C%22y%22%3A-164.69254603001974%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A7%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3EFunctionDefinition%3C%2Fspan%3E%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EgetName%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%2286b54e68-485a-4409-b618-308e2996d26b%22%2C%22x%22%3A402.83087158203125%2C%22y%22%3A-164.69254603001974%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A8%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EAssignmentExpression%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%226e5e75f9-04d2-4dce-9869-b474a65c9ea1%22%2C%22x%22%3A112%2C%22y%22%3A-44.97568811986349%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A9%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EMemberAccess%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%2205d456f4-fef2-49c9-896f-b4433d929c38%22%2C%22x%22%3A9.83087158203125%2C%22y%22%3A60.02431188013651%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A10%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EThisExpression%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22f1339a34-f85c-48ee-b8e8-8ded4161b4ec%22%2C%22x%22%3A-113.16912841796875%2C%22y%22%3A144.88274083521463%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A11%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EIdentifier%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3Ename%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22b7e8142c-bfde-45c3-911b-43c91de42cb5%22%2C%22x%22%3A85%2C%22y%22%3A144.88274083521463%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A12%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EIdentifier%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3Ename%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%228942dece-0d71-4327-856c-dfde91edec58%22%2C%22x%22%3A199%2C%22y%22%3A60.02431188013651%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A13%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EReturnStatement%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22f85c5f9a-e28a-405d-9527-451b2b4c5708%22%2C%22x%22%3A402.83087158203125%2C%22y%22%3A-44.97568811986349%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A14%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EMemberAccess%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22d3cb2c99-f47e-4c18-8df7-b97d97a59953%22%2C%22x%22%3A402.83087158203125%2C%22y%22%3A60.02431188013651%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A15%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EThisExpression%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22d17d7514-834c-4f30-b527-eeb725f615e7%22%2C%22x%22%3A303.7463073730469%2C%22y%22%3A144.88274083521463%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A16%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EIdentifier%3C%2Fdiv%3E%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3Ename%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rounded-rect%22%2C%22category%22%3A%22basic%22%2C%22round%22%3A10%2C%22id%22%3A%22160098a1-a315-45d3-85b6-ba5f32570d1f%22%2C%22x%22%3A501.9154357910156%2C%22y%22%3A144.88274083521463%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A169%2C%22height%22%3A52%2C%22rotate%22%3A0%2C%22zIndex%22%3A17%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%2243d261c2-a5af-456c-90a8-58594d806702%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%226da2258a-8ecb-4668-88b7-5cef6dc2d9b6%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2274a2f62d-b2ba-466d-a238-3ed066b193e5%22%2C%22zIndex%22%3A18%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%2299f2fb7c-ccb4-410d-a5e0-c776e418f836%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%2243d261c2-a5af-456c-90a8-58594d806702%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2216990056-0d00-4b83-828e-ae021b47e34c%22%2C%22zIndex%22%3A19%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.4970414201183432%2C0%5D%2C%22id%22%3A%226e5e75f9-04d2-4dce-9869-b474a65c9ea1%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%2299f2fb7c-ccb4-410d-a5e0-c776e418f836%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22a0507b1e-0245-46cb-afa1-e4a6174690d4%22%2C%22zIndex%22%3A20%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22straight%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2205d456f4-fef2-49c9-896f-b4433d929c38%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%226e5e75f9-04d2-4dce-9869-b474a65c9ea1%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%225587c961-ca7f-4c04-af72-170f45f8fe62%22%2C%22zIndex%22%3A21%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%228942dece-0d71-4327-856c-dfde91edec58%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%226e5e75f9-04d2-4dce-9869-b474a65c9ea1%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22ef5e3cb2-a9d3-4ffc-9f03-f42be338cec9%22%2C%22zIndex%22%3A22%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22f1339a34-f85c-48ee-b8e8-8ded4161b4ec%22%7D%2C%22source%22%3A%7B%22id%22%3A%2205d456f4-fef2-49c9-896f-b4433d929c38%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2219ab090d-bd92-499c-a1ef-4ab422779520%22%2C%22zIndex%22%3A23%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22b7e8142c-bfde-45c3-911b-43c91de42cb5%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%2205d456f4-fef2-49c9-896f-b4433d929c38%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2213a49d04-6a76-4be4-8dac-178e79be3c35%22%2C%22zIndex%22%3A24%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22ee088101-6d72-4df8-879c-667fc302c483%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%2243d261c2-a5af-456c-90a8-58594d806702%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22da369cd7-e427-4589-9a97-07065c74d221%22%2C%22zIndex%22%3A25%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2286b54e68-485a-4409-b618-308e2996d26b%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%2243d261c2-a5af-456c-90a8-58594d806702%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2250910b04-4ee5-4a47-8e7b-9b7c6c705b2f%22%2C%22zIndex%22%3A26%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22f85c5f9a-e28a-405d-9527-451b2b4c5708%22%7D%2C%22source%22%3A%7B%22id%22%3A%2286b54e68-485a-4409-b618-308e2996d26b%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2231f27552-8caa-46ad-8c03-d3a629e2c92f%22%2C%22zIndex%22%3A27%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22d3cb2c99-f47e-4c18-8df7-b97d97a59953%22%7D%2C%22source%22%3A%7B%22id%22%3A%22f85c5f9a-e28a-405d-9527-451b2b4c5708%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22adfa5163-46d5-4f5c-a5d0-76ce3d045de5%22%2C%22zIndex%22%3A28%2C%22opacity%22%3A1%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22d17d7514-834c-4f30-b527-eeb725f615e7%22%7D%2C%22source%22%3A%7B%22id%22%3A%22d3cb2c99-f47e-4c18-8df7-b97d97a59953%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22d0cde801-12e5-4913-af9e-c3285956b25d%22%2C%22zIndex%22%3A29%7D%2C%7B%22shape%22%3A%22straight%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22160098a1-a315-45d3-85b6-ba5f32570d1f%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%22d3cb2c99-f47e-4c18-8df7-b97d97a59953%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2217d1f623-3994-4350-9b39-8b2fabe4961a%22%2C%22zIndex%22%3A30%7D%2C%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fcdn.nlark.com%2Fyuque%2F0%2F2025%2Fsvg%2F57829248%2F1765023163812-c7c6b52d-d993-40d7-9b8e-cf3f3d719387.svg%22%2C%22naturalWidth%22%3A150%2C%22naturalHeight%22%3A150%2C%22uploadInfo%22%3A%7B%22hash%22%3A%22159e06f546783f56dafe3267038adcd3a81cda005beae56c4d8d69097bde42bc%22%2C%22fileName%22%3A%22iconfont.svg%22%2C%22fileType%22%3A%22image%2Fsvg%2Bxml%22%2C%22fileSize%22%3A2485%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fwww.yuque.com%2F6136c21f-3caa-473f-91b8-9c9a8907b678%22%2C%22state%22%3A-2%7D%7D%2C%22width%22%3A32%2C%22height%22%3A32%2C%22x%22%3A-298.4101002238077%2C%22y%22%3A-136.69254603001974%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%2231210cca-56fb-4c06-be93-4aba7c4fc881%22%2C%22zIndex%22%3A31%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22UAST%20Parser%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22397a44bc-1155-4bc5-8485-57c2c4334120%22%2C%22x%22%3A-318.5%2C%22y%22%3A-95.50825148882615%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22zIndex%22%3A32%7D%2C%7B%22type%22%3A%22image%22%2C%22image%22%3A%7B%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fpng%2F107856586%2F1743164734754-3e28ee66-eaa1-4785-93b4-b03f555fd2e6.png%22%2C%22naturalWidth%22%3A150%2C%22naturalHeight%22%3A134%2C%22uploadInfo%22%3A%7B%22hash%22%3A%22de073ad2598dc47f2405c22fe3da833db94c217fc811657343f31245e98b2318%22%2C%22fileName%22%3A%22image.png%22%2C%22fileType%22%3A%22image%2Fpng%22%2C%22fileSize%22%3A2682%2C%22localTempSrc%22%3A%22blob%3Ahttps%3A%2F%2Fyuque.antfin.com%2F5a71139e-19e7-41c6-be8a-01987ecb443c%22%2C%22state%22%3A-2%7D%2C%22firstInsertRatio%22%3A0.5%7D%2C%22width%22%3A46.16631458595111%2C%22height%22%3A41.241907696782995%2C%22x%22%3A-211.0311949013987%2C%22y%22%3A-123.50825148882615%2C%22constraints%22%3A%7B%22proportion%22%3Atrue%7D%2C%22id%22%3A%22c64e3c4c-ff1e-4e49-809c-c4d7e27a6f5f%22%2C%22rotate%22%3A0%2C%22zIndex%22%3A33%7D%5D%7D%2C%22viewportOption%22%3A%22adapt%22%2C%22viewportSetting%22%3A%7B%22zoom%22%3A0.5370994219203739%2C%22tlCanvasPoint%22%3A%5B-665.8948214678697%2C-506.4162146339955%2C1%5D%2C%22width%22%3A764%2C%22height%22%3A478%7D%2C%22search%22%3A%22%C2%A0CompileUnitClassDefinitionVariableDeclarationnameFunctionDefinition_CTOR_FunctionDefinitiongetNameAssignmentExpressionMemberAccessThisExpressionIdentifiernameIdentifiernameReturnStatementMemberAccessThisExpressionIdentifiernameUAST%20Parser%22%2C%22src%22%3A%22https%3A%2F%2Fcdn.nlark.com%2Fyuque%2F0%2F2025%2Fjpeg%2F57829248%2F1765023305330-0331e04d-b72a-4647-82a3-1a05b4d0c265.jpeg%22%2C%22graphicsBBox%22%3A%7B%22x%22%3A-651%2C%22y%22%3A-390.5%2C%22width%22%3A1321.9154052734375%2C%22height%22%3A587.3827514648438%7D%2C%22id%22%3A%22z592k%22%7D",
+      "decoded_value": {
+        "diagramData": {
+          "head": {
+            "version": "2.0.0",
+            "theme": {
+              "name": "default"
+            },
+            "rough": {
+              "name": "default"
+            }
+          },
+          "body": [
+            {
+              "type": "image",
+              "image": {
+                "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/png/107856586/1743164666380-98a80f17-02a7-4662-858e-b3bbd0ab46b9.png",
+                "naturalWidth": 350,
+                "naturalHeight": 234,
+                "uploadInfo": {
+                  "hash": "315486e96444fcad246ea94d4a97c39d201333e843e507885d29be8e8e45c243",
+                  "fileName": "image.png",
+                  "fileType": "image/png",
+                  "fileSize": 23578,
+                  "localTempSrc": "blob:https://yuque.antfin.com/5adc810c-2382-4266-86e4-711d074b7d7d",
+                  "state": -2
+                },
+                "firstInsertRatio": 0.5
+              },
+              "width": 249,
+              "height": 166.47428571428574,
+              "x": -651,
+              "y": -390.49999999999994,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "5517e51f-3788-4039-a37e-b212d60292cf",
+              "zIndex": 0,
+              "rotate": 0
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/png/107856586/1743164674953-5c698ed9-e399-4eb5-9a6a-43da231af9a4.png",
+                "naturalWidth": 350,
+                "naturalHeight": 240,
+                "uploadInfo": {
+                  "hash": "850980cbb6a09709d53b83e9a3650fe00aa9c82cfabce74e363b83b6d9250419",
+                  "fileName": "image.png",
+                  "fileType": "image/png",
+                  "fileSize": 22072,
+                  "localTempSrc": "blob:https://yuque.antfin.com/29d119cd-9a0a-4e55-9f88-d62e9cfba4c3",
+                  "state": -2
+                },
+                "firstInsertRatio": 0.5
+              },
+              "width": 249,
+              "height": 170.74285714285716,
+              "x": -651,
+              "y": -181.77633116883112,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "006403b9-2bce-4ca4-9a8b-a96804956efc",
+              "zIndex": 1,
+              "rotate": 0
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/png/107856586/1743164684439-f3dc6173-9450-43f9-aaa7-bb0b51fcbafd.png",
+                "naturalWidth": 352,
+                "naturalHeight": 202,
+                "uploadInfo": {
+                  "hash": "1b2cd39d6547b97c9707fbce961f4e62bee57321057fcd0f64f4c129d9e9f3d8",
+                  "fileName": "image.png",
+                  "fileType": "image/png",
+                  "fileSize": 20715,
+                  "localTempSrc": "blob:https://yuque.antfin.com/1d75def1-c84c-4a63-adf6-4ae80e61c9bb",
+                  "state": -2
+                },
+                "firstInsertRatio": 0.5
+              },
+              "width": 249,
+              "height": 142.89204545454547,
+              "x": -651,
+              "y": 31.215909090909122,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "b368c383-11ca-48a1-ae79-796017b97e83",
+              "zIndex": 2,
+              "rotate": 0
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/png/107856586/1743164734754-3e28ee66-eaa1-4785-93b4-b03f555fd2e6.png",
+                "naturalWidth": 150,
+                "naturalHeight": 134,
+                "uploadInfo": {
+                  "hash": "de073ad2598dc47f2405c22fe3da833db94c217fc811657343f31245e98b2318",
+                  "fileName": "image.png",
+                  "fileType": "image/png",
+                  "fileSize": 2682,
+                  "localTempSrc": "blob:https://yuque.antfin.com/5a71139e-19e7-41c6-be8a-01987ecb443c",
+                  "state": -2
+                },
+                "firstInsertRatio": 0.5
+              },
+              "width": 46.16631458595111,
+              "height": 41.241907696782995,
+              "x": -383.33315729297556,
+              "y": -123.50825148882615,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "c38e7d40-253f-470d-8e23-b442113079dc",
+              "zIndex": 3,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;CompileUnit</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "6da2258a-8ecb-4668-88b7-5cef6dc2d9b6",
+              "x": 111.5,
+              "y": -389.69254603001974,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "zIndex": 4,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">ClassDefinition</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "43d261c2-a5af-456c-90a8-58594d806702",
+              "x": 111.5,
+              "y": -270.69254603001974,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 5
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">VariableDeclaration</div><div style=\"text-align:center;\">name</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "ee088101-6d72-4df8-879c-667fc302c483",
+              "x": -145,
+              "y": -164.69254603001974,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 6
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style>FunctionDefinition</span></div><div style=\"text-align:center;\">_CTOR_</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "99f2fb7c-ccb4-410d-a5e0-c776e418f836",
+              "x": 111.5,
+              "y": -164.69254603001974,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 7
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style>FunctionDefinition</span></div><div style=\"text-align:center;\">getName</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "86b54e68-485a-4409-b618-308e2996d26b",
+              "x": 402.83087158203125,
+              "y": -164.69254603001974,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 8
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">AssignmentExpression</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "6e5e75f9-04d2-4dce-9869-b474a65c9ea1",
+              "x": 112,
+              "y": -44.97568811986349,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 9
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">MemberAccess</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "05d456f4-fef2-49c9-896f-b4433d929c38",
+              "x": 9.83087158203125,
+              "y": 60.02431188013651,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 10
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">ThisExpression</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "f1339a34-f85c-48ee-b8e8-8ded4161b4ec",
+              "x": -113.16912841796875,
+              "y": 144.88274083521463,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 11
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">Identifier</div><div style=\"text-align:center;\">name</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "b7e8142c-bfde-45c3-911b-43c91de42cb5",
+              "x": 85,
+              "y": 144.88274083521463,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 12
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">Identifier</div><div style=\"text-align:center;\">name</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "8942dece-0d71-4327-856c-dfde91edec58",
+              "x": 199,
+              "y": 60.02431188013651,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 13
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">ReturnStatement</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "f85c5f9a-e28a-405d-9527-451b2b4c5708",
+              "x": 402.83087158203125,
+              "y": -44.97568811986349,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 14
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">MemberAccess</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "d3cb2c99-f47e-4c18-8df7-b97d97a59953",
+              "x": 402.83087158203125,
+              "y": 60.02431188013651,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 15
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">ThisExpression</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "d17d7514-834c-4f30-b527-eeb725f615e7",
+              "x": 303.7463073730469,
+              "y": 144.88274083521463,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 16
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">Identifier</div><div style=\"text-align:center;\">name</div>",
+              "shape": "rounded-rect",
+              "category": "basic",
+              "round": 10,
+              "id": "160098a1-a315-45d3-85b6-ba5f32570d1f",
+              "x": 501.9154357910156,
+              "y": 144.88274083521463,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 169,
+              "height": 52,
+              "rotate": 0,
+              "zIndex": 17
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "43d261c2-a5af-456c-90a8-58594d806702"
+              },
+              "type": "line",
+              "source": {
+                "id": "6da2258a-8ecb-4668-88b7-5cef6dc2d9b6",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "74a2f62d-b2ba-466d-a238-3ed066b193e5",
+              "zIndex": 18,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "99f2fb7c-ccb4-410d-a5e0-c776e418f836"
+              },
+              "type": "line",
+              "source": {
+                "id": "43d261c2-a5af-456c-90a8-58594d806702",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "16990056-0d00-4b83-828e-ae021b47e34c",
+              "zIndex": 19,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.4970414201183432,
+                  0
+                ],
+                "id": "6e5e75f9-04d2-4dce-9869-b474a65c9ea1"
+              },
+              "type": "line",
+              "source": {
+                "id": "99f2fb7c-ccb4-410d-a5e0-c776e418f836",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "a0507b1e-0245-46cb-afa1-e4a6174690d4",
+              "zIndex": 20,
+              "controlPoints": []
+            },
+            {
+              "shape": "straight",
+              "target": {
+                "marker": "arrow",
+                "id": "05d456f4-fef2-49c9-896f-b4433d929c38",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "6e5e75f9-04d2-4dce-9869-b474a65c9ea1",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "5587c961-ca7f-4c04-af72-170f45f8fe62",
+              "zIndex": 21
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "8942dece-0d71-4327-856c-dfde91edec58",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "6e5e75f9-04d2-4dce-9869-b474a65c9ea1",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "ef5e3cb2-a9d3-4ffc-9f03-f42be338cec9",
+              "zIndex": 22
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "f1339a34-f85c-48ee-b8e8-8ded4161b4ec"
+              },
+              "source": {
+                "id": "05d456f4-fef2-49c9-896f-b4433d929c38",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "19ab090d-bd92-499c-a1ef-4ab422779520",
+              "zIndex": 23
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "b7e8142c-bfde-45c3-911b-43c91de42cb5",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "05d456f4-fef2-49c9-896f-b4433d929c38",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "13a49d04-6a76-4be4-8dac-178e79be3c35",
+              "zIndex": 24
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "ee088101-6d72-4df8-879c-667fc302c483",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "43d261c2-a5af-456c-90a8-58594d806702",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "da369cd7-e427-4589-9a97-07065c74d221",
+              "zIndex": 25
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "86b54e68-485a-4409-b618-308e2996d26b",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "43d261c2-a5af-456c-90a8-58594d806702",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "50910b04-4ee5-4a47-8e7b-9b7c6c705b2f",
+              "zIndex": 26
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "f85c5f9a-e28a-405d-9527-451b2b4c5708"
+              },
+              "source": {
+                "id": "86b54e68-485a-4409-b618-308e2996d26b",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "31f27552-8caa-46ad-8c03-d3a629e2c92f",
+              "zIndex": 27
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "d3cb2c99-f47e-4c18-8df7-b97d97a59953"
+              },
+              "source": {
+                "id": "f85c5f9a-e28a-405d-9527-451b2b4c5708",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "adfa5163-46d5-4f5c-a5d0-76ce3d045de5",
+              "zIndex": 28,
+              "opacity": 1
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "d17d7514-834c-4f30-b527-eeb725f615e7"
+              },
+              "source": {
+                "id": "d3cb2c99-f47e-4c18-8df7-b97d97a59953",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "d0cde801-12e5-4913-af9e-c3285956b25d",
+              "zIndex": 29
+            },
+            {
+              "shape": "straight",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "160098a1-a315-45d3-85b6-ba5f32570d1f",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "d3cb2c99-f47e-4c18-8df7-b97d97a59953",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "17d1f623-3994-4350-9b39-8b2fabe4961a",
+              "zIndex": 30
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "https://cdn.nlark.com/yuque/0/2025/svg/57829248/1765023163812-c7c6b52d-d993-40d7-9b8e-cf3f3d719387.svg",
+                "naturalWidth": 150,
+                "naturalHeight": 150,
+                "uploadInfo": {
+                  "hash": "159e06f546783f56dafe3267038adcd3a81cda005beae56c4d8d69097bde42bc",
+                  "fileName": "iconfont.svg",
+                  "fileType": "image/svg+xml",
+                  "fileSize": 2485,
+                  "localTempSrc": "blob:https://www.yuque.com/6136c21f-3caa-473f-91b8-9c9a8907b678",
+                  "state": -2
+                }
+              },
+              "width": 32,
+              "height": 32,
+              "x": -298.4101002238077,
+              "y": -136.69254603001974,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "31210cca-56fb-4c06-be93-4aba7c4fc881",
+              "zIndex": 31
+            },
+            {
+              "type": "text",
+              "html": "UAST Parser",
+              "shape": "text",
+              "category": "basic",
+              "id": "397a44bc-1155-4bc5-8485-57c2c4334120",
+              "x": -318.5,
+              "y": -95.50825148882615,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "zIndex": 32
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/png/107856586/1743164734754-3e28ee66-eaa1-4785-93b4-b03f555fd2e6.png",
+                "naturalWidth": 150,
+                "naturalHeight": 134,
+                "uploadInfo": {
+                  "hash": "de073ad2598dc47f2405c22fe3da833db94c217fc811657343f31245e98b2318",
+                  "fileName": "image.png",
+                  "fileType": "image/png",
+                  "fileSize": 2682,
+                  "localTempSrc": "blob:https://yuque.antfin.com/5a71139e-19e7-41c6-be8a-01987ecb443c",
+                  "state": -2
+                },
+                "firstInsertRatio": 0.5
+              },
+              "width": 46.16631458595111,
+              "height": 41.241907696782995,
+              "x": -211.0311949013987,
+              "y": -123.50825148882615,
+              "constraints": {
+                "proportion": true
+              },
+              "id": "c64e3c4c-ff1e-4e49-809c-c4d7e27a6f5f",
+              "rotate": 0,
+              "zIndex": 33
+            }
+          ]
+        },
+        "viewportOption": "adapt",
+        "viewportSetting": {
+          "zoom": 0.5370994219203739,
+          "tlCanvasPoint": [
+            -665.8948214678697,
+            -506.4162146339955,
+            1
+          ],
+          "width": 764,
+          "height": 478
+        },
+        "search": " CompileUnitClassDefinitionVariableDeclarationnameFunctionDefinition_CTOR_FunctionDefinitiongetNameAssignmentExpressionMemberAccessThisExpressionIdentifiernameIdentifiernameReturnStatementMemberAccessThisExpressionIdentifiernameUAST Parser",
+        "src": "https://cdn.nlark.com/yuque/0/2025/jpeg/57829248/1765023305330-0331e04d-b72a-4647-82a3-1a05b4d0c265.jpeg",
+        "graphicsBBox": {
+          "x": -651,
+          "y": -390.5,
+          "width": 1321.9154052734375,
+          "height": 587.3827514648438
+        },
+        "id": "z592k"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%2F%2F%20%E6%B3%A8%E8%A7%A3%E4%BF%A1%E6%81%AF%E5%8F%AF%E9%80%9A%E8%BF%87meta%E5%AD%97%E6%AE%B5%E4%BF%9D%E7%95%99%2C%E4%BE%8B%E5%A6%82python%E7%9A%84%40property%5Cn%7B%5Cn%20%20%5C%22type%5C%22%3A%20%5C%22FunctionDefinition%5C%22%2C%5Cn%20%20%5C%22_meta%5C%22%3A%20%7B%5Cn%20%20%20%20%5C%22decorators%5C%22%3A%20%5B%5Cn%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%5C%22type%5C%22%3A%20%5C%22Identifier%5C%22%2C%5Cn%20%20%20%20%20%20%20%20%5C%22name%5C%22%3A%20%5C%22property%5C%22%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%5D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22RgxNP%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "// 注解信息可通过meta字段保留,例如python的@property\n{\n  \"type\": \"FunctionDefinition\",\n  \"_meta\": {\n    \"decorators\": [\n      {\n        \"type\": \"Identifier\",\n        \"name\": \"property\"\n      }\n    ]\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "RgxNP"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20%5C%22type%5C%22%3A%20%5C%22%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B%5C%22%2C%5Cn%20%20%5C%22loc%5C%22%3A%20%7B%5Cn%20%20%20%20%5C%22sourcefile%5C%22%3A%20%5C%22%E6%BA%90%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%5C%22%2C%5Cn%20%20%20%20%5C%22start%5C%22%3A%20%7B%20%5C%22line%5C%22%3A%20%E8%A1%8C%E5%8F%B7%2C%20%5C%22column%5C%22%3A%20%E5%88%97%E5%8F%B7%20%7D%2C%5Cn%20%20%20%20%5C%22end%5C%22%3A%20%7B%20%5C%22line%5C%22%3A%20%E8%A1%8C%E5%8F%B7%2C%20%5C%22column%5C%22%3A%20%E5%88%97%E5%8F%B7%20%7D%5Cn%20%20%7D%2C%5Cn%20%20%5C%22%5Cn%20%20%5C%22_meta%5C%22%3A%20%7B%5Cn%20%20%20%20%2F%2F%20%E8%AF%AD%E8%A8%80%E7%89%B9%E5%AE%9A%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%A1%A5%E5%85%85%E4%BF%A1%E6%81%AF%E7%AD%89%EF%BC%8C%E4%B8%8D%E5%90%8C%E8%AF%AD%E8%A8%80%E5%8F%AF%E4%BB%A5%E8%87%AA%E8%A1%8C%E6%89%A9%E5%B1%95%5Cn%20%20%7D%2C%5Cn%20%20%2F%2F%20%E8%8A%82%E7%82%B9%E7%89%B9%E5%AE%9A%E7%9A%84%E5%AD%97%E6%AE%B5...%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22KUnKF%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  \"type\": \"节点类型\",\n  \"loc\": {\n    \"sourcefile\": \"源文件路径\",\n    \"start\": { \"line\": 行号, \"column\": 列号 },\n    \"end\": { \"line\": 行号, \"column\": 列号 }\n  },\n  \"\n  \"_meta\": {\n    // 语言特定的元数据，补充信息等，不同语言可以自行扩展\n  },\n  // 节点特定的字段...\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "KUnKF"
+      }
+    },
+    {
+      "type": "block",
+      "name": "board",
+      "value": "data:%7B%22diagramData%22%3A%7B%22head%22%3A%7B%22version%22%3A%222.0.0%22%2C%22theme%22%3A%7B%22name%22%3A%22default%22%7D%2C%22rough%22%3A%7B%22name%22%3A%22default%22%7D%7D%2C%22body%22%3A%5B%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E%26nbsp%3Bsource%20code(js%3C%2Fspan%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E)%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22edd92365-8654-4571-a9d7-194ef8273eba%22%2C%22x%22%3A-337%2C%22y%22%3A37%2C%22width%22%3A159%2C%22height%22%3A49%2C%22zIndex%22%3A0%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E%26nbsp%3Bsource%20code(golang)%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%2269593b5a-4247-40ae-ae41-688ef668a956%22%2C%22x%22%3A-144%2C%22y%22%3A37%2C%22width%22%3A159%2C%22height%22%3A49%2C%22rotate%22%3A0%2C%22zIndex%22%3A1%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E%26nbsp%3Bsource%20code(xxx)%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22f4b95baf-cc5f-4d52-b112-125bc6995dff%22%2C%22x%22%3A195%2C%22y%22%3A37%2C%22width%22%3A159%2C%22height%22%3A49%2C%22rotate%22%3A0%2C%22zIndex%22%3A2%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E.%20.%20.%3C%2Fspan%3E%22%2C%22id%22%3A%228ee7dd1e-14da-4db8-abb1-9c76693352b9%22%2C%22x%22%3A86%2C%22y%22%3A45.5%2C%22zIndex%22%3A3%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%2223f36c9c-9fab-4080-bd61-6917470b7634%22%2C%22x%22%3A-350%2C%22y%22%3A99%2C%22width%22%3A714%2C%22height%22%3A333.5%2C%22zIndex%22%3A4%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EAST%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%222baa5b95-9c00-4596-87cf-fb8e9a8af75f%22%2C%22x%22%3A-308.5%2C%22y%22%3A169%2C%22width%22%3A121%2C%22height%22%3A47%2C%22zIndex%22%3A5%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EAST%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22a15dd22a-8f02-4233-b191-9cdf18a04556%22%2C%22x%22%3A-125%2C%22y%22%3A169%2C%22width%22%3A121%2C%22height%22%3A47%2C%22rotate%22%3A0%2C%22zIndex%22%3A6%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EAST%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22978b0620-1c52-4fee-b191-fec66126fbad%22%2C%22x%22%3A214%2C%22y%22%3A169%2C%22width%22%3A121%2C%22height%22%3A47%2C%22rotate%22%3A0%2C%22zIndex%22%3A7%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3E.%20.%20.%3C%2Fspan%3E%22%2C%22id%22%3A%22ed871b4b-4811-466e-8748-ee057fffc7c6%22%2C%22x%22%3A86%2C%22y%22%3A176.5%2C%22zIndex%22%3A8%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EUAST%20Parser%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%2C%22x%22%3A-313%2C%22y%22%3A260%2C%22width%22%3A648%2C%22height%22%3A58%2C%22zIndex%22%3A9%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EUAST-Node%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22c797d5ab-92d4-4aea-ba8a-6ed44faa3a36%22%2C%22x%22%3A389%2C%22y%22%3A99%2C%22width%22%3A148.5%2C%22height%22%3A333.5%2C%22rotate%22%3A0%2C%22zIndex%22%3A10%7D%2C%7B%22type%22%3A%22line%22%2C%22shape%22%3A%22straight%22%2C%22source%22%3A%7B%22id%22%3A%22edd92365-8654-4571-a9d7-194ef8273eba%22%2C%22connection%22%3A%22S%22%7D%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26%238203%3B%3C%2Fdiv%3E%22%2C%22target%22%3A%7B%22id%22%3A%222baa5b95-9c00-4596-87cf-fb8e9a8af75f%22%2C%22connection%22%3A%5B0.4256198347107438%2C0%5D%2C%22marker%22%3A%22arrow%22%7D%2C%22id%22%3A%22e7b2253c-06b6-44df-a9e1-9871890170c6%22%2C%22zIndex%22%3A11%7D%2C%7B%22type%22%3A%22line%22%2C%22shape%22%3A%22straight%22%2C%22source%22%3A%7B%22id%22%3A%22f4b95baf-cc5f-4d52-b112-125bc6995dff%22%7D%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26%238203%3B%3C%2Fdiv%3E%22%2C%22target%22%3A%7B%22id%22%3A%22978b0620-1c52-4fee-b191-fec66126fbad%22%2C%22connection%22%3A%22N%22%2C%22marker%22%3A%22arrow%22%7D%2C%22id%22%3A%2208cfcf1a-c38d-47b4-8afe-7fa6ef076c4a%22%2C%22zIndex%22%3A12%7D%2C%7B%22type%22%3A%22line%22%2C%22shape%22%3A%22straight%22%2C%22source%22%3A%7B%22id%22%3A%2269593b5a-4247-40ae-ae41-688ef668a956%22%2C%22connection%22%3A%22S%22%7D%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26%238203%3B%3C%2Fdiv%3E%22%2C%22target%22%3A%7B%22id%22%3A%22a15dd22a-8f02-4233-b191-9cdf18a04556%22%2C%22connection%22%3A%22N%22%2C%22marker%22%3A%22arrow%22%7D%2C%22id%22%3A%22fcb1fb69-a83f-4a0f-9326-6d325c9390c8%22%2C%22zIndex%22%3A13%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3A700%3B%5C%22%3Ejs%20AST%20parser%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22id%22%3A%22579c1e08-b3be-46a5-ae4f-2cc5919c79e2%22%2C%22x%22%3A-255.5%2C%22y%22%3A116.5%2C%22zIndex%22%3A14%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3A700%3B%5C%22%3Egolang%20AST%20parser%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22id%22%3A%224caaa1b2-b9e4-47ee-9fb6-bc7f0ceb0449%22%2C%22x%22%3A-66%2C%22y%22%3A117%2C%22zIndex%22%3A15%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3A700%3B%5C%22%3Exxx%20AST%20parser%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22id%22%3A%223b19843b-dee2-4341-9bab-9d979d66f05a%22%2C%22x%22%3A158%2C%22y%22%3A119%2C%22zIndex%22%3A16%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.38348765432098764%2C0%5D%2C%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22a15dd22a-8f02-4233-b191-9cdf18a04556%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%224c941b95-2f62-44cb-a82a-875400b6ae95%22%2C%22zIndex%22%3A17%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.9066358024691358%2C0%5D%2C%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22978b0620-1c52-4fee-b191-fec66126fbad%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%229d9fb519-8e1e-4f6f-be3c-e62ec40f0d92%22%2C%22zIndex%22%3A18%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.10030864197530864%2C0%5D%2C%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%222baa5b95-9c00-4596-87cf-fb8e9a8af75f%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2205220994-dabc-4fd6-b851-ba5a2581dfe3%22%2C%22zIndex%22%3A19%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Cspan%20style%3D%5C%22font-weight%3Abold%3B%5C%22%3EUAST-Spec%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22id%22%3A%22d6b92430-53ca-4934-9c29-ff8eb0a17a42%22%2C%22x%22%3A-313%2C%22y%22%3A357.75%2C%22width%22%3A648%2C%22height%22%3A58%2C%22rotate%22%3A0%2C%22zIndex%22%3A20%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C1%5D%2C%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22d6b92430-53ca-4934-9c29-ff8eb0a17a42%22%2C%22connection%22%3A%22N%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2251a7726d-a729-4ea9-aaa5-6edcfa503024%22%2C%22zIndex%22%3A21%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0%2C0.5697151424287856%5D%2C%22id%22%3A%22c797d5ab-92d4-4aea-ba8a-6ed44faa3a36%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%2294799391-5c13-48ef-9250-5237fe476cac%22%2C%22connection%22%3A%22E%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%220da8c387-1df3-4b6b-a818-630e4c13b059%22%2C%22zIndex%22%3A22%2C%22controlPoints%22%3A%5B%5D%7D%5D%7D%2C%22viewportOption%22%3A%22WYSIWYG%22%2C%22viewportSetting%22%3A%7B%22zoom%22%3A0.8%2C%22tlCanvasPoint%22%3A%5B-359.9999999999999%2C-40.249999999999915%2C1%5D%2C%22width%22%3A764%2C%22height%22%3A478%7D%2C%22search%22%3A%22%C2%A0source%20code(js)%C2%A0source%20code(golang)%C2%A0source%20code(xxx).%20.%20.%C2%A0ASTASTAST.%20.%20.UAST%20ParserUAST-Node%E2%80%8B%E2%80%8B%E2%80%8Bjs%20AST%20parsergolang%20AST%20parserxxx%20AST%20parserUAST-Spec%22%2C%22src%22%3A%22https%3A%2F%2Fcdn.nlark.com%2Fyuque%2F0%2F2025%2Fjpeg%2F57829248%2F1762915850360-d8627fff-af6f-4dd0-83d8-17ce23f2bb04.jpeg%22%2C%22graphicsBBox%22%3A%7B%22x%22%3A-350%2C%22y%22%3A37%2C%22width%22%3A887.5%2C%22height%22%3A395.5%7D%2C%22id%22%3A%22JlFp8%22%7D",
+      "decoded_value": {
+        "diagramData": {
+          "head": {
+            "version": "2.0.0",
+            "theme": {
+              "name": "default"
+            },
+            "rough": {
+              "name": "default"
+            }
+          },
+          "body": [
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">&nbsp;source code(js</span><span style=\"font-weight:bold;\">)</span></div>",
+              "shape": "rect",
+              "id": "edd92365-8654-4571-a9d7-194ef8273eba",
+              "x": -337,
+              "y": 37,
+              "width": 159,
+              "height": 49,
+              "zIndex": 0,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">&nbsp;source code(golang)</span></div>",
+              "shape": "rect",
+              "id": "69593b5a-4247-40ae-ae41-688ef668a956",
+              "x": -144,
+              "y": 37,
+              "width": 159,
+              "height": 49,
+              "rotate": 0,
+              "zIndex": 1
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">&nbsp;source code(xxx)</span></div>",
+              "shape": "rect",
+              "id": "f4b95baf-cc5f-4d52-b112-125bc6995dff",
+              "x": 195,
+              "y": 37,
+              "width": 159,
+              "height": 49,
+              "rotate": 0,
+              "zIndex": 2
+            },
+            {
+              "type": "text",
+              "html": "<span style=\"font-weight:bold;\">. . .</span>",
+              "id": "8ee7dd1e-14da-4db8-abb1-9c76693352b9",
+              "x": 86,
+              "y": 45.5,
+              "zIndex": 3
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;</div>",
+              "shape": "rect",
+              "id": "23f36c9c-9fab-4080-bd61-6917470b7634",
+              "x": -350,
+              "y": 99,
+              "width": 714,
+              "height": 333.5,
+              "zIndex": 4,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">AST</span></div>",
+              "shape": "rect",
+              "id": "2baa5b95-9c00-4596-87cf-fb8e9a8af75f",
+              "x": -308.5,
+              "y": 169,
+              "width": 121,
+              "height": 47,
+              "zIndex": 5,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">AST</span></div>",
+              "shape": "rect",
+              "id": "a15dd22a-8f02-4233-b191-9cdf18a04556",
+              "x": -125,
+              "y": 169,
+              "width": 121,
+              "height": 47,
+              "rotate": 0,
+              "zIndex": 6
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">AST</span></div>",
+              "shape": "rect",
+              "id": "978b0620-1c52-4fee-b191-fec66126fbad",
+              "x": 214,
+              "y": 169,
+              "width": 121,
+              "height": 47,
+              "rotate": 0,
+              "zIndex": 7
+            },
+            {
+              "type": "text",
+              "html": "<span style=\"font-weight:bold;\">. . .</span>",
+              "id": "ed871b4b-4811-466e-8748-ee057fffc7c6",
+              "x": 86,
+              "y": 176.5,
+              "zIndex": 8
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">UAST Parser</span></div>",
+              "shape": "rect",
+              "id": "94799391-5c13-48ef-9250-5237fe476cac",
+              "x": -313,
+              "y": 260,
+              "width": 648,
+              "height": 58,
+              "zIndex": 9,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">UAST-Node</span></div>",
+              "shape": "rect",
+              "id": "c797d5ab-92d4-4aea-ba8a-6ed44faa3a36",
+              "x": 389,
+              "y": 99,
+              "width": 148.5,
+              "height": 333.5,
+              "rotate": 0,
+              "zIndex": 10
+            },
+            {
+              "type": "line",
+              "shape": "straight",
+              "source": {
+                "id": "edd92365-8654-4571-a9d7-194ef8273eba",
+                "connection": "S"
+              },
+              "html": "<div style=\"text-align:center;\">&#8203;</div>",
+              "target": {
+                "id": "2baa5b95-9c00-4596-87cf-fb8e9a8af75f",
+                "connection": [
+                  0.4256198347107438,
+                  0
+                ],
+                "marker": "arrow"
+              },
+              "id": "e7b2253c-06b6-44df-a9e1-9871890170c6",
+              "zIndex": 11
+            },
+            {
+              "type": "line",
+              "shape": "straight",
+              "source": {
+                "id": "f4b95baf-cc5f-4d52-b112-125bc6995dff"
+              },
+              "html": "<div style=\"text-align:center;\">&#8203;</div>",
+              "target": {
+                "id": "978b0620-1c52-4fee-b191-fec66126fbad",
+                "connection": "N",
+                "marker": "arrow"
+              },
+              "id": "08cfcf1a-c38d-47b4-8afe-7fa6ef076c4a",
+              "zIndex": 12
+            },
+            {
+              "type": "line",
+              "shape": "straight",
+              "source": {
+                "id": "69593b5a-4247-40ae-ae41-688ef668a956",
+                "connection": "S"
+              },
+              "html": "<div style=\"text-align:center;\">&#8203;</div>",
+              "target": {
+                "id": "a15dd22a-8f02-4233-b191-9cdf18a04556",
+                "connection": "N",
+                "marker": "arrow"
+              },
+              "id": "fcb1fb69-a83f-4a0f-9326-6d325c9390c8",
+              "zIndex": 13,
+              "controlPoints": []
+            },
+            {
+              "type": "text",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:700;\">js AST parser</span></div>",
+              "id": "579c1e08-b3be-46a5-ae4f-2cc5919c79e2",
+              "x": -255.5,
+              "y": 116.5,
+              "zIndex": 14
+            },
+            {
+              "type": "text",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:700;\">golang AST parser</span></div>",
+              "id": "4caaa1b2-b9e4-47ee-9fb6-bc7f0ceb0449",
+              "x": -66,
+              "y": 117,
+              "zIndex": 15
+            },
+            {
+              "type": "text",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:700;\">xxx AST parser</span></div>",
+              "id": "3b19843b-dee2-4341-9bab-9d979d66f05a",
+              "x": 158,
+              "y": 119,
+              "zIndex": 16
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.38348765432098764,
+                  0
+                ],
+                "id": "94799391-5c13-48ef-9250-5237fe476cac"
+              },
+              "type": "line",
+              "source": {
+                "id": "a15dd22a-8f02-4233-b191-9cdf18a04556",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "4c941b95-2f62-44cb-a82a-875400b6ae95",
+              "zIndex": 17,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.9066358024691358,
+                  0
+                ],
+                "id": "94799391-5c13-48ef-9250-5237fe476cac"
+              },
+              "type": "line",
+              "source": {
+                "id": "978b0620-1c52-4fee-b191-fec66126fbad",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "9d9fb519-8e1e-4f6f-be3c-e62ec40f0d92",
+              "zIndex": 18,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.10030864197530864,
+                  0
+                ],
+                "id": "94799391-5c13-48ef-9250-5237fe476cac"
+              },
+              "type": "line",
+              "source": {
+                "id": "2baa5b95-9c00-4596-87cf-fb8e9a8af75f",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "05220994-dabc-4fd6-b851-ba5a2581dfe3",
+              "zIndex": 19,
+              "controlPoints": []
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\"><span style=\"font-weight:bold;\">UAST-Spec</span></div>",
+              "shape": "rect",
+              "id": "d6b92430-53ca-4934-9c29-ff8eb0a17a42",
+              "x": -313,
+              "y": 357.75,
+              "width": 648,
+              "height": 58,
+              "rotate": 0,
+              "zIndex": 20
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  1
+                ],
+                "id": "94799391-5c13-48ef-9250-5237fe476cac"
+              },
+              "type": "line",
+              "source": {
+                "id": "d6b92430-53ca-4934-9c29-ff8eb0a17a42",
+                "connection": "N"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "51a7726d-a729-4ea9-aaa5-6edcfa503024",
+              "zIndex": 21,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0,
+                  0.5697151424287856
+                ],
+                "id": "c797d5ab-92d4-4aea-ba8a-6ed44faa3a36"
+              },
+              "type": "line",
+              "source": {
+                "id": "94799391-5c13-48ef-9250-5237fe476cac",
+                "connection": "E"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "0da8c387-1df3-4b6b-a818-630e4c13b059",
+              "zIndex": 22,
+              "controlPoints": []
+            }
+          ]
+        },
+        "viewportOption": "WYSIWYG",
+        "viewportSetting": {
+          "zoom": 0.8,
+          "tlCanvasPoint": [
+            -359.9999999999999,
+            -40.249999999999915,
+            1
+          ],
+          "width": 764,
+          "height": 478
+        },
+        "search": " source code(js) source code(golang) source code(xxx). . . ASTASTAST. . .UAST ParserUAST-Node​​​js AST parsergolang AST parserxxx AST parserUAST-Spec",
+        "src": "https://cdn.nlark.com/yuque/0/2025/jpeg/57829248/1762915850360-d8627fff-af6f-4dd0-83d8-17ce23f2bb04.jpeg",
+        "graphicsBBox": {
+          "x": -350,
+          "y": 37,
+          "width": 887.5,
+          "height": 395.5
+        },
+        "id": "JlFp8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Regenerable research workspace: downloaded videos, ASR, scene frames,
+# and the temporary YASA-Engine clone. Official YASA docs are retained
+# separately under sources/yasa-docs/.
+.work/
+
+# Keep video links and metadata, not media binaries.
+*.mp4
+*.m4a
+*.wav
+
+# Editor / operating-system noise
+.DS_Store
+*.swp
+*~

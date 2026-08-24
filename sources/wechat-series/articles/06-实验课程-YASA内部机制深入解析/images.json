@@ -1,0 +1,35 @@
+[
+  {
+    "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPkZrGldDeP6A4yv1HicTIHiaBpVnyVkicTQbQiaJfbV8V7yKykiaIBqz4KCvKXK1CFJicAscMicYcvnxDvmA/0?wx_fmt=png&from=appmsg",
+    "display_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPkZrGldDeP6A4yv1HicTIHiaBpVnyVkicTQbQiaJfbV8V7yKykiaIBqz4KCvKXK1CFJicAscMicYcvnxDvmA/640?wx_fmt=png&from=appmsg",
+    "alt": "",
+    "declared_type": "png",
+    "style": "border-radius: 50%;color: inherit;display: inline-block;width: 100%;margin: 0px;height: auto !important;vertical-align:baseline;box-sizing:border-box;max-width:100% !important;",
+    "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/06-实验课程-YASA内部机制深入解析/images/image-01.png",
+    "content_type": "image/png",
+    "bytes": 72045,
+    "sha256": "7dc95c97f8492f211a88d84cbeac6f993d0226ee7823b11564e4fa45def8ae67"
+  },
+  {
+    "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPlAciaDCv1d8OpAdvjVvTJUicqIa3EmazgPMRvA7FccKiaVzPOciaZ80ia8cv2r8IM5szJBrsbkiaz7Gjcw/0?wx_fmt=png&from=appmsg",
+    "display_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPlAciaDCv1d8OpAdvjVvTJUicqIa3EmazgPMRvA7FccKiaVzPOciaZ80ia8cv2r8IM5szJBrsbkiaz7Gjcw/640?wx_fmt=png&from=appmsg",
+    "alt": "",
+    "declared_type": "png",
+    "style": "width:140px;height:140px;",
+    "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/06-实验课程-YASA内部机制深入解析/images/image-02.png",
+    "content_type": "image/png",
+    "bytes": 1048,
+    "sha256": "eb8cf63c99d327ada553189b58f7ed68a1568e13eea03d59008c22822122e890"
+  },
+  {
+    "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPmtCHafaffGLiaSF5KumNXNI37nBoDyEknhyKjc1XKnNb7BZfCEqZdqIuK3SeWyAmsgxpxd6s8AMSg/0?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp",
+    "display_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPmtCHafaffGLiaSF5KumNXNI37nBoDyEknhyKjc1XKnNb7BZfCEqZdqIuK3SeWyAmsgxpxd6s8AMSg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&tp=webp#imgIndex=2",
+    "alt": "图片",
+    "declared_type": "png",
+    "style": "-webkit-tap-highlight-color: transparent;margin: 0px;padding: 0px;outline: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;vertical-align: bottom;height: auto !important;width: 176px !important;visibility: visible !important;",
+    "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/06-实验课程-YASA内部机制深入解析/images/image-03.png",
+    "content_type": "image/png",
+    "bytes": 65372,
+    "sha256": "342a717ebad505b5c8b3a0cd8d0798ea59902b1ab5dd9eff30c066610f5d07ae"
+  }
+]

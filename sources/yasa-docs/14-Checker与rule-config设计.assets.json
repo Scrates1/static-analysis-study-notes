@@ -1,0 +1,227 @@
+{
+  "links": [
+    "https://www.yuque.com/u22090306/bebf6g/okuzgsdc66gbmk39#NKXvV",
+    "https://www.yuque.com/u22090306/bebf6g/zkw8i3ffw8n884sd",
+    "https://www.yuque.com/u22090306/bebf6g/bow6bkg8xwm9flew",
+    "https://www.yuque.com/u22090306/bebf6g/okuzgsdc66gbmk39#NKXvV",
+    "https://www.yuque.com/u22090306/bebf6g/zkw8i3ffw8n884sd",
+    "https://www.yuque.com/u22090306/bebf6g/bow6bkg8xwm9flew"
+  ],
+  "images": [],
+  "cards": [
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%20this.checkpoints%20%3D%20%7B%5Cn%20%20%20%20%20%20check_at_start_analyze%3A%20%5B%5D%2C%20%2F%2F%20%E5%BC%80%E5%A7%8B%E5%88%86%E6%9E%90%E5%89%8D%5Cn%20%20%20%20%20%20check_at_end_analyze%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8C%E6%88%90%E5%90%8E%5Cn%20%20%20%20%20%20check_at_compile_unit%3A%20%5B%5D%2C%20%2F%2F%20%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90%E5%89%8D%5Cn%20%20%20%20%20%20check_at_end_compileunit%3A%20%5B%5D%2C%20%2F%2F%20%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90%E5%90%8E%5Cn%20%20%20%20%20%20check_at_binary_operation%3A%20%5B%5D%2C%20%2F%2F%20%E4%BA%8C%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BC%80%E5%A7%8B%E5%88%86%E6%9E%90%E5%89%8D%5Cn%20%20%20%20%20%20check_at_pre_declaration%3A%20%5B%5D%2C%20%2F%2F%20%E6%AF%8F%E4%B8%AA%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E4%B9%8B%E5%89%8D%5Cn%20%20%20%20%20%20check_at_funccall_syntax%3A%20%5B%5D%2C%20%2F%2F%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8C%E5%88%86%E6%9E%90%E7%9B%AE%E6%A0%87%E5%AF%B9%E8%B1%A1%E5%89%8D%5Cn%20%20%20%20%20%20check_at_function_call_before%3A%20%5B%5D%2C%20%2F%2F%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8C%E5%88%86%E6%9E%90%E5%87%BA%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E5%90%8E%EF%BC%8C%E5%AE%9E%E9%99%85%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8C%E8%BF%99%E4%B8%AA%E5%87%BD%E6%95%B0%E5%89%8D%5Cn%20%20%20%20%20%20check_at_function_call_after%3A%20%5B%5D%2C%20%2F%2F%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8C%E5%88%86%E6%9E%90%E5%87%BA%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E5%90%8E%EF%BC%8C%E5%AE%9E%E9%99%85%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8C%E8%BF%99%E4%B8%AA%E5%87%BD%E6%95%B0%E5%90%8E%5Cn%20%20%20%20%20%20check_at_new_expr%3A%20%5B%5D%2C%20%2F%2F%20new%E6%93%8D%E4%BD%9C%E6%97%B6%EF%BC%8C%E5%88%86%E6%9E%90new%E7%9B%AE%E6%A0%87%E5%AF%B9%E8%B1%A1%E5%89%8D%5Cn%20%20%20%20%20%20check_at_new_object%3A%20%5B%5D%2C%20%2F%2F%20new%E6%93%8D%E4%BD%9C%E6%97%B6%EF%BC%8C%E5%88%86%E6%9E%90new%E7%9B%AE%E6%A0%87%E5%AF%B9%E8%B1%A1%E5%90%8E%EF%BC%8C%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8Cnew%E6%93%8D%E4%BD%9C%E5%89%8D%5Cn%20%20%20%20%20%20check_at_new_expr_after%3A%20%5B%5D%2C%20%2F%2F%20new%E6%93%8D%E4%BD%9C%E6%95%B4%E4%BD%93%E5%88%86%E6%9E%90%E5%AE%8C%E5%90%8E%5Cn%20%20%20%20%20%20check_at_ifcondition%3A%20%5B%5D%2C%20%2F%2F%20if%E8%AF%AD%E5%8F%A5%E5%BC%80%E5%A7%8B%E5%88%86%E6%9E%90%E5%89%8D%5Cn%20%20%20%20%20%20check_at_assignment%3A%20%5B%5D%2C%20%2F%2F%20%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C%E5%89%8D%5Cn%20%20%20%20%20%20check_at_end_block%3A%20%5B%5D%2C%20%2F%2F%20%E6%AF%8F%E4%B8%80%E4%B8%AA%E8%AF%AD%E5%8F%A5%E5%9D%97%E5%88%86%E6%9E%90%E5%90%8E%5Cn%20%20%20%20%20%20check_at_function_definition%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8C%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E8%AF%AD%E5%8F%A5%E5%90%8E%5Cn%20%20%20%20%20%20check_at_variable_declaration%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8C%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E8%AF%AD%E5%8F%A5%E5%90%8E%5Cn%20%20%20%20%20%20check_at_identifier%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8Cidentifier%E5%90%8E%5Cn%20%20%20%20%20%20check_at_member_access%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8CMemberAccess%E5%90%8E%5Cn%20%20%20%20%20%20check_at_end_of_node%3A%20%5B%5D%2C%20%2F%2F%20%E5%88%86%E6%9E%90%E5%AE%8C%E6%AF%8F%E4%B8%80%E4%B8%AAast%20node%E5%90%8E%5Cn%20%20%20%20%20%20check_at_symbol_execute_of_entrypoint_before%3A%20%5B%5D%2C%20%2F%2F%20%E5%9C%A8%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AAentrypoint%E5%89%8D%5Cn%20%20%20%20%20%20check_at_symbol_execute_of_entrypoint_after%3A%20%5B%5D%2C%20%2F%2F%20%E5%9C%A8%E6%A8%A1%E6%8B%9F%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AAentrypoint%E5%90%8E%5Cn%20%20%20%20%7D%22%2C%22autoWrap%22%3Atrue%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Atrue%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22emHgi%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": " this.checkpoints = {\n      check_at_start_analyze: [], // 开始分析前\n      check_at_end_analyze: [], // 分析完成后\n      check_at_compile_unit: [], // 每个文件分析前\n      check_at_end_compileunit: [], // 每个文件分析后\n      check_at_binary_operation: [], // 二元表达式开始分析前\n      check_at_pre_declaration: [], // 每个变量定义之前\n      check_at_funccall_syntax: [], // 函数调用时，分析目标对象前\n      check_at_function_call_before: [], // 函数调用时，分析出目标函数后，实际模拟执行这个函数前\n      check_at_function_call_after: [], // 函数调用时，分析出目标函数后，实际模拟执行这个函数后\n      check_at_new_expr: [], // new操作时，分析new目标对象前\n      check_at_new_object: [], // new操作时，分析new目标对象后，模拟执行new操作前\n      check_at_new_expr_after: [], // new操作整体分析完后\n      check_at_ifcondition: [], // if语句开始分析前\n      check_at_assignment: [], // 赋值操作前\n      check_at_end_block: [], // 每一个语句块分析后\n      check_at_function_definition: [], // 分析完函数定义语句后\n      check_at_variable_declaration: [], // 分析完变量定义语句后\n      check_at_identifier: [], // 分析完identifier后\n      check_at_member_access: [], // 分析完MemberAccess后\n      check_at_end_of_node: [], // 分析完每一个ast node后\n      check_at_symbol_execute_of_entrypoint_before: [], // 在模拟执行一个entrypoint前\n      check_at_symbol_execute_of_entrypoint_after: [], // 在模拟执行一个entrypoint后\n    }",
+        "autoWrap": true,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": true,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "emHgi",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%5B%5Cn%20%20%7B%5Cn%20%20%20%20%5C%22checkerIds%5C%22%3A%5B%5Cn%20%20%20%20%20%20%5C%22taint_flow_go_input%5C%22%2C%5Cn%20%20%20%20%20%20%5C%22taint_flow_gin_input%5C%22%5Cn%20%20%20%20%5D%2C%5Cn%20%20%20%20%5C%22sources%5C%22%3A%7B%5Cn%20%20%20%20%20%20%5C%22TaintSource%5C%22%3A%5B%5D%2C%5Cn%20%20%20%20%20%20%5C%22...%5C%22%5Cn%20%20%20%20%7D%2C%5Cn%20%20%20%20%5C%22sinks%5C%22%3A%7B%5Cn%20%20%20%20%20%20%5C%22FuncCallTaintSink%5C%22%3A%5B%5D%5Cn%20%20%20%20%7D%2C%5Cn%20%20%20%20%5C%22sanitizers%5C%22%3A%5B%5D%2C%5Cn%20%20%20%20%5C%22entrypoints%5C%22%3A%5B%5D%5Cn%20%20%7D%2C%5Cn%20%20%7B%5Cn%20%20%20%20%5C%22checkerIds%5C%22%3A%5B%5Cn%20%20%20%20%20%20%5C%22taint_flow_python_input%5C%22%5Cn%20%20%20%20%5D%2C%5Cn%20%20%20%20%5C%22sources%5C%22%3A%7B%7D%2C%5Cn%20%20%20%20%5C%22sinks%5C%22%3A%7B%7D%2C%5Cn%20%20%20%20%5C%22sanitizers%5C%22%3A%5B%5D%2C%5Cn%20%20%20%20%5C%22entrypoints%5C%22%3A%5B%5D%5Cn%20%20%7D%2C%5Cn%20%20...%5Cn%20%20%5Cn%5D%22%2C%22autoWrap%22%3Atrue%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Darcula%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22boXLb%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "[\n  {\n    \"checkerIds\":[\n      \"taint_flow_go_input\",\n      \"taint_flow_gin_input\"\n    ],\n    \"sources\":{\n      \"TaintSource\":[],\n      \"...\"\n    },\n    \"sinks\":{\n      \"FuncCallTaintSink\":[]\n    },\n    \"sanitizers\":[],\n    \"entrypoints\":[]\n  },\n  {\n    \"checkerIds\":[\n      \"taint_flow_python_input\"\n    ],\n    \"sources\":{},\n    \"sinks\":{},\n    \"sanitizers\":[],\n    \"entrypoints\":[]\n  },\n  ...\n  \n]",
+        "autoWrap": true,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Darcula",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "boXLb",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22const%20taintFlowFinding%20%3D%20this.buildTaintFinding(%5Cn%20%20this.getCheckerId()%2C%5Cn%20%20this.desc%2C%5Cn%20%20node%2C%5Cn%20%20nd%2C%5Cn%20%20fclos%2C%5Cn%20%20TAINT_TAG_NAME%2C%5Cn%20%20ruleName%2C%5Cn%20%20matchedSanitizerTags%5Cn)%5Cnif%20(!TaintOutputStrategy.isNewFinding(this.resultManager%2C%20taintFlowFinding))%20continue%5Cnthis.resultManager.newFinding(taintFlowFinding%2C%20TaintOutputStrategy.outputStrategyId)%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22zy6D7%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "javascript",
+        "code": "const taintFlowFinding = this.buildTaintFinding(\n  this.getCheckerId(),\n  this.desc,\n  node,\n  nd,\n  fclos,\n  TAINT_TAG_NAME,\n  ruleName,\n  matchedSanitizerTags\n)\nif (!TaintOutputStrategy.isNewFinding(this.resultManager, taintFlowFinding)) continue\nthis.resultManager.newFinding(taintFlowFinding, TaintOutputStrategy.outputStrategyId)",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "zy6D7",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20outputStrategyId1%20%3A%20%5Bfinding1%2C%20finding2%2C...%5D%2C%5Cn%20%20outputStrategyId2%20%3A%20%5Bfinding1%2C%20finding2%2C...%5D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__height%22%3A73.711669921875%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22bZndl%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22height%22%3A73.711669921875%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  outputStrategyId1 : [finding1, finding2,...],\n  outputStrategyId2 : [finding1, finding2,...]\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__height": 73.711669921875,
+        "__spacing": "both",
+        "id": "bZndl",
+        "margin": {
+          "top": true,
+          "bottom": true
+        },
+        "height": 73.711669921875
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22starter.js%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%20%20%20%20const%20outputStrategyAutoRegister%20%3D%20new%20OutputStrategyAutoRegister()%5Cn%20%20%20%20outputStrategyAutoRegister.autoRegisterAllStrategies()%5Cn%20%20%20%20allFindings%20%3D%20resultManager.getFindings()%5Cn%20%20%20%20for%20(const%20outputStrategyId%20in%20allFindings)%20%7B%5Cn%20%20%20%20%20%20const%20strategy%20%3D%20outputStrategyAutoRegister.getStrategy(outputStrategyId)%5Cn%20%20%20%20%20%20if%20(strategy%20%26%26%20typeof%20strategy.outputFindings%20%3D%3D%3D%20'function')%20%7B%5Cn%20%20%20%20%20%20%20%20strategy.outputFindings(resultManager%2C%20strategy.getOutputFilePath()%2C%20Config%2C%20printf)%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22starter.js%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22XRJ6W%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "starter.js",
+        "mode": "plain",
+        "code": "    const outputStrategyAutoRegister = new OutputStrategyAutoRegister()\n    outputStrategyAutoRegister.autoRegisterAllStrategies()\n    allFindings = resultManager.getFindings()\n    for (const outputStrategyId in allFindings) {\n      const strategy = outputStrategyAutoRegister.getStrategy(outputStrategyId)\n      if (strategy && typeof strategy.outputFindings === 'function') {\n        strategy.outputFindings(resultManager, strategy.getOutputFilePath(), Config, printf)\n      }\n    }",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "starter.js",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "XRJ6W",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22triggerAtFunctionCallBefore(analyzer%3A%20any%2C%20scope%3A%20any%2C%20node%3A%20any%2C%20state%3A%20any%2C%20info%3A%20any)%20%7B%5Cn%20%20const%20%7B%20fclos%2C%20argvalues%20%7D%20%3D%20info%20%2F%2F%201.%20%E8%8E%B7%E5%8F%96%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%5Cn%20%20%5Cn%20%20const%20functionName%20%3D%20fclos%3F.ast%3F.id%3F.name%5Cn%20%20%5Cn%20%20%2F%2F%202.%20%E6%A3%80%E6%9F%A5%E6%9D%A1%E4%BB%B6%5Cn%20%20if%20(isTargetFunction(functionName))%20%7B%5Cn%20%20%20%20%2F%2F%203.%20%E6%89%A7%E8%A1%8C%E6%A3%80%E6%9F%A5%E9%80%BB%E8%BE%91%5Cn%20%20%20%20const%20finding%20%3D%20this.checkFunction(node%2C%20argvalues)%5Cn%20%20%20%20%5Cn%20%20%20%20%2F%2F%204.%20%E8%AE%B0%E5%BD%95%E7%BB%93%E6%9E%9C%5Cn%20%20%20%20if%20(finding)%20%7B%5Cn%20%20%20%20%20%20this.resultManager.newFinding(finding%2C%20'output_strategy_id')%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22customStyle%22%3A%5B%5D%2C%22id%22%3A%22s8u7w%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "triggerAtFunctionCallBefore(analyzer: any, scope: any, node: any, state: any, info: any) {\n  const { fclos, argvalues } = info // 1. 获取相关信息\n  \n  const functionName = fclos?.ast?.id?.name\n  \n  // 2. 检查条件\n  if (isTargetFunction(functionName)) {\n    // 3. 执行检查逻辑\n    const finding = this.checkFunction(node, argvalues)\n    \n    // 4. 记录结果\n    if (finding) {\n      this.resultManager.newFinding(finding, 'output_strategy_id')\n    }\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "customStyle": [],
+        "id": "s8u7w"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22typescript%22%2C%22code%22%3A%22class%20MyOutputStrategy%20extends%20OutputStrategy%20%7B%5Cn%20%20static%20outputStrategyId%20%3D%20'my_output'%5Cn%20%20%5Cn%20%20outputFindings(resultManager%3A%20any%2C%20outputFilePath%3A%20string%2C%20config%3A%20any%2C%20printf%3A%20any)%20%7B%5Cn%20%20%20%20%2F%2F%20%E8%BE%93%E5%87%BA%E9%80%BB%E8%BE%91%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22okDzr%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "typescript",
+        "code": "class MyOutputStrategy extends OutputStrategy {\n  static outputStrategyId = 'my_output'\n  \n  outputFindings(resultManager: any, outputFilePath: string, config: any, printf: any) {\n    // 输出逻辑\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "okDzr"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20%5C%22checkerId%5C%22%3A%20%5C%22my_checker_id%5C%22%2C%5Cn%20%20%5C%22checkerPath%5C%22%3A%20%5C%22checker%2Fmy-checker.ts%5C%22%2C%5Cn%20%20%5C%22description%5C%22%3A%20%5C%22My%20custom%20checker%5C%22%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22JwSJV%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  \"checkerId\": \"my_checker_id\",\n  \"checkerPath\": \"checker/my-checker.ts\",\n  \"description\": \"My custom checker\"\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "JwSJV"
+      }
+    }
+  ]
+}

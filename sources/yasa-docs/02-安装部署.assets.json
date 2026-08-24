@@ -1,0 +1,1209 @@
+{
+  "links": [
+    "https://github.com/antgroup/YASA-Engine/releases",
+    "https://github.com/antgroup/YASA-UAST/releases",
+    "https://golang.org/dl/",
+    "https://www.npmjs.com/package/@ant-yasa/uast-spec"
+  ],
+  "images": [],
+  "cards": [
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22pQiDp%22%7D",
+      "decoded_value": {
+        "id": "pQiDp"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%E7%9B%AE%E5%89%8D%E5%BC%80%E6%BA%90%E5%87%BA%E6%9D%A5%E7%9A%84YASA%E5%8C%85%E6%8B%AC%5CnYASA-Engine%E4%B8%8EYASA-UAST%5Cn%5Cn%E6%82%A8%E5%8F%AF%E4%BB%A5%EF%BC%9A%5Cn1.%20%E8%8E%B7%E5%8F%96%20YASA-Engine%20%E5%8F%91%E5%B8%83%E5%8C%85%EF%BC%8C%E5%8C%85%E5%90%AB%E4%BA%86YASA-Engine%E4%B8%8EYASA-UAST%E7%9A%84RELEASE%E4%BA%8C%E8%BF%9B%E5%88%B6%5Cn2.%20%E8%8E%B7%E5%8F%96%E6%BA%90%E7%A0%81%E8%87%AA%E4%B8%BB%E6%9E%84%E5%BB%BA%5Cn%20%202.1%20%E8%8E%B7%E5%8F%96%20YASA-Engine%20%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E4%B8%BB%E6%9E%84%E5%BB%BAYASA-Engine%E4%BA%8C%E8%BF%9B%E5%88%B6%5Cn%20%202.2%20%E8%8E%B7%E5%8F%96%20YASA-UAST%20%E6%BA%90%E7%A0%81%EF%BC%8C%E6%9E%84%E5%BB%BA%20uast4go%E3%80%81uast4py%20%E4%BA%8C%E8%BF%9B%E5%88%B6%2F%E5%8F%91%E5%B8%83uast-java-js%20npm%E5%8C%85%5Cn%20%202.3%20%E5%B0%86%E4%B8%A4%E8%80%85%E7%BB%84%E5%90%88%E6%88%90%E4%B8%80%E4%B8%AA%E8%BF%90%E8%A1%8C%E7%9B%AE%E5%BD%95%5Cn%20%202.4%20%E8%B0%83%E7%94%A8%20YASA-Engine%20%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Y77g2%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "目前开源出来的YASA包括\nYASA-Engine与YASA-UAST\n\n您可以：\n1. 获取 YASA-Engine 发布包，包含了YASA-Engine与YASA-UAST的RELEASE二进制\n2. 获取源码自主构建\n  2.1 获取 YASA-Engine 源码，自主构建YASA-Engine二进制\n  2.2 获取 YASA-UAST 源码，构建 uast4go、uast4py 二进制/发布uast-java-js npm包\n  2.3 将两者组合成一个运行目录\n  2.4 调用 YASA-Engine 进行测试",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Y77g2",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22RG1sv%22%7D",
+      "decoded_value": {
+        "id": "RG1sv"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22wget%20%20https%3A%2F%2Fgithub.com%2Fantgroup%2FYASA-Engine%2Freleases%2Fdownload%2F%7B%E7%89%88%E6%9C%AC%E5%8F%B7%7D%2Fyasa-linux-x64.zip%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22OVC7a%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "wget  https://github.com/antgroup/YASA-Engine/releases/download/{版本号}/yasa-linux-x64.zip",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "OVC7a",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22unzip%20yasa-linux-x64.zip%20-d%20yasa-bundle%5Cncd%20yasa-bundle%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22JcUQ3%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "unzip yasa-linux-x64.zip -d yasa-bundle\ncd yasa-bundle",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "JcUQ3",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22ls%20-l%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22PSdqT%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "ls -l",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "PSdqT",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22yasa-engine-linux-x64%20%20%20%20%23%20%E4%B8%BB%E7%A8%8B%E5%BA%8F%5Cnnode_modules%2F%20%20%20%20%20%20%20%20%20%20%20%20%23%20%E5%86%85%E7%BD%AE%20JS%20%E4%BE%9D%E8%B5%96%5Cnuast4go-linux-amd64%20%20%20%20%20%20%23%20%E5%8F%AF%E9%80%89%EF%BC%9AGo%20%E8%A7%A3%E6%9E%90%E5%99%A8%5Cnuast4py-linux-amd64%20%20%20%20%20%20%23%20%E5%8F%AF%E9%80%89%EF%BC%9APython%20%E8%A7%A3%E6%9E%90%E5%99%A8%5Cnsha256sum.txt%20%20%20%20%20%20%20%20%20%20%20%20%23%20%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22RbYZQ%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "yasa-engine-linux-x64    # 主程序\nnode_modules/            # 内置 JS 依赖\nuast4go-linux-amd64      # 可选：Go 解析器\nuast4py-linux-amd64      # 可选：Python 解析器\nsha256sum.txt            # 校验文件",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "RbYZQ",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22chmod%20%2Bx%20yasa-engine-*%20uast4go-*%20uast4py-*%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22BFzD5%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "chmod +x yasa-engine-* uast4go-* uast4py-*",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "BFzD5",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22OqYn5%22%7D",
+      "decoded_value": {
+        "id": "OqYn5"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22git%20clone%20https%3A%2F%2Fgithub.com%2Fantgroup%2FYASA-Engine.git%5Cncd%20YASA-Engine%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22MSWGb%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "git clone https://github.com/antgroup/YASA-Engine.git\ncd YASA-Engine",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "MSWGb",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20install%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22yLFNf%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm install",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "yLFNf",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npx%20tsc%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Ccvki%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npx tsc",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Ccvki",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npx%20pkg%20.%20--options%20max-old-space-size%3D13312%20--target%20node18-linux-x64%20--output%20dist%2Fyasa-engine-linux-x64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22hZXmv%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npx pkg . --options max-old-space-size=13312 --target node18-linux-x64 --output dist/yasa-engine-linux-x64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "hZXmv",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npx%20pkg%20.%20--options%20max-old-space-size%3D13312%20--target%20node18-macos-x64%20--output%20dist%2Fyasa-engine-macos-x64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22ErLzn%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npx pkg . --options max-old-space-size=13312 --target node18-macos-x64 --output dist/yasa-engine-macos-x64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "ErLzn",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npx%20pkg%20.%20--options%20max-old-space-size%3D13312%20--target%20node18-macos-arm64%20--output%20dist%2Fyasa-engine-macos-arm64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22GlBdY%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npx pkg . --options max-old-space-size=13312 --target node18-macos-arm64 --output dist/yasa-engine-macos-arm64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "GlBdY",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22mkdir%20my-release-bundle%5Cncp%20dist%2Fyasa-engine-linux-x64%20my-release-bundle%2F%5Cncp%20-r%20node_modules%20my-release-bundle%2F%5Cn%5Cn%23%20%E5%A4%8D%E5%88%B6%E4%BD%A0%E4%B9%8B%E5%89%8D%E6%9E%84%E5%BB%BA%E5%A5%BD%E7%9A%84%20UAST%20%E4%BA%8C%E8%BF%9B%E5%88%B6%5Cncp%20..%2FYASA-UAST%2Fparser-Go%2Fdist%2Fuast4go-linux-amd64%20my-release-bundle%2F%5Cncp%20..%2FYASA-UAST%2Fparser-Python%2Fdist%2Fuast4py-linux-amd64%20my-release-bundle%2F%5Cn%5Cn%23%20%E7%94%9F%E6%88%90%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6%5Cn(%5Cn%20%20cd%20my-release-bundle%5Cn%20%20%3E%20sha256sum.txt%5Cn%20%20for%20f%20in%20*%3B%20do%5Cn%20%20%20%20if%20%5B%20-f%20%5C%22%24f%5C%22%20%5D%3B%20then%5Cn%20%20%20%20%20%20sha256sum%20%5C%22%24f%5C%22%20%3E%3E%20sha256sum.txt%5Cn%20%20%20%20fi%5Cn%20%20done%5Cn)%5Cn%5Cn%23%20%E6%89%93%E5%8C%85%5Cnzip%20-qr%20yasa-custom-linux-x64.zip%20my-release-bundle%2F%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22cGzml%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "mkdir my-release-bundle\ncp dist/yasa-engine-linux-x64 my-release-bundle/\ncp -r node_modules my-release-bundle/\n\n# 复制你之前构建好的 UAST 二进制\ncp ../YASA-UAST/parser-Go/dist/uast4go-linux-amd64 my-release-bundle/\ncp ../YASA-UAST/parser-Python/dist/uast4py-linux-amd64 my-release-bundle/\n\n# 生成校验文件\n(\n  cd my-release-bundle\n  > sha256sum.txt\n  for f in *; do\n    if [ -f \"$f\" ]; then\n      sha256sum \"$f\" >> sha256sum.txt\n    fi\n  done\n)\n\n# 打包\nzip -qr yasa-custom-linux-x64.zip my-release-bundle/",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "cGzml",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22a0w9X%22%7D",
+      "decoded_value": {
+        "id": "a0w9X"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22wget%20https%3A%2F%2Fgithub.com%2Fantgroup%2FYASA-UAST%2Freleases%2Fdownload%2F%E7%89%88%E6%9C%AC%E5%8F%B7%2Fuast4go-linux-amd64%5Cnwget%20https%3A%2F%2Fgithub.com%2Fantgroup%2FYASA-UAST%2Freleases%2Fdownload%2F%E7%89%88%E6%9C%AC%E5%8F%B7%2Fuast4py-linux-amd64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22J3rjC%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "wget https://github.com/antgroup/YASA-UAST/releases/download/版本号/uast4go-linux-amd64\nwget https://github.com/antgroup/YASA-UAST/releases/download/版本号/uast4py-linux-amd64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "J3rjC",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22chmod%20%2Bx%20uast4go-linux-amd64%20uast4py-linux-amd64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22IevBu%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "chmod +x uast4go-linux-amd64 uast4py-linux-amd64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "IevBu",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22Er3Ij%22%7D",
+      "decoded_value": {
+        "id": "Er3Ij"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22git%20clone%20https%3A%2F%2Fgithub.com%2Fantgroup%2FYASA-UAST.git%5Cncd%20YASA-UAST%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22MXsZl%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "git clone https://github.com/antgroup/YASA-UAST.git\ncd YASA-UAST",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "MXsZl",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22xf3Fa%22%7D",
+      "decoded_value": {
+        "id": "xf3Fa"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22cd%20parser-Go%5CnGOOS%3Dlinux%20GOARCH%3Damd64%20go%20build%20-o%20dist%2Fuast4go-linux-amd64%20.%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22RjNiy%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "cd parser-Go\nGOOS=linux GOARCH=amd64 go build -o dist/uast4go-linux-amd64 .",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "RjNiy",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22GOOS%3Ddarwin%20GOARCH%3Damd64%20go%20build%20-o%20dist%2Fuast4go-mac-amd64%20.%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Vwwjj%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "GOOS=darwin GOARCH=amd64 go build -o dist/uast4go-mac-amd64 .",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Vwwjj",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22GOOS%3Ddarwin%20GOARCH%3Darm64%20go%20build%20-o%20dist%2Fuast4go-mac-arm64%20.%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22awBMx%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "GOOS=darwin GOARCH=arm64 go build -o dist/uast4go-mac-arm64 .",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "awBMx",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22Oc6ck%22%7D",
+      "decoded_value": {
+        "id": "Oc6ck"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%23%20%E5%9C%A8%20YASA-UAST%20%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%A7%E8%A1%8C%5Cndocker%20build%20%5C%5C%5Cn%20%20--build-arg%20GOOS%3Dlinux%20%5C%5C%5Cn%20%20--build-arg%20GOARCH%3Damd64%20%5C%5C%5Cn%20%20-f%20parser-Python%2FDockerfile.linux%20%5C%5C%5Cn%20%20-t%20uast4py-linux%20.%5Cn%5Cn%23%20%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8%E6%8F%90%E5%8F%96%E4%BA%A7%E7%89%A9%5Cndocker%20create%20--name%20temp-container%20uast4py-linux%5Cnmkdir%20-p%20dist%5Cndocker%20cp%20temp-container%3A%2Fdist%2Fuast4py-linux-amd64%20dist%2Fuast4py-linux-amd64%5Cndocker%20rm%20temp-container%5Cn%5Cn%23%20%E6%B7%BB%E5%8A%A0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90%5Cnchmod%20%2Bx%20dist%2Fuast4py-linux-amd64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Y814T%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "# 在 YASA-UAST 根目录执行\ndocker build \\\n  --build-arg GOOS=linux \\\n  --build-arg GOARCH=amd64 \\\n  -f parser-Python/Dockerfile.linux \\\n  -t uast4py-linux .\n\n# 创建容器提取产物\ndocker create --name temp-container uast4py-linux\nmkdir -p dist\ndocker cp temp-container:/dist/uast4py-linux-amd64 dist/uast4py-linux-amd64\ndocker rm temp-container\n\n# 添加可执行权限\nchmod +x dist/uast4py-linux-amd64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Y814T",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22cd%20parser-Python%5Cnpython%20-m%20venv%20.venv%5Cnsource%20.venv%2Fbin%2Factivate%5Cn%5Cnpip%20install%20-r%20requirements.txt%5Cnpip%20install%20pyinstaller%5Cn%5Cnpyinstaller%20--onefile%20uast%2Fbuilder.py%5Cn%5Cn%23%20%E9%87%8D%E5%91%BD%E5%90%8D%E5%B9%B6%E6%95%B4%E7%90%86%5Cnmv%20dist%2Fbuilder%20dist%2Fuast4py-mac-amd64%5Cnchmod%20%2Bx%20dist%2Fuast4py-mac-amd64%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22aLVmf%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "cd parser-Python\npython -m venv .venv\nsource .venv/bin/activate\n\npip install -r requirements.txt\npip install pyinstaller\n\npyinstaller --onefile uast/builder.py\n\n# 重命名并整理\nmv dist/builder dist/uast4py-mac-amd64\nchmod +x dist/uast4py-mac-amd64",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "aLVmf",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22rOr1P%22%7D",
+      "decoded_value": {
+        "id": "rOr1P"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22parser-Go%2Fdist%2F%5Cn%20%20%E2%94%94%E2%94%80%E2%94%80%20uast4go-%7Bplatform%7D-%7Barch%7D%5Cn%5Cnparser-Python%2Fdist%2F%5Cn%20%20%E2%94%94%E2%94%80%E2%94%80%20uast4py-%7Bplatform%7D-%7Barch%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22h82vN%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "parser-Go/dist/\n  └── uast4go-{platform}-{arch}\n\nparser-Python/dist/\n  └── uast4py-{platform}-{arch}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "__spacing": "both",
+        "id": "h82vN",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22oST3c%22%7D",
+      "decoded_value": {
+        "id": "oST3c"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%E8%BF%9B%E5%85%A5spec%E7%9B%AE%E5%BD%95%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22cd%20specification%2F%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%E8%BF%9B%E5%85%A5spec%E7%9B%AE%E5%BD%95%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22fontSize%22%3A14%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22ZZmXZ%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "进入spec目录",
+        "mode": "plain",
+        "code": "cd specification/",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "进入spec目录",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "fontSize": 14,
+        "__spacing": "both",
+        "id": "ZZmXZ",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20login%20--registry%3Dhttps%3A%2F%2Fregistry.npmjs.org%5Cn%23%20%E6%8C%89%E6%8F%90%E7%A4%BA%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E3%80%81%E5%AF%86%E7%A0%81%E3%80%81%E9%82%AE%E7%AE%B1%EF%BC%88%E9%9C%80%E4%B8%BA%20NPM%20%E5%AE%98%E6%96%B9%E8%B4%A6%E5%8F%B7%EF%BC%89%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22DCa7G%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm login --registry=https://registry.npmjs.org\n# 按提示输入用户名、密码、邮箱（需为 NPM 官方账号）",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "DCa7G",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22VERSION%3D%5C%221.2.3%5C%22%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22TUoHc%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "VERSION=\"1.2.3\"",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "TUoHc",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20view%20%40ant-yasa%2Fuast-spec%40%24VERSION%20version%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22iKdTJ%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm view @ant-yasa/uast-spec@$VERSION version",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "iKdTJ",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20install%5Cnnpm%20run%20build%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22s11id%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm install\nnpm run build",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "s11id",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22dist%2Findex.js%5Cndist%2Findex.d.ts%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22n5Bvd%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "dist/index.js\ndist/index.d.ts",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "__spacing": "both",
+        "id": "n5Bvd",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20pack%20--dry-run%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22qwduk%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm pack --dry-run",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "qwduk",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22dist%2Findex.js%5Cndist%2Findex.d.ts%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22U2aW8%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "dist/index.js\ndist/index.d.ts",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "__spacing": "both",
+        "id": "U2aW8",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20version%20%24VERSION%20--no-git-tag-version%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22o0nw3%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm version $VERSION --no-git-tag-version",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "o0nw3",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%23%20%E5%8F%91%E5%B8%83%E6%AD%A3%E5%BC%8F%E7%89%88%5Cnnpm%20publish%20--tag%20latest%5Cn%5Cn%23%20%E6%88%96%E5%8F%91%E5%B8%83%20beta%20%E7%89%88%5Cnnpm%20publish%20--tag%20beta%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Wz8LO%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "# 发布正式版\nnpm publish --tag latest\n\n# 或发布 beta 版\nnpm publish --tag beta",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Wz8LO",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "hr",
+      "value": "data:%7B%22id%22%3A%22NWleM%22%7D",
+      "decoded_value": {
+        "id": "NWleM"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22cd%20parser-Java-Js%2F%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22YRK8Z%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "cd parser-Java-Js/",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "YRK8Z",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20view%20%40ant-yasa%2Fuast-spec%40%24VERSION%20version%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22kvS1i%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm view @ant-yasa/uast-spec@$VERSION version",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "kvS1i",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22rm%20-rf%20node_modules%20package-lock.json%5Cnnpm%20install%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22PWApR%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "rm -rf node_modules package-lock.json\nnpm install",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "PWApR",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20install%20%40ant-yasa%2Fuast-spec%40%24VERSION%20--no-save%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22k9ivz%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm install @ant-yasa/uast-spec@$VERSION --no-save",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "k9ivz",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20run%20build%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22RLTsz%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm run build",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "RLTsz",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22dist%2Fsrc%2Findex.js%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22lZ5eN%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "dist/src/index.js",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "__spacing": "both",
+        "id": "lZ5eN",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22npm%20version%20%24VERSION%20--no-git-tag-version%5Cnnpm%20publish%20--tag%20latest%20%20%20%20%23%20%E6%88%96%20--tag%20beta%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Uvx4d%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "npm version $VERSION --no-git-tag-version\nnpm publish --tag latest    # 或 --tag beta",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "Uvx4d",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22%24%20.%2Fyasa-engine-macos-arm64%20--help%5Cnmain%20file%3A%2Fsnapshot%2FYASA-Engine%2Fsrc%2Fmain.js%5CnUsage%3A%20program%20%5Boptions%5D%20%5Bpaths...%5D%5Cn%5CnOptions%3A%5Cn%20%20--sourcePath%20%3Cdir%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E6%BA%90%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%EF%BC%88%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%EF%BC%89%5Cn%20%20--language%20%3Clang%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E8%AF%AD%E8%A8%80%EF%BC%88%E6%94%AF%E6%8C%81%3A%20javascript%2Ftypescript%2Fgolang%2Fpython%EF%BC%89%5Cn%20%20--analyzer%20%3Canalyzer%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E6%A1%86%E6%9E%B6%5Cn%20%20--report%20%3Cdir%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E6%8A%A5%E5%91%8A%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95%E6%88%96%E6%96%87%E4%BB%B6%5Cn%20%20--ruleConfigFile%20%3Cfile%3E%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E8%A7%84%E5%88%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%5Cn%20%20--entrypointMode%20%3Cmode%3E%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E5%85%A5%E5%8F%A3%E7%82%B9%E6%A8%A1%E5%BC%8F%EF%BC%88BOTH%2FSELF_COLLECT%2FONLY_CUSTOM%EF%BC%89%5Cn%20%20--checkerIds%20%3Clist%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E6%A3%80%E6%9F%A5%E5%99%A8id%E5%88%97%E8%A1%A8%EF%BC%88%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%EF%BC%89%5Cn%20%20--checkerPackIds%20%3Clist%3E%20%20%20%20%20%20%20%20%20%20%20%20%E6%8C%87%E5%AE%9A%E6%A3%80%E6%9F%A5%E5%99%A8%E7%BB%84id%E5%88%97%E8%A1%A8%EF%BC%88%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%EF%BC%89%5Cn%20%20--dumpAST%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dump%E5%8D%95%E6%96%87%E4%BB%B6AST%5Cn%20%20--uastSDKPath%20%3Cdir%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20UAST%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%5Cn%20%20--dumpAllCG%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E8%BE%93%E5%87%BA%E5%AE%8C%E6%95%B4%E8%B0%83%E7%94%A8%E5%9B%BE%E8%BE%93%E5%87%BA%5Cn%20%20--configFilePath%20%3CconfigFilePath%3E%20%20%E6%8C%87%E5%AE%9Aconfig%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%EF%BC%88JSON%E6%A0%BC%E5%BC%8F%EF%BC%89%5Cn%20%20-h%2C%20--help%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20display%20help%20for%20command%5Cn%20%20%5CnUsage%20example%3A%20.%2Fyasa-sdk%20%5Boption1%20options2%20...%5D%20source_path%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22default%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22gie8P%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "$ ./yasa-engine-macos-arm64 --help\nmain file:/snapshot/YASA-Engine/src/main.js\nUsage: program [options] [paths...]\n\nOptions:\n  --sourcePath <dir>                指定源代码目录（支持文件或目录）\n  --language <lang>                  指定语言（支持: javascript/typescript/golang/python）\n  --analyzer <analyzer>              指定框架\n  --report <dir>                     指定报告输出目录或文件\n  --ruleConfigFile <file>            指定规则配置文件\n  --entrypointMode <mode>            指定入口点模式（BOTH/SELF_COLLECT/ONLY_CUSTOM）\n  --checkerIds <list>                指定检查器id列表（逗号分隔）\n  --checkerPackIds <list>            指定检查器组id列表（逗号分隔）\n  --dumpAST                          dump单文件AST\n  --uastSDKPath <dir>                UAST二进制文件路径\n  --dumpAllCG                        输出完整调用图输出\n  --configFilePath <configFilePath>  指定config配置文件路径（JSON格式）\n  -h, --help                         display help for command\n  \nUsage example: ./yasa-sdk [option1 options2 ...] source_path",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "default",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "gie8P",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    }
+  ]
+}

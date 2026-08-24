@@ -1,0 +1,1362 @@
+{
+  "links": [
+    "https://www.yuque.com/u22090306/bebf6g/as70rglyr24h3tqc"
+  ],
+  "images": [],
+  "cards": [
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22web%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E4%B8%BE%E4%BE%8B%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22%2F%2F%20%E5%9C%A8%E9%A1%B5%E9%9D%A2DOM%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E6%97%B6%E8%BF%9B%E8%A1%8C%E5%88%9D%E5%A7%8B%E5%8C%96%5Cndocument.addEventListener('DOMContentLoaded'%2C%20function()%20%7B%5Cn%20%20initPageComponents()%3B%5Cn%7D)%3B%5Cn%2F%2F%20%E5%BD%93%E6%9F%90%E7%BB%84%E4%BB%B6%E8%8E%B7%E5%8F%96%E7%84%A6%E7%82%B9%E6%97%B6%EF%BC%8C%E5%BC%B9%E5%87%BA%E6%8F%90%E7%A4%BA%5Cndocument.getElementById(%5C%22xxx%5C%22).addEventListener('focus'%2C%20function()%20%7B%5Cn%20%20showHelpTips()%3B%5Cn%7D)%3B%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22web%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E4%B8%BE%E4%BE%8B%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%7B%22from%22%3A29%2C%22to%22%3A45%2C%22bold%22%3Atrue%7D%2C%7B%22from%22%3A156%2C%22to%22%3A172%2C%22bold%22%3Atrue%7D%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22Dn0YH%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "web事件监听举例",
+        "mode": "javascript",
+        "code": "// 在页面DOM加载完成时进行初始化\ndocument.addEventListener('DOMContentLoaded', function() {\n  initPageComponents();\n});\n// 当某组件获取焦点时，弹出提示\ndocument.getElementById(\"xxx\").addEventListener('focus', function() {\n  showHelpTips();\n});",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "web事件监听举例",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [
+          {
+            "from": 29,
+            "to": 45,
+            "bold": true
+          },
+          {
+            "from": 156,
+            "to": 172,
+            "bold": true
+          }
+        ],
+        "__spacing": "both",
+        "id": "Dn0YH",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22YASA%E2%80%94%E2%80%94checker-manager%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22%2F%2F%20%E4%BA%8B%E4%BB%B6%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%5CncheckAtFunctionCallBefore(analyzer%2C%20scope%2C%20node%2C%20state%2C%20info)%20%2F%2F%E5%BD%93%E5%88%86%E6%9E%90%E5%88%B0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%89%8D%5CncheckAtAssignment(analyzer%2C%20scope%2C%20node%2C%20state%2C%20info)%20%2F%2F%E5%BD%93%E5%88%86%E6%9E%90%E5%88%B0%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5%5CncheckAtEndOfAnalyze(analyzer%2C%20scope%2C%20node%2C%20state%2C%20info)%20%2F%2F%E5%BD%93%E6%AD%A4%E8%BD%AE%E5%88%86%E6%9E%90%E7%BB%93%E6%9D%9F%5Cn...%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22YASA%E2%80%94%E2%80%94checker-manager%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22BcgYo%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "YASA——checker-manager事件触发",
+        "mode": "javascript",
+        "code": "// 事件钩子函数\ncheckAtFunctionCallBefore(analyzer, scope, node, state, info) //当分析到函数调用前\ncheckAtAssignment(analyzer, scope, node, state, info) //当分析到赋值语句\ncheckAtEndOfAnalyze(analyzer, scope, node, state, info) //当此轮分析结束\n...",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "YASA——checker-manager事件触发",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "BcgYo",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22plain%22%2C%22code%22%3A%22Checker%E6%B3%A8%E5%86%8C%5Cn%20%20%20%20%E2%86%93%5Cn%E8%A7%84%E5%88%99%E9%85%8D%E7%BD%AE%E5%8A%A0%E8%BD%BD%5Cn%20%20%20%20%E2%86%93%5Cn%E5%88%86%E6%9E%90%E5%BC%80%E5%A7%8B%20%E2%86%92%20triggerAtStartOfAnalyze%5Cn%20%20%20%20%E2%86%93%5Cn%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90%20%E2%86%92%20triggerAtCompileUnit%5Cn%20%20%20%20%E2%86%93%5Cn%E8%8A%82%E7%82%B9%E5%88%86%E6%9E%90%20%E2%86%92%20triggerAtXXX%20(%E5%90%84%E7%A7%8D%E8%A7%A6%E5%8F%91%E7%82%B9)%5Cn%20%20%20%20%E2%86%93%5Cn%E5%88%86%E6%9E%90%E7%BB%93%E6%9D%9F%20%E2%86%92%20triggerAtEndOfAnalyze%5Cn%20%20%20%20%E2%86%93%5Cn%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Atrue%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22id%22%3A%22xa02W%22%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "plain",
+        "code": "Checker注册\n    ↓\n规则配置加载\n    ↓\n分析开始 → triggerAtStartOfAnalyze\n    ↓\n文件分析 → triggerAtCompileUnit\n    ↓\n节点分析 → triggerAtXXX (各种触发点)\n    ↓\n分析结束 → triggerAtEndOfAnalyze\n    ↓\n结果输出",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": true,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "id": "xa02W"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22YASA%E2%80%94%E2%80%94checker-manager%E4%B8%BA%E6%AF%8F%E4%B8%AA%E4%BA%8B%E4%BB%B6%E6%B3%A8%E5%86%8Cchecker%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22%2F%2F%20YASA%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%EF%BC%8C%E9%81%8D%E5%8E%86%E6%89%80%E6%9C%89checker%E7%B1%BB%5CndoRegister(CheckerClass%2C%20self%2C%20resultManager%2C%20desc)%20%7B%5Cn%20%20const%20checker%20%3D%20new%20CheckerClass(resultManager)%5Cn%20%20checker.desc%20%3D%20desc%5Cn%20%20const%20checkerId%20%3D%20checker.getCheckerId()%5Cn%20%20if%20(!checkerId)%20%7B%5Cn%20%20%20%20logger.warn(%60Checker--%20%24%7Bchecker.constructor.name%7D%20does%20not%20set%20checkerId.%20Ignore!!%60)%5Cn%20%20%20%20return%5Cn%20%20%7D%5Cn%20%20const%20checkerName%20%3D%20checker.getCheckerId()%5Cn%5Cn%20%20if%20(self.registered_checkers.hasOwnProperty(checkerName))%20%7B%5Cn%20%20%20%20logger.warn(%60%24%7BcheckerName%7D%20is%20already%20registered%2C%20new%20one%20will%20override%20the%20previous%60)%5Cn%20%20%7D%5Cn%20%20self.registered_checkers%5BcheckerName%5D%20%3D%20checker%5Cn%5Cn%20%20%2F%2F%20%E5%A6%82%E6%9E%9Cchecker%E5%AE%9E%E7%8E%B0%E4%BA%86%E6%9F%90%E4%B8%AA%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%EF%BC%8C%E5%B0%B1%E5%B0%86%E8%AF%A5checker%E6%B3%A8%E5%86%8C%E5%88%B0%E8%AF%A5%E4%BA%8B%E4%BB%B6(checkpoint)%5Cn%20%20if%20(CheckerClass.prototype.triggerAtFunctionCallBefore)%20%7B%5Cn%20%20%20%20self.checkpoints.check_at_function_call_before.push(checker)%5Cn%20%20%7D%5Cn%20%20%2F%2F%20%E5%85%B6%E4%BB%96checker%E6%B3%A8%E5%86%8C%E9%80%BB%E8%BE%91%EF%BC%8C%E6%AD%A4%E5%A4%84%E7%9C%81%E7%95%A5...%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22YASA%E2%80%94%E2%80%94checker-manager%E4%B8%BA%E6%AF%8F%E4%B8%AA%E4%BA%8B%E4%BB%B6%E6%B3%A8%E5%86%8Cchecker%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%7B%22from%22%3A659%2C%22to%22%3A686%2C%22bold%22%3Atrue%7D%2C%7B%22from%22%3A694%2C%22to%22%3A754%2C%22bold%22%3Atrue%7D%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22yQdjd%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "YASA——checker-manager为每个事件注册checker",
+        "mode": "javascript",
+        "code": "// YASA初始化时，遍历所有checker类\ndoRegister(CheckerClass, self, resultManager, desc) {\n  const checker = new CheckerClass(resultManager)\n  checker.desc = desc\n  const checkerId = checker.getCheckerId()\n  if (!checkerId) {\n    logger.warn(`Checker-- ${checker.constructor.name} does not set checkerId. Ignore!!`)\n    return\n  }\n  const checkerName = checker.getCheckerId()\n\n  if (self.registered_checkers.hasOwnProperty(checkerName)) {\n    logger.warn(`${checkerName} is already registered, new one will override the previous`)\n  }\n  self.registered_checkers[checkerName] = checker\n\n  // 如果checker实现了某个事件的处理函数，就将该checker注册到该事件(checkpoint)\n  if (CheckerClass.prototype.triggerAtFunctionCallBefore) {\n    self.checkpoints.check_at_function_call_before.push(checker)\n  }\n  // 其他checker注册逻辑，此处省略...\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "YASA——checker-manager为每个事件注册checker",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [
+          {
+            "from": 659,
+            "to": 686,
+            "bold": true
+          },
+          {
+            "from": 694,
+            "to": 754,
+            "bold": true
+          }
+        ],
+        "__spacing": "both",
+        "id": "yQdjd",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "block",
+      "name": "board",
+      "value": "data:%7B%22diagramData%22%3A%7B%22head%22%3A%7B%22version%22%3A%222.0.0%22%2C%22theme%22%3A%7B%22name%22%3A%22default%22%7D%2C%22rough%22%3A%7B%22name%22%3A%22default%22%7D%7D%2C%22body%22%3A%5B%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%E6%89%AB%E6%8F%8F%E5%BC%80%E5%A7%8B%E2%80%8B%3Cbr%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22start-end%22%2C%22id%22%3A%22d6d7a548-eb8c-42ec-afff-8bb09fc83da8%22%2C%22x%22%3A-1372%2C%22y%22%3A526%2C%22width%22%3A127%2C%22height%22%3A42%2C%22zIndex%22%3A0%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%2284fd6a1f-9f80-4563-9751-cc1aae881a20%22%2C%22x%22%3A-936%2C%22y%22%3A392.5%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A433%2C%22height%22%3A108.515625%2C%22zIndex%22%3A1%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E5%8A%A0%E8%BD%BDchecker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%220283c89a-c106-4987-8173-ebfa1583f119%22%2C%22x%22%3A-913.5%2C%22y%22%3A439%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A182%2C%22height%22%3A42%2C%22zIndex%22%3A2%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E5%8A%A0%E8%BD%BDchecker-pack%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%224def904e-2a22-4da9-8813-c140f8a50c28%22%2C%22x%22%3A-709.5%2C%22y%22%3A439%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A182%2C%22height%22%3A42%2C%22rotate%22%3A0%2C%22zIndex%22%3A3%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E8%AF%AD%E8%A8%80%E5%8F%8A%E6%A1%86%E6%9E%B6%E8%AF%86%E5%88%AB%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22d1cb1d1c-b11e-44d6-82a8-f0ab061847ed%22%2C%22x%22%3A-1372%2C%22y%22%3A603%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A127%2C%22height%22%3A57%2C%22zIndex%22%3A4%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E8%AF%AD%E8%A8%801-Analyzer%E5%88%9D%E5%A7%8B%E5%8C%96%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22df14d623-414f-4595-8705-d7e24c1eaf1e%22%2C%22x%22%3A-1186%2C%22y%22%3A343%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A167%2C%22height%22%3A57%2C%22zIndex%22%3A5%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E8%AF%AD%E8%A8%80N-Analyzer%E6%89%A7%E8%A1%8C%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%2205110a8c-1ce5-4a39-b4ed-924ae8e80eff%22%2C%22x%22%3A-1186%2C%22y%22%3A744%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A167%2C%22height%22%3A57%2C%22rotate%22%3A0%2C%22zIndex%22%3A6%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22c65d8ea9-b98e-4c90-83a0-63ddc402c254%22%2C%22x%22%3A-936%2C%22y%22%3A635.484375%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A433%2C%22height%22%3A108.515625%2C%22zIndex%22%3A7%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E5%8D%B8%E8%BD%BD%E8%AF%AD%E8%A8%80checker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22ef4fdb2a-7686-40c4-9941-c11f16640de9%22%2C%22x%22%3A-913.5%2C%22y%22%3A681.984375%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A182%2C%22height%22%3A42%2C%22zIndex%22%3A8%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22CheckerManager.constructor%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%2257bb6bda-7027-4209-8df2-03b7fbc5e190%22%2C%22x%22%3A-818.5%2C%22y%22%3A400%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22zIndex%22%3A9%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22CheckManager.checkAtEndOfAnalyze%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%222bd83d29-83d1-412c-9e61-fbd0b51b2b11%22%2C%22x%22%3A-846%2C%22y%22%3A642.484375%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22zIndex%22%3A10%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%E2%80%8B%E6%89%AB%E6%8F%8F%E7%BB%93%E6%9D%9F%3Cbr%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22start-end%22%2C%22id%22%3A%2237685055-dc5d-4af7-9c60-bccec4c2ec39%22%2C%22x%22%3A-1372%2C%22y%22%3A696%2C%22width%22%3A127%2C%22height%22%3A42%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22rotate%22%3A0%2C%22zIndex%22%3A11%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22d1cb1d1c-b11e-44d6-82a8-f0ab061847ed%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22d6d7a548-eb8c-42ec-afff-8bb09fc83da8%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22543f1e89-e443-4fcc-bdf3-b57bd6ded5ae%22%2C%22zIndex%22%3A12%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2237685055-dc5d-4af7-9c60-bccec4c2ec39%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22d1cb1d1c-b11e-44d6-82a8-f0ab061847ed%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%226668dea6-27dd-4ef6-af54-1bb4174b6e2b%22%2C%22zIndex%22%3A13%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%E8%AF%AD%E8%A8%801%20Analyzer%E7%BB%93%E6%9D%9F%3Cbr%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22start-end%22%2C%22id%22%3A%22129680a7-5d20-4862-8b46-409eb4b81c0c%22%2C%22x%22%3A-1186%2C%22y%22%3A571%2C%22width%22%3A167%2C%22height%22%3A42%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22rotate%22%3A0%2C%22zIndex%22%3A14%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2284fd6a1f-9f80-4563-9751-cc1aae881a20%22%2C%22connection%22%3A%5B0%2C0.5%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22df14d623-414f-4595-8705-d7e24c1eaf1e%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22dc5aa736-b27a-49e1-898b-3a822ed19bec%22%2C%22zIndex%22%3A15%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22df14d623-414f-4595-8705-d7e24c1eaf1e%22%2C%22connection%22%3A%5B0%2C0.5%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22d1cb1d1c-b11e-44d6-82a8-f0ab061847ed%22%2C%22connection%22%3A%5B1%2C0.5%5D%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%225cad0884-cd90-4282-8303-b37c294c921d%22%2C%22zIndex%22%3A16%2C%22controlPoints%22%3A%5B%5B-1211%2C501.5%2C%22H%22%5D%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22ac7160cf-2199-41e5-900e-9b205719d640%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22df14d623-414f-4595-8705-d7e24c1eaf1e%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22821af9c1-3a60-4477-9950-16526cfbf4b0%22%2C%22zIndex%22%3A17%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%E8%AF%AD%E8%A8%80N%20Analyzer%E7%BB%93%E6%9D%9F%3Cbr%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22start-end%22%2C%22id%22%3A%229758ef77-d47b-4e03-ad1f-cd92701c62c7%22%2C%22x%22%3A-1186%2C%22y%22%3A841.015625%2C%22width%22%3A167%2C%22height%22%3A42%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22rotate%22%3A0%2C%22zIndex%22%3A18%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2205110a8c-1ce5-4a39-b4ed-924ae8e80eff%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%22f04a0256-fa16-4d73-9cce-63cc76b02b62%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2263313b59-edca-4af1-8e16-a3e18ebec856%22%2C%22zIndex%22%3A19%2C%22opacity%22%3A1%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%229758ef77-d47b-4e03-ad1f-cd92701c62c7%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%2205110a8c-1ce5-4a39-b4ed-924ae8e80eff%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22fb64e063-d5dd-4e59-9713-45f17ca66b62%22%2C%22zIndex%22%3A20%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2284fd6a1f-9f80-4563-9751-cc1aae881a20%22%2C%22connection%22%3A%5B0%2C0.5%5D%7D%2C%22source%22%3A%7B%22id%22%3A%2205110a8c-1ce5-4a39-b4ed-924ae8e80eff%22%2C%22connection%22%3A%5B1%2C0.5%5D%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2248d6741d-05f5-4323-95e9-68576ba29632%22%2C%22zIndex%22%3A21%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22c65d8ea9-b98e-4c90-83a0-63ddc402c254%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22source%22%3A%7B%22id%22%3A%22129680a7-5d20-4862-8b46-409eb4b81c0c%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22c60db3e0-d605-4504-b636-f194d5a10865%22%2C%22zIndex%22%3A22%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22c65d8ea9-b98e-4c90-83a0-63ddc402c254%22%2C%22connection%22%3A%5B0.5000360854503464%2C1%5D%7D%2C%22source%22%3A%7B%22id%22%3A%229758ef77-d47b-4e03-ad1f-cd92701c62c7%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22a5ff10e1-c857-4d55-9fe6-4f184b64feee%22%2C%22zIndex%22%3A23%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B-1102.5%2C650.0411136672624%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22d1cb1d1c-b11e-44d6-82a8-f0ab061847ed%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%2C%22style%22%3A%22dash%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22c225dcd1-73b9-435c-a92d-44e989aa4f15%22%2C%22zIndex%22%3A24%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E8%AF%AD%E8%A8%801-Analyzer%E6%89%A7%E8%A1%8C%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22ac7160cf-2199-41e5-900e-9b205719d640%22%2C%22x%22%3A-1186%2C%22y%22%3A457%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A167%2C%22height%22%3A57%2C%22rotate%22%3A0%2C%22zIndex%22%3A25%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22129680a7-5d20-4862-8b46-409eb4b81c0c%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22ac7160cf-2199-41e5-900e-9b205719d640%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22ecdfff99-9b22-4766-9b93-46048a87598a%22%2C%22zIndex%22%3A26%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3B%E8%AF%AD%E8%A8%80N-Analyzer%E5%88%9D%E5%A7%8B%E5%8C%96%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22f04a0256-fa16-4d73-9cce-63cc76b02b62%22%2C%22x%22%3A-1186%2C%22y%22%3A650%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A167%2C%22height%22%3A57%2C%22rotate%22%3A0%2C%22zIndex%22%3A27%7D%5D%7D%2C%22viewportOption%22%3A%22adapt%22%2C%22viewportSetting%22%3A%7B%22zoom%22%3A0.7851624663638205%2C%22tlCanvasPoint%22%3A%5B-1477.7106058372644%2C309.8858343160375%2C0.9999999999999999%5D%2C%22width%22%3A662%2C%22height%22%3A478%7D%2C%22search%22%3A%22%E6%89%AB%E6%8F%8F%E5%BC%80%E5%A7%8B%E2%80%8B%C2%A0%C2%A0%E5%8A%A0%E8%BD%BDchecker%C2%A0%E5%8A%A0%E8%BD%BDchecker-pack%C2%A0%E8%AF%AD%E8%A8%80%E5%8F%8A%E6%A1%86%E6%9E%B6%E8%AF%86%E5%88%AB%C2%A0%E8%AF%AD%E8%A8%801-Analyzer%E5%88%9D%E5%A7%8B%E5%8C%96%C2%A0%E8%AF%AD%E8%A8%80N-Analyzer%E6%89%A7%E8%A1%8C%C2%A0%C2%A0%E5%8D%B8%E8%BD%BD%E8%AF%AD%E8%A8%80checkerCheckerManager.constructorCheckManager.checkAtEndOfAnalyze%E2%80%8B%E6%89%AB%E6%8F%8F%E7%BB%93%E6%9D%9F%E8%AF%AD%E8%A8%801%20Analyzer%E7%BB%93%E6%9D%9F%E8%AF%AD%E8%A8%80N%20Analyzer%E7%BB%93%E6%9D%9F%C2%A0%E8%AF%AD%E8%A8%801-Analyzer%E6%89%A7%E8%A1%8C%C2%A0%E8%AF%AD%E8%A8%80N-Analyzer%E5%88%9D%E5%A7%8B%E5%8C%96%22%2C%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fjpeg%2F107856586%2F1757421920782-eb0aaaaf-f220-4b08-a079-bcfe2b7ae8bf.jpeg%22%2C%22graphicsBBox%22%3A%7B%22x%22%3A-1372%2C%22y%22%3A343%2C%22width%22%3A869%2C%22height%22%3A540.015625%7D%2C%22id%22%3A%22VEugU%22%7D",
+      "decoded_value": {
+        "diagramData": {
+          "head": {
+            "version": "2.0.0",
+            "theme": {
+              "name": "default"
+            },
+            "rough": {
+              "name": "default"
+            }
+          },
+          "body": [
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">扫描开始​<br></div>",
+              "shape": "start-end",
+              "id": "d6d7a548-eb8c-42ec-afff-8bb09fc83da8",
+              "x": -1372,
+              "y": 526,
+              "width": 127,
+              "height": 42,
+              "zIndex": 0,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "84fd6a1f-9f80-4563-9751-cc1aae881a20",
+              "x": -936,
+              "y": 392.5,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 433,
+              "height": 108.515625,
+              "zIndex": 1,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;加载checker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "0283c89a-c106-4987-8173-ebfa1583f119",
+              "x": -913.5,
+              "y": 439,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 182,
+              "height": 42,
+              "zIndex": 2,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;加载checker-pack</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "4def904e-2a22-4da9-8813-c140f8a50c28",
+              "x": -709.5,
+              "y": 439,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 182,
+              "height": 42,
+              "rotate": 0,
+              "zIndex": 3
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;语言及框架识别</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "d1cb1d1c-b11e-44d6-82a8-f0ab061847ed",
+              "x": -1372,
+              "y": 603,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 127,
+              "height": 57,
+              "zIndex": 4,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;语言1-Analyzer初始化</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "df14d623-414f-4595-8705-d7e24c1eaf1e",
+              "x": -1186,
+              "y": 343,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 167,
+              "height": 57,
+              "zIndex": 5,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;语言N-Analyzer执行</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "05110a8c-1ce5-4a39-b4ed-924ae8e80eff",
+              "x": -1186,
+              "y": 744,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 167,
+              "height": 57,
+              "rotate": 0,
+              "zIndex": 6
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "c65d8ea9-b98e-4c90-83a0-63ddc402c254",
+              "x": -936,
+              "y": 635.484375,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 433,
+              "height": 108.515625,
+              "zIndex": 7,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;卸载语言checker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "ef4fdb2a-7686-40c4-9941-c11f16640de9",
+              "x": -913.5,
+              "y": 681.984375,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 182,
+              "height": 42,
+              "zIndex": 8,
+              "rotate": 0
+            },
+            {
+              "type": "text",
+              "html": "CheckerManager.constructor",
+              "shape": "text",
+              "category": "basic",
+              "id": "57bb6bda-7027-4209-8df2-03b7fbc5e190",
+              "x": -818.5,
+              "y": 400,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "zIndex": 9
+            },
+            {
+              "type": "text",
+              "html": "CheckManager.checkAtEndOfAnalyze",
+              "shape": "text",
+              "category": "basic",
+              "id": "2bd83d29-83d1-412c-9e61-fbd0b51b2b11",
+              "x": -846,
+              "y": 642.484375,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "zIndex": 10
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">​扫描结束<br></div>",
+              "shape": "start-end",
+              "id": "37685055-dc5d-4af7-9c60-bccec4c2ec39",
+              "x": -1372,
+              "y": 696,
+              "width": 127,
+              "height": 42,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "rotate": 0,
+              "zIndex": 11
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "d1cb1d1c-b11e-44d6-82a8-f0ab061847ed",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "d6d7a548-eb8c-42ec-afff-8bb09fc83da8"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "543f1e89-e443-4fcc-bdf3-b57bd6ded5ae",
+              "zIndex": 12
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "37685055-dc5d-4af7-9c60-bccec4c2ec39",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "d1cb1d1c-b11e-44d6-82a8-f0ab061847ed"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "6668dea6-27dd-4ef6-af54-1bb4174b6e2b",
+              "zIndex": 13
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">语言1 Analyzer结束<br></div>",
+              "shape": "start-end",
+              "id": "129680a7-5d20-4862-8b46-409eb4b81c0c",
+              "x": -1186,
+              "y": 571,
+              "width": 167,
+              "height": 42,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "rotate": 0,
+              "zIndex": 14
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "84fd6a1f-9f80-4563-9751-cc1aae881a20",
+                "connection": [
+                  0,
+                  0.5
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "df14d623-414f-4595-8705-d7e24c1eaf1e"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "dc5aa736-b27a-49e1-898b-3a822ed19bec",
+              "zIndex": 15,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "df14d623-414f-4595-8705-d7e24c1eaf1e",
+                "connection": [
+                  0,
+                  0.5
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "d1cb1d1c-b11e-44d6-82a8-f0ab061847ed",
+                "connection": [
+                  1,
+                  0.5
+                ]
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "5cad0884-cd90-4282-8303-b37c294c921d",
+              "zIndex": 16,
+              "controlPoints": [
+                [
+                  -1211,
+                  501.5,
+                  "H"
+                ]
+              ]
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "ac7160cf-2199-41e5-900e-9b205719d640",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "df14d623-414f-4595-8705-d7e24c1eaf1e"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "821af9c1-3a60-4477-9950-16526cfbf4b0",
+              "zIndex": 17,
+              "controlPoints": []
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">语言N Analyzer结束<br></div>",
+              "shape": "start-end",
+              "id": "9758ef77-d47b-4e03-ad1f-cd92701c62c7",
+              "x": -1186,
+              "y": 841.015625,
+              "width": 167,
+              "height": 42,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "rotate": 0,
+              "zIndex": 18
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "05110a8c-1ce5-4a39-b4ed-924ae8e80eff",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "f04a0256-fa16-4d73-9cce-63cc76b02b62",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "63313b59-edca-4af1-8e16-a3e18ebec856",
+              "zIndex": 19,
+              "opacity": 1,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "9758ef77-d47b-4e03-ad1f-cd92701c62c7",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "05110a8c-1ce5-4a39-b4ed-924ae8e80eff"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "fb64e063-d5dd-4e59-9713-45f17ca66b62",
+              "zIndex": 20
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "84fd6a1f-9f80-4563-9751-cc1aae881a20",
+                "connection": [
+                  0,
+                  0.5
+                ]
+              },
+              "source": {
+                "id": "05110a8c-1ce5-4a39-b4ed-924ae8e80eff",
+                "connection": [
+                  1,
+                  0.5
+                ]
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "48d6741d-05f5-4323-95e9-68576ba29632",
+              "zIndex": 21,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "c65d8ea9-b98e-4c90-83a0-63ddc402c254",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "source": {
+                "id": "129680a7-5d20-4862-8b46-409eb4b81c0c"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "c60db3e0-d605-4504-b636-f194d5a10865",
+              "zIndex": 22,
+              "controlPoints": []
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "c65d8ea9-b98e-4c90-83a0-63ddc402c254",
+                "connection": [
+                  0.5000360854503464,
+                  1
+                ]
+              },
+              "source": {
+                "id": "9758ef77-d47b-4e03-ad1f-cd92701c62c7"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "a5ff10e1-c857-4d55-9fe6-4f184b64feee",
+              "zIndex": 23
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  -1102.5,
+                  650.0411136672624
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "d1cb1d1c-b11e-44d6-82a8-f0ab061847ed"
+              },
+              "stroke": {
+                "color": "#585A5A",
+                "style": "dash"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "c225dcd1-73b9-435c-a92d-44e989aa4f15",
+              "zIndex": 24
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;语言1-Analyzer执行</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "ac7160cf-2199-41e5-900e-9b205719d640",
+              "x": -1186,
+              "y": 457,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 167,
+              "height": 57,
+              "rotate": 0,
+              "zIndex": 25
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "129680a7-5d20-4862-8b46-409eb4b81c0c"
+              },
+              "type": "line",
+              "source": {
+                "id": "ac7160cf-2199-41e5-900e-9b205719d640",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "ecdfff99-9b22-4766-9b93-46048a87598a",
+              "zIndex": 26,
+              "controlPoints": []
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;语言N-Analyzer初始化</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "f04a0256-fa16-4d73-9cce-63cc76b02b62",
+              "x": -1186,
+              "y": 650,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 167,
+              "height": 57,
+              "rotate": 0,
+              "zIndex": 27
+            }
+          ]
+        },
+        "viewportOption": "adapt",
+        "viewportSetting": {
+          "zoom": 0.7851624663638205,
+          "tlCanvasPoint": [
+            -1477.7106058372644,
+            309.8858343160375,
+            0.9999999999999999
+          ],
+          "width": 662,
+          "height": 478
+        },
+        "search": "扫描开始​  加载checker 加载checker-pack 语言及框架识别 语言1-Analyzer初始化 语言N-Analyzer执行  卸载语言checkerCheckerManager.constructorCheckManager.checkAtEndOfAnalyze​扫描结束语言1 Analyzer结束语言N Analyzer结束 语言1-Analyzer执行 语言N-Analyzer初始化",
+        "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/jpeg/107856586/1757421920782-eb0aaaaf-f220-4b08-a079-bcfe2b7ae8bf.jpeg",
+        "graphicsBBox": {
+          "x": -1372,
+          "y": 343,
+          "width": 869,
+          "height": 540.015625
+        },
+        "id": "VEugU"
+      }
+    },
+    {
+      "type": "block",
+      "name": "board",
+      "value": "data:%7B%22diagramData%22%3A%7B%22head%22%3A%7B%22version%22%3A%222.0.0%22%2C%22theme%22%3A%7B%22name%22%3A%22default%22%7D%2C%22rough%22%3A%7B%22name%22%3A%22default%22%7D%7D%2C%22body%22%3A%5B%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%26nbsp%3BcheckAtFunctionCallBefore%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22869ac3b6-1d51-476d-8e40-7eb839c7148e%22%2C%22x%22%3A-150.22723388671875%2C%22y%22%3A-282.2705841064453%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A195%2C%22height%22%3A54%2C%22zIndex%22%3A0%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EGinDefaultTaintChecker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%225e070ad3-d17d-475a-8bea-f7c2ed4f77a6%22%2C%22x%22%3A-395.72723388671875%2C%22y%22%3A-127.27058410644531%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A195%2C%22height%22%3A54%2C%22zIndex%22%3A1%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EMuxEntryPointCollectChecker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22b7cc4581-1e75-413b-81ee-281a61ac7fab%22%2C%22x%22%3A-162.72723388671875%2C%22y%22%3A-127.27058410644531%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A220%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A2%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EGRpcEntrypointCollectChecker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%221828103d-36c7-432f-9f3e-a01fdaef9bc0%22%2C%22x%22%3A98.27276611328125%2C%22y%22%3A-127.27058410644531%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A220%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A3%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3ExxChecker%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%220826c1cc-9fc4-4a56-97a7-43e412f989dd%22%2C%22x%22%3A341.27276611328125%2C%22y%22%3A-127.27058410644531%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A220%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A4%7D%2C%7B%22shape%22%3A%22curve%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%225e070ad3-d17d-475a-8bea-f7c2ed4f77a6%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22869ac3b6-1d51-476d-8e40-7eb839c7148e%22%2C%22connection%22%3A%22S%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%226a71173f-b46b-4d41-bb49-948d7a8bf17d%22%2C%22zIndex%22%3A5%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%22b7cc4581-1e75-413b-81ee-281a61ac7fab%22%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22869ac3b6-1d51-476d-8e40-7eb839c7148e%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22810679fd-0c59-4934-ae29-56e79f04c3d8%22%2C%22zIndex%22%3A6%7D%2C%7B%22shape%22%3A%22curve%22%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%221828103d-36c7-432f-9f3e-a01fdaef9bc0%22%2C%22connection%22%3A%5B0.5%2C0%5D%7D%2C%22type%22%3A%22line%22%2C%22source%22%3A%7B%22id%22%3A%22869ac3b6-1d51-476d-8e40-7eb839c7148e%22%2C%22connection%22%3A%5B0.5%2C1%5D%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22443e703c-482f-4ccf-b21d-fd21be04b33c%22%2C%22zIndex%22%3A7%2C%22controlPoints%22%3A%5B%5D%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EtriggerAtFunctionCallBefore%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%2299dc2b7a-46e0-40fd-9c03-baa584477d0a%22%2C%22x%22%3A-395.72723388671875%2C%22y%22%3A4.7294158935546875%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A195%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A8%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EtriggerAtFunctionCallBefore%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%2255ec00c6-c607-446b-ae08-83f1370c555c%22%2C%22x%22%3A-150.22723388671875%2C%22y%22%3A4.7294158935546875%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A195%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A9%7D%2C%7B%22type%22%3A%22geometry%22%2C%22html%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3EtriggerAtFunctionCallBefore%3C%2Fdiv%3E%22%2C%22shape%22%3A%22rect%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22a547384e-906a-4501-b9f5-a66e8b90d1c1%22%2C%22x%22%3A110.77276611328125%2C%22y%22%3A4.7294158935546875%2C%22fill%22%3A%7B%22color%22%3A%22%23FFFFFF%22%7D%2C%22stroke%22%3A%7B%22color%22%3A%22%23585A5A%22%7D%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22width%22%3A195%2C%22height%22%3A54%2C%22rotate%22%3A0%2C%22zIndex%22%3A10%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22id%22%3A%2299dc2b7a-46e0-40fd-9c03-baa584477d0a%22%7D%2C%22source%22%3A%7B%22id%22%3A%225e070ad3-d17d-475a-8bea-f7c2ed4f77a6%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%2220deb957-8843-419e-ac69-6d5d24088512%22%2C%22zIndex%22%3A11%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%2255ec00c6-c607-446b-ae08-83f1370c555c%22%7D%2C%22source%22%3A%7B%22id%22%3A%22b7cc4581-1e75-413b-81ee-281a61ac7fab%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22551be00d-bfcc-40ab-92b9-49f770cd80ec%22%2C%22zIndex%22%3A12%7D%2C%7B%22shape%22%3A%22elbow%22%2C%22stroke%22%3A%7B%22width%22%3A2%2C%22color%22%3A%22%23585A5A%22%7D%2C%22target%22%3A%7B%22marker%22%3A%22arrow%22%2C%22connection%22%3A%5B0.5%2C0%5D%2C%22id%22%3A%22a547384e-906a-4501-b9f5-a66e8b90d1c1%22%7D%2C%22source%22%3A%7B%22id%22%3A%221828103d-36c7-432f-9f3e-a01fdaef9bc0%22%2C%22connection%22%3A%22S%22%7D%2C%22type%22%3A%22line%22%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22id%22%3A%22260ff207-a681-41d1-bf9f-e42c7542df99%22%2C%22zIndex%22%3A13%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%221%20FunctionCallBefore%20%E4%BA%8B%E4%BB%B6checkpoint%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%22aeb9a938-be9d-4997-8139-2a6c1c3d5854%22%2C%22x%22%3A-404.72723388671875%2C%22y%22%3A-272.7705841064453%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22zIndex%22%3A14%2C%22height%22%3A35%2C%22rotate%22%3A0%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%222%20checkerManager%E5%8F%96%E5%87%BA%E6%89%80%E6%9C%89%E6%B3%A8%E5%86%8C%E4%BA%86%E8%AF%A5%E4%BA%8B%E4%BB%B6%E7%9A%84checker%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%227b4471e5-590d-434a-bf83-dd23215ff905%22%2C%22x%22%3A-739.7272338867188%2C%22y%22%3A-117.77058410644531%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22height%22%3A35%2C%22rotate%22%3A0%2C%22zIndex%22%3A15%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%223%20%E6%89%A7%E8%A1%8C%E6%AF%8F%E4%B8%AAchecker%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%EF%BC%88%E8%8B%A5%E6%9C%89%EF%BC%89%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%227b34c58b-88b2-41ba-a8a2-bbd62230f2e6%22%2C%22x%22%3A-686.7272338867188%2C%22y%22%3A14.229415893554688%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22height%22%3A35%2C%22rotate%22%3A0%2C%22zIndex%22%3A16%7D%2C%7B%22type%22%3A%22text%22%2C%22html%22%3A%22%3Cspan%20style%3D%5C%22color%3Argb(138%2C%20143%2C%20141)%3B%5C%22%3ExxChecker%20%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%AE%9E%E7%8E%B0triggerAtFunctionCallBefore%20%E5%87%BD%E6%95%B0%EF%BC%8C%3C%2Fspan%3E%3Cdiv%3E%3Cspan%20style%3D%5C%22color%3Argb(138%2C%20143%2C%20141)%3B%5C%22%3E%E6%95%85%E6%9C%AA%E5%9C%A8FunctionCallBefore%E4%BA%8B%E4%BB%B6%E5%A4%84%E6%B3%A8%E5%86%8C%EF%BC%8C%E4%B8%8D%E4%BC%9A%E8%A2%AB%E5%8F%96%E5%88%B0%3C%2Fspan%3E%3C%2Fdiv%3E%22%2C%22shape%22%3A%22text%22%2C%22category%22%3A%22basic%22%2C%22id%22%3A%226091a37b-9797-4d93-a368-a8a8c2cc44e1%22%2C%22x%22%3A341.27276611328125%2C%22y%22%3A-184.2705841064453%2C%22defaultContentStyle%22%3A%7B%22color%22%3A%22%23262626%22%7D%2C%22height%22%3A35%2C%22rotate%22%3A0%2C%22zIndex%22%3A17%2C%22css%22%3A%7B%22foreColor%22%3A%22%238a8f8d%22%7D%7D%5D%7D%2C%22viewportOption%22%3A%22adapt%22%2C%22viewportSetting%22%3A%7B%22zoom%22%3A0.5%2C%22tlCanvasPoint%22%3A%5B-911.7272338867188%2C-685.7705688476562%2C1%5D%2C%22width%22%3A662%2C%22height%22%3A478%7D%2C%22search%22%3A%22%C2%A0checkAtFunctionCallBeforeGinDefaultTaintCheckerMuxEntryPointCollectCheckerGRpcEntrypointCollectCheckerxxCheckertriggerAtFunctionCallBeforetriggerAtFunctionCallBeforetriggerAtFunctionCallBefore1%20FunctionCallBefore%20%E4%BA%8B%E4%BB%B6checkpoint2%20checkerManager%E5%8F%96%E5%87%BA%E6%89%80%E6%9C%89%E6%B3%A8%E5%86%8C%E4%BA%86%E8%AF%A5%E4%BA%8B%E4%BB%B6%E7%9A%84checker3%20%E6%89%A7%E8%A1%8C%E6%AF%8F%E4%B8%AAchecker%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%EF%BC%88%E8%8B%A5%E6%9C%89%EF%BC%89xxChecker%20%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%AE%9E%E7%8E%B0triggerAtFunctionCallBefore%20%E5%87%BD%E6%95%B0%EF%BC%8C%E6%95%85%E6%9C%AA%E5%9C%A8FunctionCallBefore%E4%BA%8B%E4%BB%B6%E5%A4%84%E6%B3%A8%E5%86%8C%EF%BC%8C%E4%B8%8D%E4%BC%9A%E8%A2%AB%E5%8F%96%E5%88%B0%22%2C%22src%22%3A%22https%3A%2F%2Fintranetproxy.alipay.com%2Fskylark%2Flark%2F0%2F2025%2Fjpeg%2F107856586%2F1757423013303-bacb4a96-67eb-4355-9012-7f1b6b73562f.jpeg%22%2C%22graphicsBBox%22%3A%7B%22x%22%3A-739.7272338867188%2C%22y%22%3A-282.27056884765625%2C%22width%22%3A1456%2C%22height%22%3A341%7D%2C%22id%22%3A%22eNfND%22%7D",
+      "decoded_value": {
+        "diagramData": {
+          "head": {
+            "version": "2.0.0",
+            "theme": {
+              "name": "default"
+            },
+            "rough": {
+              "name": "default"
+            }
+          },
+          "body": [
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">&nbsp;checkAtFunctionCallBefore</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "869ac3b6-1d51-476d-8e40-7eb839c7148e",
+              "x": -150.22723388671875,
+              "y": -282.2705841064453,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 195,
+              "height": 54,
+              "zIndex": 0,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">GinDefaultTaintChecker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "5e070ad3-d17d-475a-8bea-f7c2ed4f77a6",
+              "x": -395.72723388671875,
+              "y": -127.27058410644531,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 195,
+              "height": 54,
+              "zIndex": 1,
+              "rotate": 0
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">MuxEntryPointCollectChecker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "b7cc4581-1e75-413b-81ee-281a61ac7fab",
+              "x": -162.72723388671875,
+              "y": -127.27058410644531,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 220,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 2
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">GRpcEntrypointCollectChecker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "1828103d-36c7-432f-9f3e-a01fdaef9bc0",
+              "x": 98.27276611328125,
+              "y": -127.27058410644531,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 220,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 3
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">xxChecker</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "0826c1cc-9fc4-4a56-97a7-43e412f989dd",
+              "x": 341.27276611328125,
+              "y": -127.27058410644531,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 220,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 4
+            },
+            {
+              "shape": "curve",
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "5e070ad3-d17d-475a-8bea-f7c2ed4f77a6"
+              },
+              "type": "line",
+              "source": {
+                "id": "869ac3b6-1d51-476d-8e40-7eb839c7148e",
+                "connection": "S"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "6a71173f-b46b-4d41-bb49-948d7a8bf17d",
+              "zIndex": 5
+            },
+            {
+              "shape": "elbow",
+              "target": {
+                "marker": "arrow",
+                "id": "b7cc4581-1e75-413b-81ee-281a61ac7fab"
+              },
+              "type": "line",
+              "source": {
+                "id": "869ac3b6-1d51-476d-8e40-7eb839c7148e"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "810679fd-0c59-4934-ae29-56e79f04c3d8",
+              "zIndex": 6
+            },
+            {
+              "shape": "curve",
+              "target": {
+                "marker": "arrow",
+                "id": "1828103d-36c7-432f-9f3e-a01fdaef9bc0",
+                "connection": [
+                  0.5,
+                  0
+                ]
+              },
+              "type": "line",
+              "source": {
+                "id": "869ac3b6-1d51-476d-8e40-7eb839c7148e",
+                "connection": [
+                  0.5,
+                  1
+                ]
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "443e703c-482f-4ccf-b21d-fd21be04b33c",
+              "zIndex": 7,
+              "controlPoints": []
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">triggerAtFunctionCallBefore</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "99dc2b7a-46e0-40fd-9c03-baa584477d0a",
+              "x": -395.72723388671875,
+              "y": 4.7294158935546875,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 195,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 8
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">triggerAtFunctionCallBefore</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "55ec00c6-c607-446b-ae08-83f1370c555c",
+              "x": -150.22723388671875,
+              "y": 4.7294158935546875,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 195,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 9
+            },
+            {
+              "type": "geometry",
+              "html": "<div style=\"text-align:center;\">triggerAtFunctionCallBefore</div>",
+              "shape": "rect",
+              "category": "basic",
+              "id": "a547384e-906a-4501-b9f5-a66e8b90d1c1",
+              "x": 110.77276611328125,
+              "y": 4.7294158935546875,
+              "fill": {
+                "color": "#FFFFFF"
+              },
+              "stroke": {
+                "color": "#585A5A"
+              },
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "width": 195,
+              "height": 54,
+              "rotate": 0,
+              "zIndex": 10
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "id": "99dc2b7a-46e0-40fd-9c03-baa584477d0a"
+              },
+              "source": {
+                "id": "5e070ad3-d17d-475a-8bea-f7c2ed4f77a6",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "20deb957-8843-419e-ac69-6d5d24088512",
+              "zIndex": 11
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "55ec00c6-c607-446b-ae08-83f1370c555c"
+              },
+              "source": {
+                "id": "b7cc4581-1e75-413b-81ee-281a61ac7fab",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "551be00d-bfcc-40ab-92b9-49f770cd80ec",
+              "zIndex": 12
+            },
+            {
+              "shape": "elbow",
+              "stroke": {
+                "width": 2,
+                "color": "#585A5A"
+              },
+              "target": {
+                "marker": "arrow",
+                "connection": [
+                  0.5,
+                  0
+                ],
+                "id": "a547384e-906a-4501-b9f5-a66e8b90d1c1"
+              },
+              "source": {
+                "id": "1828103d-36c7-432f-9f3e-a01fdaef9bc0",
+                "connection": "S"
+              },
+              "type": "line",
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "id": "260ff207-a681-41d1-bf9f-e42c7542df99",
+              "zIndex": 13
+            },
+            {
+              "type": "text",
+              "html": "1 FunctionCallBefore 事件checkpoint",
+              "shape": "text",
+              "category": "basic",
+              "id": "aeb9a938-be9d-4997-8139-2a6c1c3d5854",
+              "x": -404.72723388671875,
+              "y": -272.7705841064453,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "zIndex": 14,
+              "height": 35,
+              "rotate": 0
+            },
+            {
+              "type": "text",
+              "html": "2 checkerManager取出所有注册了该事件的checker",
+              "shape": "text",
+              "category": "basic",
+              "id": "7b4471e5-590d-434a-bf83-dd23215ff905",
+              "x": -739.7272338867188,
+              "y": -117.77058410644531,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "height": 35,
+              "rotate": 0,
+              "zIndex": 15
+            },
+            {
+              "type": "text",
+              "html": "3 执行每个checker的事件处理函数（若有）",
+              "shape": "text",
+              "category": "basic",
+              "id": "7b34c58b-88b2-41ba-a8a2-bbd62230f2e6",
+              "x": -686.7272338867188,
+              "y": 14.229415893554688,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "height": 35,
+              "rotate": 0,
+              "zIndex": 16
+            },
+            {
+              "type": "text",
+              "html": "<span style=\"color:rgb(138, 143, 141);\">xxChecker 中没有实现triggerAtFunctionCallBefore 函数，</span><div><span style=\"color:rgb(138, 143, 141);\">故未在FunctionCallBefore事件处注册，不会被取到</span></div>",
+              "shape": "text",
+              "category": "basic",
+              "id": "6091a37b-9797-4d93-a368-a8a8c2cc44e1",
+              "x": 341.27276611328125,
+              "y": -184.2705841064453,
+              "defaultContentStyle": {
+                "color": "#262626"
+              },
+              "height": 35,
+              "rotate": 0,
+              "zIndex": 17,
+              "css": {
+                "foreColor": "#8a8f8d"
+              }
+            }
+          ]
+        },
+        "viewportOption": "adapt",
+        "viewportSetting": {
+          "zoom": 0.5,
+          "tlCanvasPoint": [
+            -911.7272338867188,
+            -685.7705688476562,
+            1
+          ],
+          "width": 662,
+          "height": 478
+        },
+        "search": " checkAtFunctionCallBeforeGinDefaultTaintCheckerMuxEntryPointCollectCheckerGRpcEntrypointCollectCheckerxxCheckertriggerAtFunctionCallBeforetriggerAtFunctionCallBeforetriggerAtFunctionCallBefore1 FunctionCallBefore 事件checkpoint2 checkerManager取出所有注册了该事件的checker3 执行每个checker的事件处理函数（若有）xxChecker 中没有实现triggerAtFunctionCallBefore 函数，故未在FunctionCallBefore事件处注册，不会被取到",
+        "src": "https://intranetproxy.alipay.com/skylark/lark/0/2025/jpeg/107856586/1757423013303-bacb4a96-67eb-4355-9012-7f1b6b73562f.jpeg",
+        "graphicsBBox": {
+          "x": -739.7272338867188,
+          "y": -282.27056884765625,
+          "width": 1456,
+          "height": 341
+        },
+        "id": "eNfND"
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22const%20taintFlowFinding%20%3D%20this.buildTaintFinding(%5Cn%20%20this.getCheckerId()%2C%5Cn%20%20this.desc%2C%5Cn%20%20node%2C%5Cn%20%20nd%2C%5Cn%20%20fclos%2C%5Cn%20%20TAINT_TAG_NAME%2C%5Cn%20%20ruleName%2C%5Cn%20%20matchedSanitizerTags%5Cn)%5Cnif%20(!TaintOutputStrategy.isNewFinding(this.resultManager%2C%20taintFlowFinding))%20continue%5Cnthis.resultManager.newFinding(taintFlowFinding%2C%20TaintOutputStrategy.outputStrategyId)%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22zy6D7%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "javascript",
+        "code": "const taintFlowFinding = this.buildTaintFinding(\n  this.getCheckerId(),\n  this.desc,\n  node,\n  nd,\n  fclos,\n  TAINT_TAG_NAME,\n  ruleName,\n  matchedSanitizerTags\n)\nif (!TaintOutputStrategy.isNewFinding(this.resultManager, taintFlowFinding)) continue\nthis.resultManager.newFinding(taintFlowFinding, TaintOutputStrategy.outputStrategyId)",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "zy6D7",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22json%22%2C%22code%22%3A%22%7B%5Cn%20%20outputStrategyId1%20%3A%20%5Bfinding1%2C%20finding2%2C...%5D%2C%5Cn%20%20outputStrategyId2%20%3A%20%5Bfinding1%2C%20finding2%2C...%5D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__height%22%3A90.25%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22bZndl%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22height%22%3A90.25%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "json",
+        "code": "{\n  outputStrategyId1 : [finding1, finding2,...],\n  outputStrategyId2 : [finding1, finding2,...]\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__height": 90.25,
+        "__spacing": "both",
+        "id": "bZndl",
+        "margin": {
+          "top": true,
+          "bottom": true
+        },
+        "height": 90.25
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22outputFindings(resultManager%2C%20outputFilePath%2C%20config%2C%20printf)%20%7B%5Cn%20%20let%20reportFilePath%5Cn%20%20if%20(resultManager)%20%7B%5Cn%20%20%20%20const%20allFindings%20%3D%20resultManager.getFindings()%5Cn%20%20%20%20const%20taintFindings%20%3D%20allFindings%5BTaintOutputStrategy.outputStrategyId%5D%5Cn%20%20%20%20let%20callgraphFindings%5Cn%20%20%20%20if%20(taintFindings)%20%7B%5Cn%20%20%20%20%20%20callgraphFindings%20%3D%20allFindings%5BCallgraphOutputStrategy.outputStrategyId%5D%5Cn%20%20%20%20%20%20const%20results%20%3D%20this.getTaintFlowAsSarif(taintFindings%2C%20callgraphFindings)%5Cn%20%20%20%20%20%20reportFilePath%20%3D%20pathMod.join(Config.reportDir%2C%20outputFilePath)%5Cn%20%20%20%20%20%20FileUtil.writeJSONfile(reportFilePath%2C%20results)%5Cn%20%20%20%20%7D%5Cn%20%20%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22WCBia%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "",
+        "mode": "javascript",
+        "code": "outputFindings(resultManager, outputFilePath, config, printf) {\n  let reportFilePath\n  if (resultManager) {\n    const allFindings = resultManager.getFindings()\n    const taintFindings = allFindings[TaintOutputStrategy.outputStrategyId]\n    let callgraphFindings\n    if (taintFindings) {\n      callgraphFindings = allFindings[CallgraphOutputStrategy.outputStrategyId]\n      const results = this.getTaintFlowAsSarif(taintFindings, callgraphFindings)\n      reportFilePath = pathMod.join(Config.reportDir, outputFilePath)\n      FileUtil.writeJSONfile(reportFilePath, results)\n    }\n  }",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "WCBia",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    },
+    {
+      "type": "inline",
+      "name": "codeblock",
+      "value": "data:%7B%22search%22%3A%22starter.js%22%2C%22mode%22%3A%22javascript%22%2C%22code%22%3A%22const%20outputStrategyAutoRegister%20%3D%20new%20OutputStrategyAutoRegister()%5CnoutputStrategyAutoRegister.autoRegisterAllStrategies()%5CnallFindings%20%3D%20resultManager.getFindings()%5Cnfor%20(const%20outputStrategyId%20in%20allFindings)%20%7B%5Cn%20%20const%20strategy%20%3D%20outputStrategyAutoRegister.getStrategy(outputStrategyId)%5Cn%20%20if%20(strategy%20%26%26%20typeof%20strategy.outputFindings%20%3D%3D%3D%20'function')%20%7B%5Cn%20%20%20%20strategy.outputFindings(resultManager%2C%20strategy.getOutputFilePath()%2C%20Config%2C%20printf)%5Cn%20%20%7D%5Cn%7D%22%2C%22autoWrap%22%3Afalse%2C%22lineNumbers%22%3Atrue%2C%22heightLimit%22%3Atrue%2C%22collapsed%22%3Afalse%2C%22hideToolbar%22%3Afalse%2C%22name%22%3A%22starter.js%22%2C%22tabSize%22%3Anull%2C%22indentWithTab%22%3Afalse%2C%22lightLines%22%3A%5B%5D%2C%22foldLines%22%3A%5B%5D%2C%22theme%22%3A%22Github%20Light%22%2C%22fontSize%22%3A14%2C%22customStyle%22%3A%5B%5D%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22XRJ6W%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%7D",
+      "decoded_value": {
+        "search": "starter.js",
+        "mode": "javascript",
+        "code": "const outputStrategyAutoRegister = new OutputStrategyAutoRegister()\noutputStrategyAutoRegister.autoRegisterAllStrategies()\nallFindings = resultManager.getFindings()\nfor (const outputStrategyId in allFindings) {\n  const strategy = outputStrategyAutoRegister.getStrategy(outputStrategyId)\n  if (strategy && typeof strategy.outputFindings === 'function') {\n    strategy.outputFindings(resultManager, strategy.getOutputFilePath(), Config, printf)\n  }\n}",
+        "autoWrap": false,
+        "lineNumbers": true,
+        "heightLimit": true,
+        "collapsed": false,
+        "hideToolbar": false,
+        "name": "starter.js",
+        "tabSize": null,
+        "indentWithTab": false,
+        "lightLines": [],
+        "foldLines": [],
+        "theme": "Github Light",
+        "fontSize": 14,
+        "customStyle": [],
+        "__spacing": "both",
+        "id": "XRJ6W",
+        "margin": {
+          "top": true,
+          "bottom": true
+        }
+      }
+    }
+  ]
+}
