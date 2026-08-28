@@ -69,7 +69,7 @@ YASA-UAST → Analyzer → Symbolic State → Checkpoint / Checker → Finding /
 - [勘误与概念辨析](勘误与辨析.md)：集中列出最危险的术语混淆和文章技术问题；
 - [参考资料](参考资料.md)：系列引用、YASA 官方入口、文档和固定源码链接；
 - [来源与复现说明](sources/README.md)：本地证据布局、抓取命令和证据优先级；
-- [微信原文 HTML 归档](sources/wechat-series/README.md)：8 篇原始页面 HTML、本地结构阅读版、规范化正文、109 张内容图及清单；
+- [微信原文可读归档](sources/wechat-series/README.md)：8 篇 GitHub 可读 Markdown、原始页面 HTML、本地结构版、109 张内容图及清单；
 - `.work/transcripts/`：三次视频带时间戳 ASR，仅作检索线索；
 - `.work/lesson-scenes/`：视频场景帧和 contact sheet；
 - `sources/yasa-docs/`：21 篇官方公开 YASA 文档的可追踪规范化快照及来源元数据；

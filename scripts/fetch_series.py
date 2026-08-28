@@ -286,6 +286,63 @@ class ArticleHTMLExtractor(HTMLParser):
         return "".join(self.parts)
 
 
+class CodeBlockExtractor(HTMLParser):
+    """Recover source lines from WeChat's `<pre><code>…</code>…</pre>` layout."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.pre_depth = 0
+        self.current: list[str] = []
+        self.language = "text"
+        self.blocks: list[tuple[str, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        tag = tag.lower()
+        if not self.pre_depth and tag == "pre":
+            data = {key.lower(): value or "" for key, value in attrs}
+            language = data.get("data-lang") or data.get("lang") or "text"
+            self.language = re.sub(r"[^0-9A-Za-z_+.-]", "", language) or "text"
+            self.pre_depth = 1
+            self.current = []
+            return
+        if not self.pre_depth:
+            return
+        if tag not in VOID_TAGS:
+            self.pre_depth += 1
+        if tag == "code" and self.current and not self.current[-1].endswith("\n"):
+            self.current.append("\n")
+        elif tag == "br":
+            self.current.append("\n")
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if self.pre_depth and tag.lower() == "br":
+            self.current.append("\n")
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if not self.pre_depth:
+            return
+        if tag == "code" and self.current and not self.current[-1].endswith("\n"):
+            self.current.append("\n")
+        if tag == "pre" and self.pre_depth == 1:
+            code = "".join(self.current).replace("\xa0", " ").replace("\u200b", "")
+            code_lines = [line.rstrip() for line in code.splitlines()]
+            while code_lines and not code_lines[0].strip():
+                code_lines.pop(0)
+            while code_lines and not code_lines[-1].strip():
+                code_lines.pop()
+            self.blocks.append((self.language, "\n".join(code_lines)))
+            self.current = []
+            self.pre_depth = 0
+            return
+        if tag not in VOID_TAGS:
+            self.pre_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self.pre_depth:
+            self.current.append(data)
+
+
 def session() -> requests.Session:
     result = requests.Session()
     result.headers.update({
@@ -384,6 +441,105 @@ body {{ box-sizing: border-box; max-width: 820px; margin: 0 auto; padding: 24px;
 """
 
 
+def render_readable_markdown(
+    title: str,
+    source_url: str,
+    published_at: dt.datetime,
+    lines: list[str],
+    image_records: list[dict[str, Any]],
+    code_blocks: list[tuple[str, str]] | None = None,
+) -> str:
+    code_placements: dict[int, tuple[int, str, str]] = {}
+    search_from = 0
+    for language, code in code_blocks or []:
+        target = re.sub(r"\s+", "", code)
+        if not target:
+            continue
+        placement: tuple[int, int] | None = None
+        for start in range(search_from, len(lines)):
+            combined = ""
+            for end in range(start, len(lines)):
+                combined += re.sub(r"\s+", "", lines[end])
+                if not combined:
+                    continue
+                if combined == target:
+                    placement = (start, end)
+                    break
+                if not target.startswith(combined):
+                    break
+            if placement:
+                break
+        if not placement:
+            raise RuntimeError(f"Could not place an HTML code block in Markdown: {title}")
+        start, end = placement
+        code_placements[start] = (end, language, code)
+        search_from = end + 1
+
+    output = [
+        f"# {title}",
+        "",
+        f"> 发布时间：{published_at.isoformat()}",
+        f"> 公众号原文：[打开官方页面]({source_url})",
+        "> 本文件用于 GitHub 直接阅读：正文顺序来自原文，图片使用仓库中的本地副本；复杂公众号装饰样式请对照 `article.html`。",
+        "",
+    ]
+    expect_part_title = False
+    index = 0
+    while index < len(lines):
+        if index in code_placements:
+            end, language, code = code_placements[index]
+            fence = "````" if "```" in code else "```"
+            output.extend([f"{fence}{language}", code, fence, ""])
+            expect_part_title = False
+            index = end + 1
+            continue
+
+        line = lines[index]
+        index += 1
+        if not line.strip():
+            continue
+
+        image_match = re.fullmatch(r"\[\[IMAGE_(\d+)\]\]", line)
+        if image_match:
+            number = int(image_match.group(1))
+            if not 1 <= number <= len(image_records):
+                raise RuntimeError(f"Image marker out of range in {title}: {line}")
+            record = image_records[number - 1]
+            filename = Path(record["local_path"]).name
+            alt = record.get("alt") or f"原文图片 {number:02d}"
+            output.extend([f"![{alt}](images/{filename})", ""])
+            expect_part_title = False
+            continue
+
+        part_match = re.fullmatch(r"Part\s+(\d+)", line, flags=re.IGNORECASE)
+        if part_match:
+            output.extend([f"## Part {part_match.group(1)}", ""])
+            expect_part_title = True
+            continue
+
+        if expect_part_title and 0 < len(line) <= 80:
+            output.extend([f"### {line}", ""])
+            expect_part_title = False
+            continue
+        expect_part_title = False
+
+        section_match = re.match(r"^(\d+(?:\.\d+)+)\s+(.+)$", line)
+        if section_match and len(line) <= 120:
+            depth = min(6, 2 + section_match.group(1).count("."))
+            output.extend([f"{'#' * depth} {line}", ""])
+            continue
+
+        if line.strip() in {"参考文献", "References", "总结", "小结"}:
+            output.extend([f"## {line.strip()}", ""])
+            continue
+
+        output.extend([line, ""])
+
+    while output and not output[-1]:
+        output.pop()
+    return "\n".join(output) + "\n"
+
+
 def fetch_article(
     client: requests.Session,
     article: dict[str, Any],
@@ -407,6 +563,8 @@ def fetch_article(
     extractor.feed(response.text)
     structured = ArticleHTMLExtractor()
     structured.feed(response.text)
+    code_extractor = CodeBlockExtractor()
+    code_extractor.feed(response.text)
     lines = extractor.normalized_lines()
     body_html = structured.body_html()
     if not lines or not body_html:
@@ -431,9 +589,16 @@ def fetch_article(
 
     raw_html_path = article_dir / "original.raw.html"
     local_html_path = article_dir / "article.html"
+    readable_markdown_path = article_dir / "article.md"
     raw_html_path.write_bytes(response.content)
     local_html_path.write_text(
         render_local_article(title, url, created_at, body_html, image_records),
+        encoding="utf-8",
+    )
+    readable_markdown_path.write_text(
+        render_readable_markdown(
+            title, url, created_at, lines, image_records, code_extractor.blocks
+        ),
         encoding="utf-8",
     )
 
@@ -452,7 +617,7 @@ def fetch_article(
         f"# {title}",
         "",
         "> 研究用规范化抽取：保留原文信息顺序，以图片占位符关联本地图片；不含页面广告和脚本。",
-        f"> HTML 证据：[本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面]({url})",
+        f"> 阅读入口：[GitHub Markdown 版](article.md) · [本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面]({url})",
         "",
     ]
     (article_dir / "extracted.md").write_text(
@@ -470,6 +635,7 @@ def fetch_article(
         "itemidx": article.get("itemidx", ""),
         "slug": slug,
         "extracted_path": (relative_dir / "extracted.md").as_posix(),
+        "readable_markdown_path": (relative_dir / "article.md").as_posix(),
         "local_html_path": (relative_dir / "article.html").as_posix(),
         "raw_html_path": (relative_dir / "original.raw.html").as_posix(),
         "raw_html_sha256": hashlib.sha256(response.content).hexdigest(),
@@ -484,9 +650,10 @@ def write_series_indexes(output_root: Path, articles: list[dict[str, Any]]) -> N
     markdown = [
         "# 微信公众号原文归档",
         "",
-        "本目录同时保留三种形态：",
+        "本目录同时保留四种形态：",
         "",
-        "- `article.html`：保留公众号正文 `#js_content` 标签层次和内联样式，图片已本地化；推荐克隆后用浏览器阅读；",
+        "- `article.md`：段落化并嵌入本地原图的 GitHub 直接阅读版；",
+        "- `article.html`：保留公众号正文 `#js_content` 标签层次和内联样式，图片已本地化；适合克隆后用浏览器阅读；",
         "- `original.raw.html`：抓取时收到的完整原始页面 HTML，用于结构核验；可能依赖微信远程资源，不建议直接执行其中脚本；",
         "- `extracted.md`：供检索、审计和脚本处理的规范化纯文本，不追求还原公众号排版。",
         "",
@@ -498,8 +665,8 @@ def write_series_indexes(output_root: Path, articles: list[dict[str, Any]]) -> N
         "",
         "然后访问 <http://127.0.0.1:8000/>。",
         "",
-        "| # | 标题 | 本地 HTML | 原始页面 HTML | 规范化文本 | 官方页面 |",
-        "|---:|---|---|---|---|---|",
+        "| # | 标题 | GitHub 阅读 | 本地 HTML | 原始页面 HTML | 规范化文本 | 官方页面 |",
+        "|---:|---|---|---|---|---|---|",
     ]
     html_items: list[str] = []
     for article in articles:
@@ -509,13 +676,15 @@ def write_series_indexes(output_root: Path, articles: list[dict[str, Any]]) -> N
         slug = article["slug"]
         official = article["source_url"]
         markdown.append(
-            f"| {number} | {markdown_title} | [阅读](articles/{slug}/article.html) | "
+            f"| {number} | {markdown_title} | [直接阅读](articles/{slug}/article.md) | "
+            f"[结构视图](articles/{slug}/article.html) | "
             f"[原页](articles/{slug}/original.raw.html) | "
             f"[文本](articles/{slug}/extracted.md) | [微信]({official}) |"
         )
         html_items.append(
             "<li>"
             f"<strong>{number}. {html.escape(title)}</strong><br>"
+            f'<a href="articles/{html.escape(slug, quote=True)}/article.md">GitHub Markdown 版</a> · '
             f'<a href="articles/{html.escape(slug, quote=True)}/article.html">本地 HTML 结构视图</a> · '
             f'<a href="articles/{html.escape(slug, quote=True)}/extracted.md">规范化文本</a> · '
             f'<a href="{html.escape(official, quote=True)}">公众号官方页面</a>'

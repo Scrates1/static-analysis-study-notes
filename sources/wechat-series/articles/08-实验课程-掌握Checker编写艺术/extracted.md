@@ -11,7 +11,7 @@ image_count: 3
 # 高校教学系列：实验课程—掌握Checker编写艺术
 
 > 研究用规范化抽取：保留原文信息顺序，以图片占位符关联本地图片；不含页面广告和脚本。
-> HTML 证据：[本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484326&idx=1&sn=b53b2698ab4fc90af2f03156a82a3777&chksm=fbce358eccb9bc982fd0d06b012b0af7cceddb891e8badbfaa87437b2fa756be438a4f27e86e)
+> 阅读入口：[GitHub Markdown 版](article.md) · [本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484326&idx=1&sn=b53b2698ab4fc90af2f03156a82a3777&chksm=fbce358eccb9bc982fd0d06b012b0af7cceddb891e8badbfaa87437b2fa756be438a4f27e86e)
 
 华中科技大学与蚂蚁基础安全团队联合开设的《静态程序分析原理与实践》课程已正式开课。该课程主要面向华科软件安全方向的研究生，采用理论与实践相结合的教学方式，培养具备扎实理论基础和强实践能力的网络安全专业人才。
 作者及实验课程主讲人信息如下：

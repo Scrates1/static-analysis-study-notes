@@ -4,6 +4,7 @@
 
 - `wechat-series/README.md`、`wechat-series/index.html`：8 篇微信原文的 GitHub 索引与本地浏览入口；
 - `wechat-series/index.json`：官方微信合集元数据、8 篇文章的标题/URL/时间、抽取状态与 HTML 哈希；
+- `wechat-series/articles/*/article.md`：可在 GitHub 直接阅读、嵌入本地原图并恢复代码块的 Markdown 版；
 - `wechat-series/articles/*/article.html`：保留 `#js_content` 标签层次和内联样式、使用本地图片的安全阅读版；
 - `wechat-series/articles/*/original.raw.html`：抓取时收到的完整原始页面 HTML；
 - `wechat-series/articles/*/extracted.md`：供检索和审计的规范化正文；
@@ -55,7 +56,7 @@ python scripts/verify_materials.py --require-work-evidence # 连同本地视频/
 
 ## 使用提醒
 
-- 微信原文阅读优先打开 `article.html`；`original.raw.html` 含微信页面脚本，仅用于原始结构核验，不建议脱离隔离环境直接执行；
+- GitHub 上阅读微信原文优先打开 `article.md`；克隆后需要查看原始标签结构时再打开 `article.html`；`original.raw.html` 含微信页面脚本，仅用于原始结构核验；
 - `extracted.md` 是研究用规范化文本，不是重新发布的排版副本；
 - `yasa-docs/` 保留每篇文档的原始 URL、更新时间和抽取元数据；它是研究快照，不替代官方在线版本，公开再分发前仍应核对上游许可；
 - 最终学习笔记采用结构化转述、公式重建与纠错，不应以笔记替代原作者文章；

@@ -80,15 +80,29 @@ def verify_sources(check: Verification) -> None:
 
     total_images = 0
     html_snapshots = 0
+    readable_markdown = 0
     for article in articles:
         number = article.get("series_number")
         extracted = resolve_source_path(article.get("extracted_path", ""))
+        article_md = resolve_source_path(article.get("readable_markdown_path", ""))
         local_html = resolve_source_path(article.get("local_html_path", ""))
         raw_html = resolve_source_path(article.get("raw_html_path", ""))
         manifest = resolve_source_path(article.get("image_manifest_path", ""))
         check.require(extracted.is_file(), f"article {number}: missing extracted text {extracted}")
+        check.require(article_md.is_file(), f"article {number}: missing readable Markdown {article_md}")
         check.require(local_html.is_file(), f"article {number}: missing local HTML view {local_html}")
         check.require(raw_html.is_file(), f"article {number}: missing raw HTML snapshot {raw_html}")
+        if article_md.is_file():
+            readable_markdown += 1
+            markdown_text = article_md.read_text(encoding="utf-8")
+            expected_markdown_images = article.get("content_images", 0)
+            check.require(markdown_text.startswith("# "), f"article {number}: readable Markdown lacks H1")
+            check.require("[[IMAGE_" not in markdown_text, f"article {number}: unresolved Markdown image marker")
+            check.require(
+                len(re.findall(r"!\[[^\]]*\]\(images/image-[^)]+\)", markdown_text)) == expected_markdown_images,
+                f"article {number}: readable Markdown image count differs from {expected_markdown_images}",
+            )
+            check.require(markdown_text.count("```") % 2 == 0, f"article {number}: unbalanced Markdown code fences")
         if local_html.is_file() and raw_html.is_file():
             html_snapshots += 1
             local_text = local_html.read_text(encoding="utf-8")
@@ -122,10 +136,11 @@ def verify_sources(check: Verification) -> None:
             if local.is_file() and record.get("sha256"):
                 check.require(sha256(local) == record["sha256"], f"article {number} image {position}: SHA-256 mismatch")
     check.require(total_images == 109, f"found {total_images} article images, expected 109")
+    check.require(readable_markdown == 8, f"found {readable_markdown} readable Markdown articles, expected 8")
     check.require(html_snapshots == 8, f"found {html_snapshots} article HTML snapshots, expected 8")
     check.note(
-        f"official snapshot: {len(articles)}/8 articles, {html_snapshots}/8 HTML views, "
-        f"{total_images}/109 images"
+        f"official snapshot: {len(articles)}/8 articles, {readable_markdown}/8 readable Markdown, "
+        f"{html_snapshots}/8 HTML views, {total_images}/109 images"
     )
 
 
