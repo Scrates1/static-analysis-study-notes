@@ -1,14 +1,20 @@
 # 高校教学系列：程序分析—指针分析及抽象解释
 
-> 发布时间：2025-12-18T20:37:46+08:00
-> 公众号原文：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484320&idx=1&sn=f306868888b67d001729ff18ef5abadc&chksm=fbce3588ccb9bc9e900831b3670b3bb609b078e7425c6fccc2b68366172997dafbd79ce8bf73)
-> 本文件用于 GitHub 直接阅读：正文顺序来自原文，图片使用仓库中的本地副本；复杂公众号装饰样式请对照 `article.html`。
+[← 返回微信原文目录](../../README.md)
+
+> **归档信息**
+>
+> **发布时间**：2025-12-18T20:37:46+08:00<br>
+> **公众号原文**：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484320&idx=1&sn=f306868888b67d001729ff18ef5abadc&chksm=fbce3588ccb9bc9e900831b3670b3bb609b078e7425c6fccc2b68366172997dafbd79ce8bf73)<br>
+> **归档说明**：正文顺序和原图来自原文；代码块由 HTML 结构恢复。复杂装饰样式可对照 [`article.html`](article.html)。
+
+---
 
 在上一篇笔记中，我们介绍了数据流分析的基本概念与应用，为理解程序状态变化提供了基础框架。本篇将进一步探讨指针分析，并正式介绍抽象解释框架。指针分析通过追踪变量指向关系解决别名问题；抽象解释则利用抽象域和抽象状态，将程序可能的运行行为进行近似，从而在保证安全性的前提下进行高效分析。本篇将以概念讲解结合示例的方式，展示这些方法的基本原理及应用场景。
 
 本文作者信息如下：
 
-![原文图片 01](images/image-01.png)
+<p align="center"><img src="images/image-01.png" alt="原文图片 01" width="96"></p>
 
 曾珺
 
@@ -20,7 +26,7 @@ Github主页：
 
 https://github.com/JIRUWOZHI
 
-![原文图片 02](images/image-02.png)
+<p align="center"><img src="images/image-02.png" alt="原文图片 02" width="96"></p>
 
 王申奥
 
@@ -40,13 +46,13 @@ https://shenaow.github.io/
 
 在本小节中，我们将首先介绍指针/别名分析的基本原理，帮助理解指针在程序中如何影响内存访问。随后，将讨论分析精度的不同维度，包括流敏感性、上下文敏感性与路径敏感性。最后，我们将介绍 Andersen 算法，以一个简单的例子带大家了解指针分析的实际作用。
 
-### 1.1 基础概念：指针分析
+#### 1.1 基础概念：指针分析
 
 指针分析（Pointer Analysis），又叫指向性分析（Point-to Analysis）或者别名分析（Alias Analysis），是静态分析中的核心技术，其目标是在编译阶段尽可能精确地确定指针在运行时可能指向的内存对象。它通过计算每个指针变量的points-to集合，即该指针可能引用的地址被取过的变量集合，来恢复程序的潜在内存结构。
 
 示例：考虑如下代码片段
 
-```cs
+```c
 int a, b;
 int *p = &a;
 int *q = p;
@@ -54,19 +60,19 @@ int *q = p;
 
 在这个例子中，p 和 q 的 points-to 集合均为 {a}，说明两者都可能指向变量 a。通过这种映射，分析工具可以重建程序的潜在内存结构。
 
-```bash
+```text
 pts(p) = pts(q) = {a}  #指针p和指针q的points-to集合
 ```
 
 别名关系是指针分析的需要回答的一个核心问题，用于判断两个指针解引用是否可能指向同一块内存。如果两个指针的 points-to 集合存在交集，则说明 p 和 q 是别名，它们的解引用可能访问同一内存位置。
 
-```css
+```text
 pts(p) ∩ pts(q) ≠ ∅  #指针p和q是别名
 ```
 
 别名信息在程序优化和安全分析中具有重要作用。例如，在常量传播中，如果 *p = 1; x = *q; 且 p 与 q 是必然别名（must-alias），则可以确定 x 的值为 1；在污点分析中，如果 *p 被标记为受控输入，而 p 和 q 是别名，则通过 *q 读取的值也应被视为受控。
 
-### 1.2 分析精度：流敏感性、上下文敏感性与路径敏感性
+#### 1.2 分析精度：流敏感性、上下文敏感性与路径敏感性
 
 在静态分析中，精度是最核心的设计维度之一。在构建指针分析、数据流分析、污点分析时，我们通常需要在性能与精度之间做取舍，而“流敏感性”“上下文敏感性”和“路径敏感性”恰恰构成了这三类重要的精度维度。这三个维度分别对应：程序执行顺序、函数调用上下文、控制流路径条件。理解它们可以帮助我们判断某个静态分析工具到底能精确到什么程度，也能帮助你自己设计更合理的分析策略。
 
@@ -74,17 +80,17 @@ pts(p) ∩ pts(q) ≠ ∅  #指针p和q是别名
 
 流敏感性关注程序 执行顺序，也就是不同语句之间前后的关系。
 
-流不敏感（Flow-insensitive）：
+- 流不敏感（Flow-insensitive）：
 
 完全忽略执行顺序，把所有指针相关语句放一起分析；分析结果给出一个“全局可能性”，但无法分清不同程序点的状态。
 
-流敏感（Flow-sensitive）：
+- 流敏感（Flow-sensitive）：
 
 分析按程序顺序推进，每一行代码都有独立状态；因此能区分出不同时间点指针指向的变化情况。
 
 示例：考虑如下代码片段
 
-```nginx
+```text
 if (True){
     x = 3
     x = 5  //变量x在这里的值是什么？
@@ -97,17 +103,17 @@ if (True){
 
 上下文敏感性关注的是函数在不同调用场景下是否被区分对待。
 
-上下文不敏感（Context-insensitive）：
+- 上下文不敏感（Context-insensitive）：
 
 所有函数调用场景被合并，即函数的行为在任何调用点都被认为相同。
 
-上下文敏感（Context-sensitive）：
+- 上下文敏感（Context-sensitive）：
 
 区分不同的调用路径，为每个调用上下文分别分析。
 
 示例：考虑如下代码片段
 
-```javascript
+```text
 function f(x) {
   n = 1 //n是全局变量
   if(x) {
@@ -131,17 +137,17 @@ function g(y){ //变量n在此处是否会等于y？
 
 路径敏感性用于处理 if / while 等控制流的分支语义：
 
-路径不敏感（Path-insensitive）：
+- 路径不敏感（Path-insensitive）：
 
 在控制流汇合点，所有路径的分析状态全部合并，导致分析较为保守。
 
-路径敏感（Path-sensitive）：
+- 路径敏感（Path-sensitive）：
 
 分析会区分每条可能的路径，只有在条件一致的路径上才会合并状态。
 
 示例：考虑如下代码片段
 
-```apache
+```text
 x = 0
 if(a > 0)
   x = 1
@@ -156,13 +162,13 @@ if(a > 0)
 
 而在路径敏感分析中，分析器会区分不同条件路径进行跟踪：在 a > 0 的路径上，x 先被赋值为 1，再加 3，最终 x = 4；在 a <= 0 的路径上，x 被赋值为 2，由于a值不满足if 分支的条件所以不会执行加3的操作，最终x = 2。因此，路径敏感分析能够精确区分每条执行路径，并正确指出在程序运行到这里时，x 并不总是等于 5。
 
-![原文图片 03](images/image-03.gif)
+<p align="center"><img src="images/image-03.gif" alt="原文图片 03"></p>
 
 YASA小助手
 
 YASA从程序入口点对程序解释执行的过程进行有界模拟，牺牲一部分循环语句的深层模拟，从而支持流敏感，域敏感，上下文敏感和路径敏感的分析。
 
-### 1.3 Andersen算法：最经典的指针分析算法
+#### 1.3 Andersen算法：最经典的指针分析算法
 
 Andersen 算法[1]是一种经典的基于约束的指针分析法，它在静态分析领域广泛使用，并被认为是最稳健、最受欢迎的包含式指针分析算法。该算法属于流不敏感、上下文不敏感、路径不敏感的分析类型，其核心目标是通计算每个指针的 points-to 集合。 算法首先将程序抽象为一个约束图，其中指针变量和对象分别映射为图节点，而各种指针相关操作（赋值、取地址、间接访问等）被映射为节点之间的约束边。分析过程中，算法不断沿着这些约束边传播 points-to 信息，通过迭代直至所有节点的 points-to 集合达到不再变化的固定点。
 
@@ -170,67 +176,61 @@ Andersen 算法[1]是一种经典的基于约束的指针分析法，它在静�
 
 下表列出了 Field-Sensitive Andersen 算法在不同 LLVM IR / C 代码操作下的约束传播规则示意：
 
-![原文图片 04](images/image-04.png)
+<p align="center"><img src="images/image-04.png" alt="原文图片 04"></p>
 
 约束求解流程
 
 指针分析的核心是对上述约束进行求解。标准的 Andersen 求解过程通常基于Worklist算法，其步骤如下：
 
-初始化阶段：
-
-对每条 address（addr）约束 p ←Addr— o，将 {o} 加入 pts(p)。
-
-将所有有入边 addr 的节点加入工作队列。
-
-从 worklist 中弹出节点 p：
+1. 初始化阶段：
+    - 对每条 address（addr）约束 p ←Addr— o，将 {o} 加入 pts(p)。
+    - 将所有有入边 addr 的节点加入工作队列。
+1. 从 worklist 中弹出节点 p：
 
 对节点 p 的各类入边、出边进行处理：
 
-处理 store 边：
+    - 处理 store 边：
 
 对每条 p ←store q，对于 o ∈ pts(p)，添加 o ←Copy— q 边。
 
-处理 load 边：
+    - 处理 load 边：
 
 对每条 q ←load p，对于 o ∈ pts(p)，添加 q ←Copy— o 边。
 
-处理 copy 和 field/gep 边：
+    - 处理 copy 和 field/gep 边：
 
 直接将 points-to 信息从源节点传播到目标节点，或将字段化的 points-to 信息加入相应字段节点。
 
-触发重新加入 worklist 的条件：
-
-若节点的 points-to 集合发生变化，则重新将其加入队列。
-
-若由于 load/store 引入了新的 copy 约束边，则 copy 边的源节点也会加入队列继续传播。
-
-收敛（Fixpoint）：
+1. 触发重新加入 worklist 的条件：
+    - 若节点的 points-to 集合发生变化，则重新将其加入队列。
+    - 若由于 load/store 引入了新的 copy 约束边，则 copy 边的源节点也会加入队列继续传播。
+1. 收敛（Fixpoint）：
 
 随着所有约束被反复传播，当不再产生新的 copy 边，且所有节点的 points-to 集合不再变化时，整个分析达到固定点，此时指针关系的推导完成。
 
-![原文图片 05](images/image-05.png)
+<p align="center"><img src="images/image-05.png" alt="原文图片 05" width="460"></p>
 
 示例：Andersen 算法的完整求解流程
 
 首先，对于一个 C 语言程序，需要将其转换为 LLVM IR 的中间表示形式，示例如下[2]。
 
-![原文图片 06](images/image-06.png)
+<p align="center"><img src="images/image-06.png" alt="原文图片 06"></p>
 
 在初始化阶段，分析器会识别 IR 中的所有操作，并构建每个节点之间的初始约束关系。随后，算法根据 Address 操作边，将 %a1、%b1、%a 和 %b 加入 WorkList。
 
-![原文图片 07](images/image-07.png)
+<p align="center"><img src="images/image-07.png" alt="原文图片 07"></p>
 
 接下来，从 WorkList 中弹出 %a1 进行处理。由于 %a1 没有其他节点通过 Store 操作指向它，也没有指向其他节点的 Load、Copy 或 Gep,fld 操作，因此无需生成新的约束边。同理，处理 %b1 时也是相同的情况。
 
-![原文图片 08](images/image-08.png)
+<p align="center"><img src="images/image-08.png" alt="原文图片 08"></p>
 
 对于 %a 节点，由于存在 %a ←Store— %a1 的约束边，算法会将 %a 的 points-to 集合 {O3} 通过 Copy 规则传播，生成一条新的边 O3 ←Copy— %a1，并将 %a1 重新加入 WorkList 以便进一步处理。同时，存在 %p ←Copy— %a 的操作边，因此 %p 的 points-to 集合也会更新为 {O3}，并将 %p 加入 WorkList。对 %b 节点同样按照对称规则进行处理，逐步更新相关节点的 points-to 集合并生成新的约束边。
 
-![原文图片 09](images/image-09.png)
+<p align="center"><img src="images/image-09.png" alt="原文图片 09"></p>
 
 随着 WorkList 中节点被不断弹出和处理，新的 Copy 边和 points-to 信息会持续在约束图中传播和更新。每一次迭代都使指针与其可能指向的对象关系更加准确地反映在图中，直到整个系统收敛。最终，当 WorkList 为空，且没有节点的 points-to 集合发生变化，也没有新的 Copy 边被添加时，算法达到固定点，约束图构建完成，最终生成的约束图如图所示。
 
-![原文图片 10](images/image-10.png)
+<p align="center"><img src="images/image-10.png" alt="原文图片 10" width="260"></p>
 
 ## Part 02
 
@@ -240,17 +240,17 @@ Andersen 算法[1]是一种经典的基于约束的指针分析法，它在静�
 
 抽象解释[3]（Abstract Interpretation）正是在这样的背景下提出的。它是一种静态分析理论，用于在不执行程序的情况下，推断程序的行为和性质。其核心思想是通过构建程序行为的抽象模型，在保证分析安全性的前提下，对程序可能的状态空间进行近似推理。与精确执行相比，抽象解释不关注每一个具体值，而是关注变量可能取值的范围、指针可能指向的对象集合，或者污点信息的流动状态等抽象属性。 其提供了一套系统方法，通过定义抽象域、抽象传递函数以及固定点求解算法，实现对程序状态的安全近似推理，从而能够在可控复杂度下分析大规模程序的潜在漏洞或安全风险。
 
-### 2.1 抽象解释的基本概念
+#### 2.1 抽象解释的基本概念
 
 在抽象解释中，程序中可能存在无限的具体值，需要将其映射为有限的抽象值，以便进行静态分析。为此引入抽象域（Abstract Domain）的概念，它通过形式化结构管理这些抽象值。
 
-![原文图片 11](images/image-11.png)
+<p align="center"><img src="images/image-11.png" alt="原文图片 11"></p>
 
 如上图所示[4]，对于表达式x = 0 or 2，可以将其从所有整数的具体域进行抽象，抽象方式可以有三种，其一是符号域（{0, +}），在符号域中我们只关心x的符号是正负还是零；再精确一些的话我们可以定义区间域（[0, 2]），此时我们关心的是x的取值范围；更精确的情况可以分析x的具体值，但是抽象域越精确，分析的时间/空间开销也就越大。
 
 抽象域的核心是偏序关系（Partial Order），记作 ⊑，用于描述抽象值之间的包含或大小关系。偏序关系需满足以下条件：
 
-```makefile
+```text
 自反性:      ∀x ∈ S, x ⊑ x
 传递性:      ∀x,y,z ∈ S, x ⊑ y ∧ y ⊑ z ⇒ x ⊑ z
 反对称性:    ∀x,y ∈ S, x ⊑ y ∧ y ⊑ x ⇒ x = y
@@ -267,7 +267,7 @@ Andersen 算法[1]是一种经典的基于约束的指针分析法，它在静�
 
 如果偏序集合中任意两个元素都存在最小上界和最大下界，则形成一个格（Lattice）：
 
-```nginx
+```text
 x ⊔ y = x 的最小上界与 y 的最小上界
 x ⊓ y = x 的最大下界与 y 的最大下界
 ```
@@ -276,11 +276,11 @@ x ⊓ y = x 的最大下界与 y 的最大下界
 
 一个直观例子是幂集格（Powerset Lattice）：
 
-![原文图片 12](images/image-12.png)
+<p align="center"><img src="images/image-12.png" alt="原文图片 12" width="466"></p>
 
 例如，给定集合 A={0,1,2,3}，其幂集 P(A)包含所有子集，构成一个完备格。最小元素 ⊥= ∅（空集），最大元素 ⊤= {0,1,2,3}（全集）。对于任意两个子集，例如 x={0,1} 和 y={1,2}}，可以计算它们的最小上界与最大下界：
 
-```apache
+```text
 x = {0,1}
 y = {1,2}
 
@@ -292,7 +292,7 @@ x ⊓ y = x & y  # 交集，结果 {1}
 
 此外，格的高度（Lattice Height）定义为从最小元素 ⊥ 到最大元素 ⊤的最长路径长度。在幂集格 (P(A),⊆)中，格的高度等于集合 AAA 的元素个数 ∣A∣。高度的概念在抽象解释中非常重要，因为它影响固定点计算的迭代次数和分析复杂度。
 
-### 2.2 典型抽象域
+#### 2.2 典型抽象域
 
 程序分析中，不同变量类型和分析目标对应不同的抽象域。常见的抽象域有符号域、区间域、布尔域、指针域等，它们为静态分析提供了可操作的模型，这里简单介绍一下符号域和区间域。
 
@@ -300,21 +300,21 @@ x ⊓ y = x & y  # 交集，结果 {1}
 
 符号域是一种通过变量的符号信息对具体值集合进行抽象的域。例如，一个整数变量可以取正数、零或负数，对应的抽象值集合为 {+, 0, -}。符号域通常采用格结构来定义：
 
-```ini
+```text
 L = < P({-, 0, +}), ⊆, ⊓, ⊔, ⊥, ⊤ >
 ```
 
 其中，⊆ 表示部分序关系，⊓ 和 ⊔ 分别是下确界和上确界运算，⊥ 和 ⊤ 分别表示最小和最大抽象元素。例如：
 
-{+} ⊆ {0,+}
+- {+} ⊆ {0,+}
 
 表示正数集合被零或正数集合包含。
 
-{+} ⊓ {0} = ⊥
+- {+} ⊓ {0} = ⊥
 
 两集合的交集为空。
 
-{+} ⊔ {0} = {0,+}
+- {+} ⊔ {0} = {0,+}
 
 两集合的并集为 {0,+}。
 
@@ -324,30 +324,27 @@ L = < P({-, 0, +}), ⊆, ⊓, ⊔, ⊥, ⊤ >
 
 区间域是一种表示整数集合的抽象域，通过上下界确定变量可能的取值范围。其格结构定义如下：
 
-```ini
+```text
 L_interval = < I, ⊆, ⊓, ⊔, ⊥, ⊤ >
 I = { [a,b] | a,b ∈ Z ∪ {-∞,+∞} } ∪ {⊥}
 ```
 
 部分序关系为：[a1,b1] ⊑ [a2,b2] 当且仅当 a2 ≤ a1 且 b1 ≤ b2。例如：
 
-[0,0] ⊑ [0,1]，表示单点区间被更大的区间包含。
-
-对于 [3,8] 和 [7,12]：
-
-交集运算： [3,8] ⊓ [7,12] = [7,8]，为两区间的最大公共区间；
-
-并集运算： [3,8] ⊔ [7,12] = [3,12]，为包含两区间的最小区间。
+- [0,0] ⊑ [0,1]，表示单点区间被更大的区间包含。
+- 对于 [3,8] 和 [7,12]：
+    - 交集运算： [3,8] ⊓ [7,12] = [7,8]，为两区间的最大公共区间；
+    - 并集运算： [3,8] ⊔ [7,12] = [3,12]，为包含两区间的最小区间。
 
 区间域适合分析变量的取值范围、循环边界及数组下标可能越界等问题，同时在符号域基础上提供更精细的数值近似。
 
-![原文图片 13](images/image-13.gif)
+<p align="center"><img src="images/image-13.gif" alt="原文图片 13"></p>
 
 YASA小助手
 
 YASA也是基于抽象解释的基本思想，其抽象域选用了程序状态中有限的指针域，能够通过编写自定义checker收集程序中间状态的任意变量指向进行分析。
 
-### 2.3 抽象状态与抽象轨迹
+#### 2.3 抽象状态与抽象轨迹
 
 在静态分析中，除了定义抽象域来近似变量的取值外，还需要跟踪程序执行过程中变量的抽象状态和变化。
 
@@ -355,7 +352,7 @@ YASA也是基于抽象解释的基本思想，其抽象域选用了程序状态�
 
 抽象状态是程序在某个点上所有变量的抽象值集合，用于近似运行时的具体状态。形式化地，一个抽象状态 AS 定义为映射：
 
-```nginx
+```text
 AS : V → A
 ```
 
@@ -371,7 +368,7 @@ AS : V → A
 
 其中 L 表示程序语句位置（program points），V 表示程序变量，A 表示抽象域的值。在实现中，可以分别定义语句前后的抽象状态（pre-abstract trace 和 post-abstract trace）：
 
-```javascript
+```text
 σ_L : V → A    // 程序点 L 的抽象状态
 σ_L(x) ∈ A    // 程序点 L 处变量 x 的抽象值
 ```
@@ -384,35 +381,29 @@ AS : V → A
 
 在语句 ℓ_1 执行后，变量 a 的值被初始化为 0，在区间域中抽象为 [0,0]；变量 b 尚未赋值，对应的抽象值为最小元素 ⊥。因此，ℓ_1 之后的抽象状态为σ_ℓ1 = { a: [0,0]; b: ⊥ }，程序的抽象轨迹如图所示：
 
-![原文图片 14](images/image-14.png)
+<p align="center"><img src="images/image-14.png" alt="原文图片 14" width="411"></p>
 
 在语句 ℓ_2 执行后，变量 b 被赋值为 1，在区间域中抽象为 [1,1]；变量 a 的抽象值保持不变 [0,0]。因此，ℓ_2 之后的抽象状态为σ_ℓ2 = { a: [0,0]; b: [1,1] }，程序的抽象轨迹如图所示：
 
-![原文图片 15](images/image-15.png)
+<p align="center"><img src="images/image-15.png" alt="原文图片 15" width="401"></p>
 
 通过这个抽象轨迹，我们可以看到程序中每个变量在每个程序点上的可能取值范围。即使程序变量可能在运行时取任意具体值，区间域的抽象轨迹也能够提供一个上界近似，为进一步的静态分析（如范围检查、溢出检测、条件分支分析等）提供基础信息。
 
 对于下图中的CFG，使用区间域来抽象变量 a 的取值范围，并在每个程序点 ℓ_i 维护一个抽象状态 σ_{ℓ_i}。表格中的抽象轨迹 σ_{ℓ_i}(a) 表示在不同分析阶段，分析器对程序点 ℓ_i 的变量 a 的近似值。
 
-初始状态下，对所有程序点 ℓ_i，都有σ_{ℓ_i}(a) = ⊥
+- 初始状态下，对所有程序点 ℓ_i，都有σ_{ℓ_i}(a) = ⊥
+- 执行到 ℓ1 时，a 被赋值为常量 0，因此在区间域中表示成区间 [0, 0]
+- 对于第一次循环：
+    - ℓ2上的抽象状态源于其所有前驱节点的状态的并，即σ_ℓ2 = σ_ℓ1 ⊔ σ_ℓ3。在当前 CFG 中，ℓ2的前驱只有一个：ℓ1。因此，第一次迭代时把来自ℓ1的信息传到ℓ2，即σ_ℓ2 = σ_ℓ1 = [0, 0]
+    - 当控制流从ℓ2走到ℓ3时，说明分支条件 a < 10为真。我们可以利用这一信息对 a做条件约束：
+        - ℓ2上的抽象值是 σ_ℓ2；分支条件为 a < 10，在区间域中，我们可以把 σ_ℓ2与条件 a < 10做一次求交（meet），得到满足分支条件的子区间；然后在 ℓ3 上对 a 执行算术操作 a++，即对区间整体加上 [1,1]，即σ_ℓ3 = ([-∞, 9] ⊓ σ_ℓ2) + [1,1]
+        - 由于σ_ℓ2 = σ_ℓ1 = [0, 0]，因此在第一次循环中，σ_ℓ3 = ([-∞, 9] ⊓ [0, 0]) + [1,1] = [1, 1]
 
-执行到 ℓ1 时，a 被赋值为常量 0，因此在区间域中表示成区间 [0, 0]
-
-对于第一次循环：
-
-ℓ2上的抽象状态源于其所有前驱节点的状态的并，即σ_ℓ2 = σ_ℓ1 ⊔ σ_ℓ3。在当前 CFG 中，ℓ2的前驱只有一个：ℓ1。因此，第一次迭代时把来自ℓ1的信息传到ℓ2，即σ_ℓ2 = σ_ℓ1 = [0, 0]
-
-当控制流从ℓ2走到ℓ3时，说明分支条件 a < 10为真。我们可以利用这一信息对 a做条件约束：
-
-ℓ2上的抽象值是 σ_ℓ2；分支条件为 a < 10，在区间域中，我们可以把 σ_ℓ2与条件 a < 10做一次求交（meet），得到满足分支条件的子区间；然后在 ℓ3 上对 a 执行算术操作 a++，即对区间整体加上 [1,1]，即σ_ℓ3 = ([-∞, 9] ⊓ σ_ℓ2) + [1,1]
-
-由于σ_ℓ2 = σ_ℓ1 = [0, 0]，因此在第一次循环中，σ_ℓ3 = ([-∞, 9] ⊓ [0, 0]) + [1,1] = [1, 1]
-
-![原文图片 16](images/image-16.png)
+<p align="center"><img src="images/image-16.png" alt="原文图片 16"></p>
 
 按照上述过程迭代求解程序的抽象轨迹，可以得到下表
 
-![原文图片 17](images/image-17.png)
+<p align="center"><img src="images/image-17.png" alt="原文图片 17"></p>
 
 程序在第12次循环时达到不动点，最终的不动点状态时，σ_ℓ2 = [0, 10], σ_ℓ3 = [1, 10]
 
@@ -422,7 +413,7 @@ AS : V → A
 
 因此，可以引入抽象解释的加宽（Widening）和变窄（Narrowing）来加速分析过程。
 
-### 2.4 加宽（Widening）和变窄（Narrowing）
+#### 2.4 加宽（Widening）和变窄（Narrowing）
 
 标准的抽象解释有可能收敛得很慢，甚至有可能因为半格的高度无限导致不收敛。为了让结果收敛得更快，可以使用加宽的方法。加宽之后结果也会随之变得不精确，这时候可以使用变窄的方法，进一步让结果变精确[4]。
 
@@ -430,57 +421,54 @@ AS : V → A
 
 加宽的基本思路是在每次更新的时候，根据更新之前的值和新计算时的值，分析抽象值的变化趋势，然后根据变化趋势推测最终会收敛到的抽象值。
 
-![原文图片 18](images/image-18.png)
+<p align="center"><img src="images/image-18.png" alt="原文图片 18"></p>
 
-![原文图片 19](images/image-19.png)
+<p align="center"><img src="images/image-19.png" alt="原文图片 19"></p>
 
 在上述程序中，我们只在循环头 ℓ₂ 上使用 widening，ℓ₂ 的更新规则写成：
 
-![原文图片 20](images/image-20.png)
+<p align="center"><img src="images/image-20.png" alt="原文图片 20" width="279"></p>
 
 下面将 widening 算子应用上述程序分析的抽象解释中，过程如下：
 
-![原文图片 21](images/image-21.png)
+<p align="center"><img src="images/image-21.png" alt="原文图片 21"></p>
 
-![原文图片 22](images/image-22.png)
+<p align="center"><img src="images/image-22.png" alt="原文图片 22"></p>
 
-![原文图片 23](images/image-23.png)
+<p align="center"><img src="images/image-23.png" alt="原文图片 23"></p>
 
 达到不动点状态时，σ_ℓ1处a的取值范围是[0, 0],σ_ℓ2处a的取值范围是[0, +∞],σ_ℓ3处a的取值范围是[1, 10],σ_ℓ4处a的取值范围是[10, +∞]
 
-![原文图片 24](images/image-24.png)
+<p align="center"><img src="images/image-24.png" alt="原文图片 24"></p>
 
 应用Narrowing修正结果
 
 加宽虽然能加快收敛，但也会导致很多分析返回不精确的结果。为了解决这样的问题，变窄通过再次应用原始分析对加宽的结果进行修正。给定加宽分析的值作为初值，变窄应用原始抽象解释对该值进行多轮迭代更新[4]
 
-![原文图片 25](images/image-25.png)
+<p align="center"><img src="images/image-25.png" alt="原文图片 25"></p>
 
-![原文图片 26](images/image-26.png)
+<p align="center"><img src="images/image-26.png" alt="原文图片 26"></p>
 
 也即：
 
-如果旧区间的下界是 −∞，就把下界收缩到新区间的下界 ℓ₂；
-
-否则保持旧下界 ℓ₁ 不变；
-
-如果旧区间的上界是 +∞，就把上界收缩到新区间的上界 h₂；
-
-否则保持旧上界 h₁ 不变
+- 如果旧区间的下界是 −∞，就把下界收缩到新区间的下界 ℓ₂；
+- 否则保持旧下界 ℓ₁ 不变；
+- 如果旧区间的上界是 +∞，就把上界收缩到新区间的上界 h₂；
+- 否则保持旧上界 h₁ 不变
 
 例如，对于[0, +∞] Δ [0, 10] = [0, 10]
 
-![原文图片 27](images/image-27.png)
+<p align="center"><img src="images/image-27.png" alt="原文图片 27"></p>
 
 在上述widening达到不动点的程序而言，我们可以在第4次循环迭代时应用narrowing算子，
 
-![原文图片 28](images/image-28.png)
+<p align="center"><img src="images/image-28.png" alt="原文图片 28"></p>
 
-![原文图片 29](images/image-29.png)
+<p align="center"><img src="images/image-29.png" alt="原文图片 29"></p>
 
 应用narrowing算子达到不动点状态时，σ_ℓ1处a的取值范围是[0, 0],σ_ℓ2处a的取值范围是[0, 10],σ_ℓ3处a的取值范围是[1, 10],σ_ℓ4处a的取值范围是[10, 10]
 
-![原文图片 30](images/image-30.png)
+<p align="center"><img src="images/image-30.png" alt="原文图片 30"></p>
 
 应用widening和narrowing算子，仅需要5次循环就能够求解到精确的区间结果，能够更快更精确地收敛。
 
@@ -492,23 +480,14 @@ AS : V → A
 
 到此，我们静态分析课程的原理部分也就结束了，希望这一系列的课程笔记能够帮助大家更好地理解静态分析！
 
-![原文图片 31](images/image-31.png)
+<p align="center"><img src="images/image-31.png" alt="原文图片 31" width="361"></p>
 
-参考资料
+### 参考资料
 
-[1] Andersen, L.O.: Program Analysis and Specialization for the C Programming Language.
-
-[2] Software Security Analysis. Yulei Sui.
-
-https://github.com/SVF-tools/Software-Security-Analysis/wiki
-
-[3] Cousot P, Cousot R. Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints
-
-[4] 软件分析技术课程讲义. 熊英飞.
-
-https://xiongyingfei.github.io/SA_new/2025/slides/lecnotes.pdf
-
-∨
+1. Andersen, L.O.: Program Analysis and Specialization for the C Programming Language.
+2. Software Security Analysis. Yulei Sui. — <https://github.com/SVF-tools/Software-Security-Analysis/wiki>
+3. Cousot P, Cousot R. Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints
+4. 软件分析技术课程讲义. 熊英飞. — <https://xiongyingfei.github.io/SA_new/2025/slides/lecnotes.pdf>
 
 YASA用户调研邀请
 
@@ -528,32 +507,31 @@ YASA用户调研邀请
 
 如中奖请截图保存结果，添加 YASA 小助手微信（YASA1024）兑奖～
 
-![图片](images/image-32.png)
+<p align="center"><img src="images/image-32.png" alt="图片" width="140"></p>
 
 您的每一份反馈都对我们非常重要
 
 期待听到您的宝贵建议！
 
-关联阅读
+### 关联阅读
 
-开课啦 | 华中科技大学与蚂蚁基础安全团队联合开设《静态程序分析原理与实践》课程
-
-高校教学系列：程序分析—基础概念
-
-高校教学系列：程序分析—中间表示
-
-高校教学系列：程序分析—数据流分析
-
-高校教学系列：实验课程—YASA原理简介及功能演示
-
-高校教学系列：实验课程—YASA内部机制深入解析
+- [开课啦 | 华中科技大学与蚂蚁基础安全团队联合开设《静态程序分析原理与实践》课程](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247483856&idx=1&sn=b2d22f2b375edf8c0394b95b7a5e379f&scene=21#wechat_redirect)
+- [高校教学系列：程序分析—基础概念](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484014&idx=1&sn=626a0e866cf890a19b5335cc5bbb555b&scene=21#wechat_redirect)
+- [高校教学系列：程序分析—中间表示](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484022&idx=1&sn=76fa95ff85549754bad3bc3a505b713f&scene=21#wechat_redirect)
+- [高校教学系列：程序分析—数据流分析](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484230&idx=1&sn=6a2191643d461d8d8585bc24c02ec136&scene=21#wechat_redirect)
+- [高校教学系列：实验课程—YASA原理简介及功能演示](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484237&idx=1&sn=10a647b65b32c94f9f40b542ed4d99b2&scene=21#wechat_redirect)
+- [高校教学系列：实验课程—YASA内部机制深入解析](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484261&idx=1&sn=668fdc83e772d4b68bbfd787e5022385&scene=21#wechat_redirect)
 
 长按识别二维码
 
 关注“开放式安全基础设施”
 
-![图片](images/image-33.png)
+<p align="center"><img src="images/image-33.png" alt="图片" width="176"></p>
 
 在这里与上千名技术精英
 
 交流技术干货&程序分析
+
+---
+
+[← 返回微信原文目录](../../README.md) · [查看公众号原文](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484320&idx=1&sn=f306868888b67d001729ff18ef5abadc&chksm=fbce3588ccb9bc9e900831b3670b3bb609b078e7425c6fccc2b68366172997dafbd79ce8bf73)

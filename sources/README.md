@@ -4,7 +4,7 @@
 
 - `wechat-series/README.md`、`wechat-series/index.html`：8 篇微信原文的 GitHub 索引与本地浏览入口；
 - `wechat-series/index.json`：官方微信合集元数据、8 篇文章的标题/URL/时间、抽取状态与 HTML 哈希；
-- `wechat-series/articles/*/article.md`：可在 GitHub 直接阅读、嵌入本地原图并恢复代码块的 Markdown 版；
+- `wechat-series/articles/*/article.md`：可在 GitHub 直接阅读，恢复代码块、行内公式图和原始图片尺寸的 Markdown 版；
 - `wechat-series/articles/*/article.html`：保留 `#js_content` 标签层次和内联样式、使用本地图片的安全阅读版；
 - `wechat-series/articles/*/original.raw.html`：抓取时收到的完整原始页面 HTML；
 - `wechat-series/articles/*/extracted.md`：供检索和审计的规范化正文；
@@ -48,7 +48,8 @@ python scripts/verify_materials.py --require-work-evidence # 连同本地视频/
 
 - 官方合集抓取时：`article_count=8`，取得 8 项，`continue_flag=0`；
 - 官方课程页列出的 4 次理论课 + 3 次实验课，与合集中的 7 篇课程材料逐一对应，另有 1 篇开课公告；
-- 所有 8 篇正文均保留完整抓取页、`#js_content` 本地结构阅读版和规范化文本；
+- 所有 8 篇正文均保留完整抓取页、`#js_content` 本地结构阅读版、GitHub 可读版和规范化文本；
+- 109 张正文图片均已逐文件校验；微信返回的 3 个 MathJax SVG 缺少 `<use>` 字形引用，归档版已恢复引用，原始哈希保存在对应 `images.json`；
 - 所有正文知识图片已被课程笔记的逐图审计覆盖；
 - 三篇实验文章链接的三个视频均已获取；视频没有官方字幕；
 - 第二、三讲 PDF 的附件名和链接可核验，但匿名请求只返回语雀登录页；无效 HTML 未冒充 PDF 保存，正文不作为证据；

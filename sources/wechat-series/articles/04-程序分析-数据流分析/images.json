@@ -7,8 +7,11 @@
     "style": "",
     "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/04-程序分析-数据流分析/images/image-01.svg",
     "content_type": "image/svg+xml",
-    "bytes": 1155,
-    "sha256": "c8f0c1f3c57df926ffad1b97e7d9e5bddb9e140006b59113d82988cdf2285041"
+    "bytes": 1210,
+    "sha256": "c4e6317b22a7e616ee29df5f5e51d00eafadbdd5628ad5622d4d26c9e91b0e73",
+    "render_repair": "restored missing MathJax SVG use reference",
+    "source_bytes": 1155,
+    "source_sha256": "c8f0c1f3c57df926ffad1b97e7d9e5bddb9e140006b59113d82988cdf2285041"
   },
   {
     "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPltd357HQXNkG8DJbJeRYRYtDfeZqTSvvblxf6WpHhcictG6b759JjycW6ClicXHI0XXdCUmsgbicoHQ/0?wx_fmt=png&from=appmsg",
@@ -40,8 +43,11 @@
     "style": "",
     "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/04-程序分析-数据流分析/images/image-04.svg",
     "content_type": "image/svg+xml",
-    "bytes": 777,
-    "sha256": "e7a1f9ab6656d20e8b8d03b7b94649ac5d287d572a84f16d568a5dc70c5f867c"
+    "bytes": 832,
+    "sha256": "c9ed0a0d808f8167ada4788914280e6d3e3b97d8e3d949d9039098670a887ebf",
+    "render_repair": "restored missing MathJax SVG use reference",
+    "source_bytes": 777,
+    "source_sha256": "e7a1f9ab6656d20e8b8d03b7b94649ac5d287d572a84f16d568a5dc70c5f867c"
   },
   {
     "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPltd357HQXNkG8DJbJeRYRYniaPNHxYyOZpIX04Wz3MJwlqu7zzw7UK8xoYR5Iav3vLFFDWgCv87CQ/0?wx_fmt=png&from=appmsg",
@@ -95,8 +101,11 @@
     "style": "",
     "local_path": "/data/lihan/00code/static_analysis_note/sources/wechat-series/articles/04-程序分析-数据流分析/images/image-09.svg",
     "content_type": "image/svg+xml",
-    "bytes": 781,
-    "sha256": "fcaf9f5bcc5be6abfc21d0f89202797a81588a1a6a7c02a7c3e09676cceed82a"
+    "bytes": 836,
+    "sha256": "582193f45129040108f3582cf0286336e02abf2e4aa34c545c8b5bfa2c8f3b31",
+    "render_repair": "restored missing MathJax SVG use reference",
+    "source_bytes": 781,
+    "source_sha256": "fcaf9f5bcc5be6abfc21d0f89202797a81588a1a6a7c02a7c3e09676cceed82a"
   },
   {
     "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/9kb0CP8mQPltd357HQXNkG8DJbJeRYRYeNNqIy1hdWUCbY8A66fopxdPvn6q9ngicVpNLx6AAIwZeCD7AkIBicmQ/0?wx_fmt=png&from=appmsg",

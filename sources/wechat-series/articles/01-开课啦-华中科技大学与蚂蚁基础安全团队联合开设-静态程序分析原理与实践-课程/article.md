@@ -1,12 +1,18 @@
 # 开课啦 | 华中科技大学与蚂蚁基础安全团队联合开设《静态程序分析原理与实践》课程
 
-> 发布时间：2025-11-11T18:18:30+08:00
-> 公众号原文：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247483856&idx=1&sn=b2d22f2b375edf8c0394b95b7a5e379f&chksm=fbce37f8ccb9beeed3edd35a67b02baefb2960c4c0a02c6289193437e79920ec8436b05399b9)
-> 本文件用于 GitHub 直接阅读：正文顺序来自原文，图片使用仓库中的本地副本；复杂公众号装饰样式请对照 `article.html`。
+[← 返回微信原文目录](../../README.md)
+
+> **归档信息**
+>
+> **发布时间**：2025-11-11T18:18:30+08:00<br>
+> **公众号原文**：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247483856&idx=1&sn=b2d22f2b375edf8c0394b95b7a5e379f&chksm=fbce37f8ccb9beeed3edd35a67b02baefb2960c4c0a02c6289193437e79920ec8436b05399b9)<br>
+> **归档说明**：正文顺序和原图来自原文；代码块由 HTML 结构恢复。复杂装饰样式可对照 [`article.html`](article.html)。
+
+---
 
 2025年11月7日，蚂蚁基础安全团队与华中科技大学（以下简称华科）网络空间安全学院联合开设的研究生课程《静态程序分析原理与实践》正式开课。
 
-![原文图片 01](images/image-01.jpg)
+<p align="center"><img src="images/image-01.jpg" alt="原文图片 01"></p>
 
 图1 开课师生合影
 
@@ -14,19 +20,16 @@
 
 课程理论部分由华科博士生导师王浩宇教授团队（简介：https://howiepku.github.io/）主讲，内容涵盖静态程序分析的概念、基础理论、核心算法、分析技术等关键知识点。王教授在软件安全、系统安全、智能化程序分析等领域有着深厚的学术造诣和丰富的教学经验，将为学生提供系统性的理论指导。
 
-![原文图片 02](images/image-02.jpg)
+<p align="center"><img src="images/image-02.jpg" alt="原文图片 02"></p>
 
 图2 授课现场
 
 实践部分创新引入蚂蚁基础安全团队开源的统一多语言程序分析项目YASA（开源地址：https://github.com/antgroup/YASA-Engine），通过企业级实战案例帮助学生深入理解分析引擎的设计理念与应用能力。YASA作为蚂蚁集团在程序分析领域的重要开源项目，此次被华科纳入正式课程内容，标志着其技术先进性与教育价值获得国内知名高校的认可。通过这一实践环节，华科的同学们将能够：
 
-深度掌握YASA的使用方法和操作技巧
-
-深入理解YASA的设计原理和架构思想
-
-基于YASA开展创新性研究工作
-
-参与YASA开源社区的建设与发展
+- 深度掌握YASA的使用方法和操作技巧
+- 深入理解YASA的设计原理和架构思想
+- 基于YASA开展创新性研究工作
+- 参与YASA开源社区的建设与发展
 
 “我们非常高兴能够与华中科技大学这样的顶尖学府合作，”蚂蚁YASA团队负责人表示，“通过将企业级的技术工具和实践经验引入高校课堂，我们希望能够培养出更多具备创新能力和实践技能的网络安全人才。”
 
@@ -48,8 +51,12 @@ https://github.com/antgroup/YASA-Engine/
 
 关注“开放式安全基础设施”
 
-![原文图片 03](images/image-03.png)
+<p align="center"><img src="images/image-03.png" alt="原文图片 03" width="176"></p>
 
 在这里与上千名技术精英
 
 交流技术干货&程序分析
+
+---
+
+[← 返回微信原文目录](../../README.md) · [查看公众号原文](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247483856&idx=1&sn=b2d22f2b375edf8c0394b95b7a5e379f&chksm=fbce37f8ccb9beeed3edd35a67b02baefb2960c4c0a02c6289193437e79920ec8436b05399b9)

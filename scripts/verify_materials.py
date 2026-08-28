@@ -81,6 +81,8 @@ def verify_sources(check: Verification) -> None:
     total_images = 0
     html_snapshots = 0
     readable_markdown = 0
+    companion_videos = 0
+    repaired_svg = 0
     for article in articles:
         number = article.get("series_number")
         extracted = resolve_source_path(article.get("extracted_path", ""))
@@ -97,9 +99,14 @@ def verify_sources(check: Verification) -> None:
             markdown_text = article_md.read_text(encoding="utf-8")
             expected_markdown_images = article.get("content_images", 0)
             check.require(markdown_text.startswith("# "), f"article {number}: readable Markdown lacks H1")
-            check.require("[[IMAGE_" not in markdown_text, f"article {number}: unresolved Markdown image marker")
             check.require(
-                len(re.findall(r"!\[[^\]]*\]\(images/image-[^)]+\)", markdown_text)) == expected_markdown_images,
+                not any(marker in markdown_text for marker in ("[[IMAGE_", "[[LINK_", "[[LIST_")),
+                f"article {number}: unresolved Markdown rendering marker",
+            )
+            check.require(not re.search(r"(?m)^∨$", markdown_text), f"article {number}: decorative video arrow remains")
+            companion_videos += markdown_text.count("**配套视频**")
+            check.require(
+                len(re.findall(r'(?:\]\(|src=")images/image-[^)"\s>]+', markdown_text)) == expected_markdown_images,
                 f"article {number}: readable Markdown image count differs from {expected_markdown_images}",
             )
             check.require(markdown_text.count("```") % 2 == 0, f"article {number}: unbalanced Markdown code fences")
@@ -124,6 +131,13 @@ def verify_sources(check: Verification) -> None:
         records = json.loads(manifest.read_text(encoding="utf-8"))
         expected_count = article.get("content_images")
         check.require(len(records) == expected_count, f"article {number}: manifest has {len(records)} images, expected {expected_count}")
+        if article_md.is_file():
+            referenced = re.findall(r'(?:\]\(|src=")images/(image-[^)"\s>]+)', markdown_text)
+            expected_files = [Path(record.get("local_path", "")).name for record in records]
+            check.require(
+                referenced == expected_files,
+                f"article {number}: Markdown image order/filenames differ from manifest",
+            )
         total_images += len(records)
         for position, record in enumerate(records, start=1):
             local = Path(record.get("local_path", ""))
@@ -135,12 +149,35 @@ def verify_sources(check: Verification) -> None:
             check.require(local.is_file(), f"article {number} image {position}: missing {local}")
             if local.is_file() and record.get("sha256"):
                 check.require(sha256(local) == record["sha256"], f"article {number} image {position}: SHA-256 mismatch")
+            if local.is_file() and local.suffix.lower() != ".svg":
+                header = local.read_bytes()[:16]
+                suffix = local.suffix.lower()
+                valid_signature = {
+                    ".png": header.startswith(b"\x89PNG\r\n\x1a\n"),
+                    ".jpg": header.startswith(b"\xff\xd8\xff"),
+                    ".jpeg": header.startswith(b"\xff\xd8\xff"),
+                    ".gif": header.startswith((b"GIF87a", b"GIF89a")),
+                    ".webp": header.startswith(b"RIFF") and header[8:12] == b"WEBP",
+                }.get(suffix, bool(header))
+                check.require(valid_signature, f"article {number} image {position}: invalid {suffix} signature")
+            if record.get("render_repair"):
+                repaired_svg += 1
+            if local.is_file() and local.suffix.lower() == ".svg":
+                svg = local.read_text(encoding="utf-8")
+                check.require("<svg" in svg, f"article {number} image {position}: invalid SVG root")
+                if "<use" in svg:
+                    check.require(
+                        "xlink:href=" in svg or " href=" in svg,
+                        f"article {number} image {position}: SVG use has no glyph reference",
+                    )
     check.require(total_images == 109, f"found {total_images} article images, expected 109")
+    check.require(companion_videos == 3, f"found {companion_videos} companion video links, expected 3")
     check.require(readable_markdown == 8, f"found {readable_markdown} readable Markdown articles, expected 8")
     check.require(html_snapshots == 8, f"found {html_snapshots} article HTML snapshots, expected 8")
     check.note(
         f"official snapshot: {len(articles)}/8 articles, {readable_markdown}/8 readable Markdown, "
-        f"{html_snapshots}/8 HTML views, {total_images}/109 images"
+        f"{html_snapshots}/8 HTML views, {total_images}/109 images, "
+        f"{companion_videos}/3 video links, {repaired_svg} repaired SVG"
     )
 
 
