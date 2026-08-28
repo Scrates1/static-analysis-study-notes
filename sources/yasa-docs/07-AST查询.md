@@ -4,7 +4,7 @@ slug: mzaslh9b1hook19l
 source_url: https://www.yuque.com/u22090306/bebf6g/mzaslh9b1hook19l
 updated_at: 2025-11-17T10:52:20.000Z
 word_count: 424
-image_count: 0
+image_count: 1
 card_count: 6
 ---
 
@@ -12,7 +12,6 @@ card_count: 6
 
 参数说明
 
-[[CARD_01]]
 ```plain
 --help 打印帮助
 --sourcePath 将要分析的目标文件
@@ -25,7 +24,6 @@ card_count: 6
 解析单文件
 执行命令
 
-[[CARD_02]]
 ```plain
 # 命令示例
 /Users/yasa-macos-arm64
@@ -40,7 +38,6 @@ card_count: 6
 预期输出示例
 结果文件将会输出到--report指定的路径/Users/xxx/root.json下：
 
-[[CARD_03]]
 ```javascript
 main file:/snapshot/yasa2/dist/main.js
 source path: /Users/xxx/root.go
@@ -48,12 +45,11 @@ Report File: /Users/xxx/root.json
 ```
 未指定输出地点时，会默认输出到当前目录的uast.json下
 UAST结果说明
-UAST 结果结构详见UAST节点说明
+UAST 结果结构详见[UAST节点说明](https://github.com/antgroup/YASA-UAST/blob/main/specification/specification.md)
 
 解析整个工程
 执行命令
 
-[[CARD_04]]
 ```plain
 # 命令示例
 /Users/yasa-macos-arm64
@@ -68,7 +64,6 @@ UAST 结果结构详见UAST节点说明
 预期输出示例
 结果文件将会输出到--report指定的路径/Users/xxx/myproject/uastdump下：
 
-[[CARD_05]]
 ```javascript
 main file:/snapshot/yasa2/dist/main.js
 source path: /Users/xxx/myproject/
@@ -78,6 +73,6 @@ parseDirectory UAST success!
 报告输出
 未指定输出地点时，会默认输出到当前目录下
 
-[[CARD_06]]
+![image.png](https://cdn.nlark.com/yuque/0/2025/png/59228126/1757554101350-1f08e7d9-44da-4473-931c-fb29014dbd27.png)
 UAST结果说明
-UAST 结果结构详见UAST节点说明
+UAST 结果结构详见[UAST节点说明](https://github.com/antgroup/YASA-UAST/blob/main/specification/specification.md)

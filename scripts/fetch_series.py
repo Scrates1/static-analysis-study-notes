@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Fetch the public WeChat album and extract its article bodies for local study.
 
-The script writes a reproducible metadata index, the exact fetched page HTML,
-a safe local-view HTML that preserves the original js_content element structure,
-normalized text, and the content images needed for offline study.
+The script writes only GitHub-readable Markdown and the local content images
+referenced by that Markdown. Full page HTML and JSON sidecars are intentionally
+not retained in the study repository.
 """
 
 from __future__ import annotations
 
 import argparse
 import datetime as dt
-import hashlib
 import html
 import json
 import mimetypes
@@ -217,106 +216,6 @@ class ArticleExtractor(HTMLParser):
         return result
 
 
-class ArticleHTMLExtractor(HTMLParser):
-    """Preserve the js_content tree while localizing its ordered images.
-
-    The exact HTTP response is stored separately. This serializer intentionally
-    removes inline event-handler attributes and remote srcset values so the local
-    view remains inert under its restrictive Content-Security-Policy.
-    """
-
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=False)
-        self.depth = 0
-        self.parts: list[str] = []
-        self.image_count = 0
-
-    @property
-    def inside(self) -> bool:
-        return self.depth > 0
-
-    def _attributes(
-        self, tag: str, attrs: list[tuple[str, str | None]]
-    ) -> list[tuple[str, str | None]]:
-        result: list[tuple[str, str | None]] = []
-        data = {key.lower(): value or "" for key, value in attrs}
-        image_source = ""
-        if tag == "img":
-            image_source = data.get("data-src") or data.get("src") or ""
-            if image_source and "data:image/" not in image_source:
-                self.image_count += 1
-
-        for key, value in attrs:
-            lowered = key.lower()
-            if lowered.startswith("on"):
-                continue
-            if tag == "img" and lowered in {"src", "data-src", "srcset", "data-srcset"}:
-                continue
-            result.append((key, value))
-
-        if tag == "img" and image_source and "data:image/" not in image_source:
-            placeholder = f"__WECHAT_LOCAL_IMAGE_{self.image_count:02d}__"
-            result.extend([
-                ("src", placeholder),
-                ("data-original-src", image_source.replace("&amp;", "&")),
-                ("loading", "lazy"),
-            ])
-        return result
-
-    @staticmethod
-    def _tag(tag: str, attrs: list[tuple[str, str | None]], closing: str = ">") -> str:
-        rendered = [f"<{tag}"]
-        for key, value in attrs:
-            rendered.append(f" {html.escape(key, quote=True)}")
-            if value is not None:
-                rendered.append(f'="{html.escape(value, quote=True)}"')
-        rendered.append(closing)
-        return "".join(rendered)
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        data = {key.lower(): value or "" for key, value in attrs}
-        starting_root = not self.inside and data.get("id") == "js_content"
-        if starting_root:
-            self.depth = 1
-        elif self.inside and tag not in VOID_TAGS:
-            self.depth += 1
-        if self.inside:
-            self.parts.append(self._tag(tag, self._attributes(tag, attrs)))
-
-    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        tag = tag.lower()
-        if self.inside:
-            self.parts.append(self._tag(tag, self._attributes(tag, attrs), " />"))
-
-    def handle_endtag(self, tag: str) -> None:
-        tag = tag.lower()
-        if not self.inside:
-            return
-        self.parts.append(f"</{tag}>")
-        if tag not in VOID_TAGS:
-            self.depth -= 1
-
-    def handle_data(self, data: str) -> None:
-        if self.inside:
-            self.parts.append(data)
-
-    def handle_entityref(self, name: str) -> None:
-        if self.inside:
-            self.parts.append(f"&{name};")
-
-    def handle_charref(self, name: str) -> None:
-        if self.inside:
-            self.parts.append(f"&#{name};")
-
-    def handle_comment(self, data: str) -> None:
-        if self.inside:
-            self.parts.append(f"<!--{data}-->")
-
-    def body_html(self) -> str:
-        return "".join(self.parts)
-
-
 class CodeBlockExtractor(HTMLParser):
     """Recover source lines from WeChat's `<pre><code>…</code>…</pre>` layout."""
 
@@ -507,68 +406,9 @@ def fetch_image(client: requests.Session, record: dict[str, str], stem: Path) ->
     suffix = extension_for(content_type, record["source_url"])
     destination = stem.with_suffix(suffix)
     source_content = response.content
-    local_content, repaired_svg = repair_svg_for_rendering(source_content)
+    local_content, _ = repair_svg_for_rendering(source_content)
     destination.write_bytes(local_content)
-    result: dict[str, Any] = {
-        **record,
-        "local_path": destination.as_posix(),
-        "content_type": content_type,
-        "bytes": len(local_content),
-        "sha256": hashlib.sha256(local_content).hexdigest(),
-    }
-    if repaired_svg:
-        result.update({
-            "render_repair": "restored missing MathJax SVG use reference",
-            "source_bytes": len(source_content),
-            "source_sha256": hashlib.sha256(source_content).hexdigest(),
-        })
-    return result
-
-
-def render_local_article(
-    title: str,
-    source_url: str,
-    published_at: dt.datetime,
-    body: str,
-    image_records: list[dict[str, Any]],
-) -> str:
-    for number, record in enumerate(image_records, start=1):
-        placeholder = f"__WECHAT_LOCAL_IMAGE_{number:02d}__"
-        local_name = Path(record["local_path"]).name
-        body = body.replace(placeholder, f"images/{local_name}")
-    if "__WECHAT_LOCAL_IMAGE_" in body:
-        raise RuntimeError(f"Unresolved local image placeholder in: {title}")
-
-    safe_title = html.escape(title)
-    safe_url = html.escape(source_url, quote=True)
-    return f"""<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-<title>{safe_title}</title>
-<style>
-html {{ background: #f5f5f5; }}
-body {{ box-sizing: border-box; max-width: 820px; margin: 0 auto; padding: 24px; background: white; color: #222; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.75; overflow-wrap: anywhere; }}
-.archive-meta {{ margin: 0 0 24px; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; font-size: 14px; }}
-.archive-meta a {{ color: #0969da; }}
-#js_content {{ display: block !important; visibility: visible !important; opacity: 1 !important; max-width: 100% !important; }}
-#js_content img {{ max-width: 100% !important; height: auto !important; }}
-#js_content pre {{ overflow-x: auto; white-space: pre-wrap; }}
-</style>
-</head>
-<body>
-<header class="archive-meta">
-<strong>本地正文 HTML 结构快照</strong><br>
-发布时间：{published_at.isoformat()}<br>
-官方页面：<a href="{safe_url}">{safe_url}</a><br>
-说明：保留公众号 <code>#js_content</code> 的标签层次与内联样式；图片改为本地副本，脚本和外部资源被 CSP 禁用。
-</header>
-{body}
-</body>
-</html>
-"""
+    return {**record, "local_path": destination.as_posix()}
 
 
 def image_width_hint(record: dict[str, Any]) -> int | None:
@@ -714,7 +554,7 @@ def render_readable_markdown(
         f"> **发布时间**：{published_at.isoformat()}<br>",
         f"> **公众号原文**：[打开官方页面]({source_url})<br>",
         *([f"> **配套视频**：[在 Bilibili 观看]({video_url})<br>"] if video_url else []),
-        "> **归档说明**：正文顺序和原图来自原文；代码块由 HTML 结构恢复。复杂装饰样式可对照 [`article.html`](article.html)。",
+        "> **归档说明**：正文顺序、原图和代码块均由公众号原文整理；本目录仅保留 GitHub 可直接阅读的 Markdown 版本。",
         "",
         "---",
         "",
@@ -866,23 +706,21 @@ def fetch_article(
     if "wappoc_appmsgcaptcha" in response.url or 'id="js_content"' not in response.text:
         raise RuntimeError(f"WeChat returned a verification page for: {title}")
 
-    extractor = ArticleExtractor()
-    extractor.feed(response.text)
     markdown_extractor = ArticleExtractor(inline_image_markers=True)
     markdown_extractor.feed(response.text)
-    structured = ArticleHTMLExtractor()
-    structured.feed(response.text)
     code_extractor = CodeBlockExtractor()
     code_extractor.feed(response.text)
     table_extractor = TableBlockExtractor()
     table_extractor.feed(response.text)
-    lines = extractor.normalized_lines()
-    body_html = structured.body_html()
-    if not lines or not body_html:
+    lines = markdown_extractor.normalized_lines()
+    if not lines:
         raise RuntimeError(f"No article body extracted for: {title}")
 
+    for stale_image in assets_dir.glob("image-*"):
+        if stale_image.is_file():
+            stale_image.unlink()
     image_records: list[dict[str, Any]] = []
-    for image_number, image in enumerate(extractor.images, start=1):
+    for image_number, image in enumerate(markdown_extractor.images, start=1):
         image_records.append(
             fetch_image(client, image, assets_dir / f"image-{image_number:02d}")
         )
@@ -892,22 +730,13 @@ def fetch_article(
     created_at = dt.datetime.fromtimestamp(
         int(article["create_time"]), tz=dt.timezone(dt.timedelta(hours=8))
     )
-    if not (
-        structured.image_count == len(markdown_extractor.images) == len(image_records)
-    ):
+    if len(markdown_extractor.images) != len(image_records):
         raise RuntimeError(
-            f"HTML/text/Markdown image counts differ for {title}: "
-            f"{structured.image_count}, {len(markdown_extractor.images)}, {len(image_records)}"
+            f"Markdown/downloaded image counts differ for {title}: "
+            f"{len(markdown_extractor.images)} != {len(image_records)}"
         )
 
-    raw_html_path = article_dir / "original.raw.html"
-    local_html_path = article_dir / "article.html"
     readable_markdown_path = article_dir / "article.md"
-    raw_html_path.write_bytes(response.content)
-    local_html_path.write_text(
-        render_local_article(title, url, created_at, body_html, image_records),
-        encoding="utf-8",
-    )
     video_url = next(
         (video for fragment, video in EXPERIMENT_VIDEO_URLS.items() if fragment in title),
         None,
@@ -927,107 +756,35 @@ def fetch_article(
         encoding="utf-8",
     )
 
-    relative_dir = article_dir.relative_to(output_root.parent)
-    frontmatter = [
-        "---",
-        f"series_number: {number}",
-        f"title: {json.dumps(title, ensure_ascii=False)}",
-        f"published_at: {created_at.isoformat()}",
-        f"source_url: {json.dumps(url, ensure_ascii=False)}",
-        f"msgid: {article.get('msgid', '')}",
-        f"itemidx: {article.get('itemidx', '')}",
-        f"image_count: {len(image_records)}",
-        "---",
-        "",
-        f"# {title}",
-        "",
-        "> 研究用规范化抽取：保留原文信息顺序，以图片占位符关联本地图片；不含页面广告和脚本。",
-        f"> 阅读入口：[GitHub Markdown 版](article.md) · [本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面]({url})",
-        "",
-    ]
-    (article_dir / "extracted.md").write_text(
-        "\n".join(frontmatter + lines) + "\n", encoding="utf-8"
-    )
-    (article_dir / "images.json").write_text(
-        json.dumps(image_records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
     return {
         "series_number": number,
         "title": title,
-        "published_at": created_at.isoformat(),
         "source_url": url,
-        "msgid": article.get("msgid", ""),
-        "itemidx": article.get("itemidx", ""),
         "slug": slug,
-        "extracted_path": (relative_dir / "extracted.md").as_posix(),
-        "readable_markdown_path": (relative_dir / "article.md").as_posix(),
-        "local_html_path": (relative_dir / "article.html").as_posix(),
-        "raw_html_path": (relative_dir / "original.raw.html").as_posix(),
-        "raw_html_sha256": hashlib.sha256(response.content).hexdigest(),
-        "image_manifest_path": (relative_dir / "images.json").as_posix(),
-        "body_characters": sum(len(line) for line in lines),
-        "body_lines": len(lines),
         "content_images": len(image_records),
     }
 
 
-def write_series_indexes(output_root: Path, articles: list[dict[str, Any]]) -> None:
+def write_series_readme(output_root: Path, articles: list[dict[str, Any]]) -> None:
     markdown = [
-        "# 微信公众号原文归档",
+        "# 微信公众号课程原文（Markdown）",
         "",
-        "本目录同时保留四种形态：",
+        "本目录只保留适合 GitHub 直接阅读的资料：",
         "",
-        "- `article.md`：恢复段落、代码块、行内公式图和原始图片尺寸的 GitHub 直接阅读版；",
-        "- `article.html`：保留公众号正文 `#js_content` 标签层次和内联样式，图片已本地化；适合克隆后用浏览器阅读；",
-        "- `original.raw.html`：抓取时收到的完整原始页面 HTML，用于结构核验；可能依赖微信远程资源，不建议直接执行其中脚本；",
-        "- `extracted.md`：供检索、审计和脚本处理的规范化纯文本，不追求还原公众号排版。",
+        f"- {len(articles)} 篇 `article.md`：恢复标题层级、列表、表格、代码块、原文链接和配套视频；",
+        f"- {sum(article.get('content_images', 0) for article in articles)} 张 `images/` 本地图片：供 Markdown 正文引用，不能单独删除；",
+        "- 每篇文章顶部均保留公众号官方页面链接。",
         "",
-        f"当前快照共 {sum(article.get('content_images', 0) for article in articles)} 张正文图片，均由校验器核对文件、哈希和 Markdown 引用。抓取器会修复微信 MathJax SVG 中缺失的字形引用，并在 `images.json` 保留原始哈希。",
-        "",
-        "本地阅读入口：直接用浏览器打开本目录的 `index.html`，或运行：",
-        "",
-        "```bash",
-        "python -m http.server 8000 --directory sources/wechat-series",
-        "```",
-        "",
-        "然后访问 <http://127.0.0.1:8000/>。",
-        "",
-        "| # | 标题 | GitHub 阅读 | 本地 HTML | 原始页面 HTML | 规范化文本 | 官方页面 |",
-        "|---:|---|---|---|---|---|---|",
+        "| # | 文章 | GitHub 阅读 |",
+        "|---:|---|---|",
     ]
-    html_items: list[str] = []
     for article in articles:
-        number = article["series_number"]
-        title = article["title"]
-        markdown_title = title.replace("|", "\\|")
-        slug = article["slug"]
-        official = article["source_url"]
+        title = article["title"].replace("|", "\\|")
         markdown.append(
-            f"| {number} | {markdown_title} | [直接阅读](articles/{slug}/article.md) | "
-            f"[结构视图](articles/{slug}/article.html) | "
-            f"[原页](articles/{slug}/original.raw.html) | "
-            f"[文本](articles/{slug}/extracted.md) | [微信]({official}) |"
+            f"| {article['series_number']} | {title} | "
+            f"[直接阅读](articles/{article['slug']}/article.md) |"
         )
-        html_items.append(
-            "<li>"
-            f"<strong>{number}. {html.escape(title)}</strong><br>"
-            f'<a href="articles/{html.escape(slug, quote=True)}/article.md">GitHub Markdown 版</a> · '
-            f'<a href="articles/{html.escape(slug, quote=True)}/article.html">本地 HTML 结构视图</a> · '
-            f'<a href="articles/{html.escape(slug, quote=True)}/extracted.md">规范化文本</a> · '
-            f'<a href="{html.escape(official, quote=True)}">公众号官方页面</a>'
-            "</li>"
-        )
-
     (output_root / "README.md").write_text("\n".join(markdown) + "\n", encoding="utf-8")
-    html_index = """<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'">
-<title>微信公众号原文归档</title>
-<style>body{max-width:820px;margin:40px auto;padding:0 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7}li{margin:18px 0}a{color:#0969da}</style>
-</head><body><h1>微信公众号原文归档</h1>
-<p>以下“本地 HTML 结构视图”保留正文标签层次与内联样式，并使用本地图片。</p><ol>
-""" + "\n".join(html_items) + "\n</ol></body></html>\n"
-    (output_root / "index.html").write_text(html_index, encoding="utf-8")
 
 
 def main() -> None:
@@ -1059,34 +816,20 @@ def main() -> None:
         if args.pause:
             time.sleep(args.pause)
 
-    generated_at = dt.datetime.now(dt.timezone.utc).isoformat()
-    index = {
-        "source": {
-            "platform": "微信公众号",
-            "album_title": base_info.get("title", ""),
-            "album_id": ALBUM_ID,
-            "biz": BIZ,
-            "account_name": base_info.get("nickname", ""),
-            "account_username": base_info.get("username", ""),
-            "official_article_count": int(base_info.get("article_count", 0)),
-            "is_updating": base_info.get("isupdating") == "1",
-            "album_page": ALBUM_PAGE,
-        },
-        "retrieved_at": generated_at,
-        "completeness": {
-            "listed": len(articles),
-            "extracted": len(index_articles),
-            "all_officially_listed_articles_extracted": len(index_articles)
-            == int(base_info.get("article_count", 0)),
-            "continue_flag_was_clear": True,
-        },
-        "articles": index_articles,
+    official_count = int(base_info.get("article_count", 0))
+    complete = len(index_articles) == official_count
+    write_series_readme(output_root, index_articles)
+    summary = {
+        "album_title": base_info.get("title", ""),
+        "official_article_count": official_count,
+        "written_markdown": len(index_articles),
+        "written_images": sum(article["content_images"] for article in index_articles),
+        "is_updating": base_info.get("isupdating") == "1",
+        "complete": complete,
     }
-    (output_root / "index.json").write_text(
-        json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    write_series_indexes(output_root, index_articles)
-    print(f"Wrote {output_root / 'index.json'} and local HTML indexes")
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    if not complete:
+        raise RuntimeError("Not all officially listed articles were written")
 
 
 if __name__ == "__main__":

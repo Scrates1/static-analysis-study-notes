@@ -6,7 +6,7 @@
 >
 > **发布时间**：2025-12-18T20:37:46+08:00<br>
 > **公众号原文**：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484320&idx=1&sn=f306868888b67d001729ff18ef5abadc&chksm=fbce3588ccb9bc9e900831b3670b3bb609b078e7425c6fccc2b68366172997dafbd79ce8bf73)<br>
-> **归档说明**：正文顺序和原图来自原文；代码块由 HTML 结构恢复。复杂装饰样式可对照 [`article.html`](article.html)。
+> **归档说明**：正文顺序、原图和代码块均由公众号原文整理；本目录仅保留 GitHub 可直接阅读的 Markdown 版本。
 
 ---
 

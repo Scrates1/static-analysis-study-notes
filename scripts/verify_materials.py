@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Verify the local course snapshot and final learning-note structure."""
+"""Verify the lean Markdown-only course snapshot and learning-note structure."""
 
 from __future__ import annotations
 
 import argparse
-import hashlib
-import json
 import re
 import sys
 from pathlib import Path
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX = ROOT / "sources/wechat-series/index.json"
+SOURCES = ROOT / "sources"
+WECHAT = SOURCES / "wechat-series"
+ARTICLE_ROOT = WECHAT / "articles"
+EXPECTED_IMAGE_COUNTS = [3, 10, 4, 51, 33, 3, 2, 3]
+EXPECTED_VIDEO_IDS = {"BV1y1mxBeEJu", "BV1RUqhB6EUG", "BV1x4BxB5EBH"}
+ALLOWED_SOURCE_SUFFIXES = {".md", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
 FINAL_DOCS = [
     ROOT / "README.md",
     ROOT / "00-系列索引与完整性.md",
@@ -25,9 +28,19 @@ FINAL_DOCS = [
     ROOT / "练习与参考答案.md",
     ROOT / "学习路线.md",
     ROOT / "参考资料.md",
-    ROOT / "sources/README.md",
+    SOURCES / "README.md",
 ]
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
+IMAGE_RE = re.compile(r"(?:src=[\"']|\]\()images/(image-[^\"'\s)>]+)")
+FORBIDDEN_REFERENCES = (
+    "sources/video-lessons",
+    "wechat-series/index.json",
+    "yasa-docs/index.json",
+    "original.raw.html",
+    "extracted.md",
+    "images.json",
+    ".assets.json",
+)
 
 
 class Verification:
@@ -43,212 +56,155 @@ class Verification:
         self.notes.append(message)
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
-def resolve_source_path(relative: str) -> Path:
-    path = Path(relative)
-    if path.parts and path.parts[0] == "wechat-series":
-        return ROOT / "sources" / path
-    return ROOT / path
-
-
-def verify_sources(check: Verification) -> None:
-    check.require(INDEX.is_file(), "missing sources/wechat-series/index.json")
-    if not INDEX.is_file():
+def valid_image(path: Path, check: Verification, label: str) -> None:
+    suffix = path.suffix.lower()
+    if suffix == ".svg":
+        text = path.read_text(encoding="utf-8")
+        check.require("<svg" in text, f"{label}: invalid SVG root")
+        if "<use" in text:
+            check.require(
+                bool(re.search(r"<use\b[^>]*(?:xlink:href|href)=", text)),
+                f"{label}: SVG use has no glyph reference",
+            )
         return
-    index = json.loads(INDEX.read_text(encoding="utf-8"))
-    source = index.get("source", {})
-    completeness = index.get("completeness", {})
-    articles = index.get("articles", [])
-    check.require(source.get("album_title") == "高校教学系列-程序分析", "unexpected album title")
-    check.require(source.get("official_article_count") == 8, "official article count is not 8")
-    check.require(len(articles) == 8, f"index lists {len(articles)} articles, expected 8")
-    check.require(completeness.get("listed") == 8, "completeness.listed is not 8")
-    check.require(completeness.get("extracted") == 8, "completeness.extracted is not 8")
-    check.require(completeness.get("all_officially_listed_articles_extracted") is True, "article extraction flag is false")
-    check.require(completeness.get("continue_flag_was_clear") is True, "album pagination was not exhausted")
 
-    archive_root = INDEX.parent
-    check.require((archive_root / "README.md").is_file(), "missing WeChat archive README")
-    check.require((archive_root / "index.html").is_file(), "missing WeChat local HTML index")
+    header = path.read_bytes()[:16]
+    valid = {
+        ".png": header.startswith(b"\x89PNG\r\n\x1a\n"),
+        ".jpg": header.startswith(b"\xff\xd8\xff"),
+        ".jpeg": header.startswith(b"\xff\xd8\xff"),
+        ".gif": header.startswith((b"GIF87a", b"GIF89a")),
+        ".webp": header.startswith(b"RIFF") and header[8:12] == b"WEBP",
+    }.get(suffix, False)
+    check.require(valid, f"{label}: invalid {suffix} signature")
+
+
+def verify_source_shape(check: Verification) -> None:
+    files = [path for path in SOURCES.rglob("*") if path.is_file()]
+    unexpected = [
+        path.relative_to(ROOT).as_posix()
+        for path in files
+        if path.suffix.lower() not in ALLOWED_SOURCE_SUFFIXES
+    ]
+    check.require(not unexpected, f"non-Markdown source artifacts remain: {unexpected}")
+    check.require(not list(SOURCES.rglob("*.html")), "HTML files remain under sources/")
+    check.require(not list(SOURCES.rglob("*.json")), "JSON sidecars remain under sources/")
+    check.note(f"lean sources layout: {len(files)} files; Markdown plus required images only")
+
+
+def verify_wechat(check: Verification) -> None:
+    check.require((WECHAT / "README.md").is_file(), "missing WeChat Markdown index")
+    article_dirs = sorted(path for path in ARTICLE_ROOT.glob("[0-9][0-9]-*") if path.is_dir())
+    check.require(len(article_dirs) == 8, f"found {len(article_dirs)} WeChat article directories, expected 8")
 
     total_images = 0
-    html_snapshots = 0
-    readable_markdown = 0
-    companion_videos = 0
-    repaired_svg = 0
-    for article in articles:
-        number = article.get("series_number")
-        extracted = resolve_source_path(article.get("extracted_path", ""))
-        article_md = resolve_source_path(article.get("readable_markdown_path", ""))
-        local_html = resolve_source_path(article.get("local_html_path", ""))
-        raw_html = resolve_source_path(article.get("raw_html_path", ""))
-        manifest = resolve_source_path(article.get("image_manifest_path", ""))
-        check.require(extracted.is_file(), f"article {number}: missing extracted text {extracted}")
-        check.require(article_md.is_file(), f"article {number}: missing readable Markdown {article_md}")
-        check.require(local_html.is_file(), f"article {number}: missing local HTML view {local_html}")
-        check.require(raw_html.is_file(), f"article {number}: missing raw HTML snapshot {raw_html}")
-        if article_md.is_file():
-            readable_markdown += 1
-            markdown_text = article_md.read_text(encoding="utf-8")
-            expected_markdown_images = article.get("content_images", 0)
-            check.require(markdown_text.startswith("# "), f"article {number}: readable Markdown lacks H1")
-            check.require(
-                not any(marker in markdown_text for marker in ("[[IMAGE_", "[[LINK_", "[[LIST_")),
-                f"article {number}: unresolved Markdown rendering marker",
-            )
-            check.require(not re.search(r"(?m)^∨$", markdown_text), f"article {number}: decorative video arrow remains")
-            companion_videos += markdown_text.count("**配套视频**")
-            check.require(
-                len(re.findall(r'(?:\]\(|src=")images/image-[^)"\s>]+', markdown_text)) == expected_markdown_images,
-                f"article {number}: readable Markdown image count differs from {expected_markdown_images}",
-            )
-            check.require(markdown_text.count("```") % 2 == 0, f"article {number}: unbalanced Markdown code fences")
-        if local_html.is_file() and raw_html.is_file():
-            html_snapshots += 1
-            local_text = local_html.read_text(encoding="utf-8")
-            expected_html_images = article.get("content_images", 0)
-            check.require('id="js_content"' in local_text, f"article {number}: local HTML lacks js_content")
-            check.require("__WECHAT_LOCAL_IMAGE_" not in local_text, f"article {number}: unresolved HTML image placeholder")
-            check.require(
-                local_text.count('src="images/image-') == expected_html_images,
-                f"article {number}: local HTML image count differs from {expected_html_images}",
-            )
-            raw_bytes = raw_html.read_bytes()
-            check.require(b'id="js_content"' in raw_bytes, f"article {number}: raw HTML lacks js_content")
-            expected_raw_hash = article.get("raw_html_sha256")
-            if expected_raw_hash:
-                check.require(hashlib.sha256(raw_bytes).hexdigest() == expected_raw_hash, f"article {number}: raw HTML SHA-256 mismatch")
-        check.require(manifest.is_file(), f"article {number}: missing image manifest {manifest}")
-        if not manifest.is_file():
+    video_headers = 0
+    video_ids: set[str] = set()
+    svg_count = 0
+    for number, article_dir in enumerate(article_dirs, start=1):
+        article = article_dir / "article.md"
+        check.require(article.is_file(), f"article {number}: missing article.md")
+        direct_files = sorted(path.name for path in article_dir.iterdir() if path.is_file())
+        check.require(direct_files == ["article.md"], f"article {number}: redundant direct files remain: {direct_files}")
+        if not article.is_file():
             continue
-        records = json.loads(manifest.read_text(encoding="utf-8"))
-        expected_count = article.get("content_images")
-        check.require(len(records) == expected_count, f"article {number}: manifest has {len(records)} images, expected {expected_count}")
-        if article_md.is_file():
-            referenced = re.findall(r'(?:\]\(|src=")images/(image-[^)"\s>]+)', markdown_text)
-            expected_files = [Path(record.get("local_path", "")).name for record in records]
-            check.require(
-                referenced == expected_files,
-                f"article {number}: Markdown image order/filenames differ from manifest",
-            )
-        total_images += len(records)
-        for position, record in enumerate(records, start=1):
-            local = Path(record.get("local_path", ""))
-            if not local.is_absolute():
-                local = ROOT / local
-            elif not local.exists():
-                # Manifests retain the acquisition-time absolute path; fall back after relocation.
-                local = manifest.parent / "images" / local.name
-            check.require(local.is_file(), f"article {number} image {position}: missing {local}")
-            if local.is_file() and record.get("sha256"):
-                check.require(sha256(local) == record["sha256"], f"article {number} image {position}: SHA-256 mismatch")
-            if local.is_file() and local.suffix.lower() != ".svg":
-                header = local.read_bytes()[:16]
-                suffix = local.suffix.lower()
-                valid_signature = {
-                    ".png": header.startswith(b"\x89PNG\r\n\x1a\n"),
-                    ".jpg": header.startswith(b"\xff\xd8\xff"),
-                    ".jpeg": header.startswith(b"\xff\xd8\xff"),
-                    ".gif": header.startswith((b"GIF87a", b"GIF89a")),
-                    ".webp": header.startswith(b"RIFF") and header[8:12] == b"WEBP",
-                }.get(suffix, bool(header))
-                check.require(valid_signature, f"article {number} image {position}: invalid {suffix} signature")
-            if record.get("render_repair"):
-                repaired_svg += 1
-            if local.is_file() and local.suffix.lower() == ".svg":
-                svg = local.read_text(encoding="utf-8")
-                check.require("<svg" in svg, f"article {number} image {position}: invalid SVG root")
-                if "<use" in svg:
-                    check.require(
-                        "xlink:href=" in svg or " href=" in svg,
-                        f"article {number} image {position}: SVG use has no glyph reference",
-                    )
-    check.require(total_images == 109, f"found {total_images} article images, expected 109")
-    check.require(companion_videos == 3, f"found {companion_videos} companion video links, expected 3")
-    check.require(readable_markdown == 8, f"found {readable_markdown} readable Markdown articles, expected 8")
-    check.require(html_snapshots == 8, f"found {html_snapshots} article HTML snapshots, expected 8")
-    check.note(
-        f"official snapshot: {len(articles)}/8 articles, {readable_markdown}/8 readable Markdown, "
-        f"{html_snapshots}/8 HTML views, {total_images}/109 images, "
-        f"{companion_videos}/3 video links, {repaired_svg} repaired SVG"
-    )
+
+        text = article.read_text(encoding="utf-8")
+        check.require(text.startswith("# "), f"article {number}: Markdown lacks H1")
+        check.require("mp.weixin.qq.com" in text, f"article {number}: official source link is absent")
+        check.require(text.count("```") % 2 == 0, f"article {number}: unbalanced code fences")
+        check.require(
+            not any(marker in text for marker in ("[[IMAGE_", "[[LINK_", "[[LIST_")),
+            f"article {number}: unresolved renderer marker",
+        )
+        check.require(not re.search(r"(?m)^∨$", text), f"article {number}: decorative placeholder remains")
+
+        references = IMAGE_RE.findall(text)
+        images_dir = article_dir / "images"
+        local_images = sorted(path for path in images_dir.glob("image-*") if path.is_file())
+        expected = EXPECTED_IMAGE_COUNTS[number - 1] if number <= len(EXPECTED_IMAGE_COUNTS) else -1
+        check.require(len(references) == expected, f"article {number}: {len(references)} image references, expected {expected}")
+        check.require(len(local_images) == expected, f"article {number}: {len(local_images)} image files, expected {expected}")
+        check.require(
+            references == [path.name for path in local_images],
+            f"article {number}: image references and local files differ",
+        )
+        total_images += len(local_images)
+        for position, image in enumerate(local_images, start=1):
+            valid_image(image, check, f"article {number} image {position}")
+            svg_count += image.suffix.lower() == ".svg"
+
+        video_headers += text.count("**配套视频**")
+        video_ids.update(re.findall(r"BV[0-9A-Za-z]+", text))
+
+    check.require(total_images == 109, f"found {total_images} WeChat images, expected 109")
+    check.require(svg_count == 3, f"found {svg_count} SVG images, expected 3")
+    check.require(video_headers == 3, f"found {video_headers} companion-video headers, expected 3")
+    check.require(EXPECTED_VIDEO_IDS <= video_ids, f"missing companion video IDs: {sorted(EXPECTED_VIDEO_IDS - video_ids)}")
+    check.note(f"WeChat reading set: {len(article_dirs)}/8 Markdown, {total_images}/109 images, {svg_count}/3 SVG")
 
 
 def verify_yasa_docs(check: Verification) -> None:
-    docs_root = ROOT / "sources/yasa-docs"
-    index_path = docs_root / "index.json"
-    yasa_docs = sorted(docs_root.glob("[0-9][0-9]-*.md"))
-    sidecars = sorted(docs_root.glob("[0-9][0-9]-*.assets.json"))
-    check.require(index_path.is_file(), "missing sources/yasa-docs/index.json")
-    check.require(len(yasa_docs) == 21, f"found {len(yasa_docs)} normalized YASA docs, expected 21")
-    check.require(len(sidecars) == 21, f"found {len(sidecars)} YASA asset sidecars, expected 21")
-    if index_path.is_file():
-        index = json.loads(index_path.read_text(encoding="utf-8"))
-        check.require(len(index.get("documents", [])) == 21, "YASA document index does not list 21 documents")
-    check.note(f"retained YASA docs: {len(yasa_docs)}/21 markdown, {len(sidecars)}/21 sidecars")
+    docs_root = SOURCES / "yasa-docs"
+    check.require((docs_root / "README.md").is_file(), "missing YASA Markdown index")
+    docs = sorted(docs_root.glob("[0-9][0-9]-*.md"))
+    check.require(len(docs) == 21, f"found {len(docs)} YASA Markdown docs, expected 21")
+    markdown_images = 0
+    for document in docs:
+        text = document.read_text(encoding="utf-8")
+        check.require(text.startswith("---\n"), f"{document.name}: missing front matter")
+        check.require("\nsource_url: " in text, f"{document.name}: source URL missing from front matter")
+        check.require("\n# " in text, f"{document.name}: document H1 missing")
+        check.require(
+            "[[CARD_" not in text and "[[IMAGE_" not in text,
+            f"{document.name}: unresolved Yuque placeholder",
+        )
+        check.require(text.count("```") % 2 == 0, f"{document.name}: unbalanced code fences")
+        markdown_images += len(re.findall(r"!\[[^\]]*\]\(https?://", text))
+    check.require(markdown_images == 4, f"found {markdown_images} YASA Markdown images, expected 4")
+    check.note(f"YASA reading set: {len(docs)}/21 Markdown documents, {markdown_images}/4 linked images")
 
 
-def verify_video_evidence(check: Verification, require_work: bool = False) -> None:
-    metadata_path = ROOT / "sources/video-lessons-hd.json"
-    check.require(metadata_path.is_file(), "missing sources/video-lessons-hd.json")
-    lessons: list[dict] = []
-    if metadata_path.is_file():
-        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-        lessons = metadata.get("lessons", metadata if isinstance(metadata, list) else [])
-        check.require(len(lessons) == 3, f"video metadata contains {len(lessons)} lessons, expected 3")
-
+def verify_work_evidence(check: Verification, require_work: bool = False) -> None:
     work_root = ROOT / ".work"
     if not work_root.exists():
-        message = "local .work video/ASR/scene evidence is absent (expected in a clean Git clone)"
+        message = "ignored .work video/ASR/scene evidence is absent (normal in a clean clone)"
         if require_work:
             check.require(False, message)
         else:
-            check.note(message + "; metadata and public links remain available")
+            check.note(message)
         return
 
-    for lesson in lessons:
-        video = ROOT / lesson.get("downloaded_file", "")
-        check.require(video.is_file(), f"missing lesson video: {video}")
-        if video.is_file() and lesson.get("downloaded_bytes"):
-            check.require(video.stat().st_size == lesson["downloaded_bytes"], f"lesson video size mismatch: {video}")
     transcripts = sorted((work_root / "transcripts").glob("lesson-*.md"))
-    check.require(len(transcripts) == 3, f"found {len(transcripts)} transcripts, expected 3")
-    segment_counts = [
-        sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.startswith("- `"))
-        for path in transcripts
+    scene_counts = [
+        len(list(directory.glob("scene-*.jpg")))
+        for directory in sorted((work_root / "lesson-scenes").glob("lesson-*"))
+        if directory.is_dir()
     ]
-    check.require(segment_counts == [678, 846, 631], f"transcript segment counts are {segment_counts}, expected [678, 846, 631]")
-    scene_counts = []
-    for directory in sorted((work_root / "lesson-scenes").glob("lesson-*")):
-        if directory.is_dir():
-            scene_counts.append(len(list(directory.glob("scene-*.jpg"))))
-    check.require(scene_counts == [43, 30, 19], f"scene counts are {scene_counts}, expected [43, 30, 19]")
-    check.note(
-        f"local video evidence: {len(transcripts)}/3 transcripts, {sum(segment_counts)} segments, "
-        f"{sum(scene_counts)} scene frames"
-    )
+    if require_work:
+        check.require(len(transcripts) == 3, f"found {len(transcripts)} transcripts, expected 3")
+        check.require(scene_counts == [43, 30, 19], f"scene counts are {scene_counts}, expected [43, 30, 19]")
+    check.note(f"optional local evidence: {len(transcripts)} transcripts, {sum(scene_counts)} scene frames")
 
 
 def verify_markdown(check: Verification) -> None:
-    for document in FINAL_DOCS:
-        check.require(document.is_file(), f"missing final document: {document.relative_to(ROOT)}")
+    documents = FINAL_DOCS + sorted(SOURCES.rglob("*.md"))
+    seen: set[Path] = set()
+    for document in documents:
+        if document in seen:
+            continue
+        seen.add(document)
+        check.require(document.is_file(), f"missing Markdown document: {document.relative_to(ROOT)}")
         if not document.is_file():
             continue
         text = document.read_text(encoding="utf-8")
         relative = document.relative_to(ROOT)
-        check.require(text.startswith("# "), f"{relative}: first line is not an H1")
+        if document in FINAL_DOCS:
+            check.require(text.startswith("# "), f"{relative}: first line is not an H1")
         check.require(text.count("```") % 2 == 0, f"{relative}: unbalanced fenced code blocks")
-        if relative.parts and relative.parts[0] == "notes":
-            check.require("[[IMAGE_" not in text, f"{relative}: unresolved image placeholder")
-            check.require("[[CARD_" not in text, f"{relative}: unresolved Yuque card placeholder")
-            check.require("详尽草稿" not in text and "专项研究草稿" not in text, f"{relative}: draft marker remains")
+        for stale in FORBIDDEN_REFERENCES:
+            check.require(stale not in text, f"{relative}: stale reference to removed artifact {stale}")
+
         link_text = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
         for match in LINK_RE.finditer(link_text):
             raw = match.group(1).strip()
@@ -260,7 +216,7 @@ def verify_markdown(check: Verification) -> None:
                 continue
             linked = (document.parent / target).resolve()
             check.require(linked.exists(), f"{relative}: broken local link {raw}")
-    check.note(f"final documents: {sum(path.is_file() for path in FINAL_DOCS)}/{len(FINAL_DOCS)} present")
+    check.note(f"Markdown/link checks: {len(seen)} documents")
 
 
 def main() -> int:
@@ -268,14 +224,15 @@ def main() -> int:
     parser.add_argument(
         "--require-work-evidence",
         action="store_true",
-        help="fail when ignored local videos, ASR, or scene frames are absent",
+        help="fail when ignored local ASR or scene evidence is absent",
     )
     args = parser.parse_args()
 
     check = Verification()
-    verify_sources(check)
+    verify_source_shape(check)
+    verify_wechat(check)
     verify_yasa_docs(check)
-    verify_video_evidence(check, require_work=args.require_work_evidence)
+    verify_work_evidence(check, require_work=args.require_work_evidence)
     verify_markdown(check)
     for note in check.notes:
         print(f"OK: {note}")

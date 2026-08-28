@@ -14,7 +14,6 @@ Checker是什么
 YASA 作为一款统一的多语言分析引擎，具备高扩展能力，可满足用户不同的需求。但如果直接将适配逻辑放在主体逻辑中，代码将变得臃肿且难以维护和扩展。为此，需要采取易于扩展的外挂式方案。
 YASA中提供了类似"hook(钩子)机制"的Checker机制，您可以类比成web开发中的事件监听——addXXXListener，允许开发者在事件发生时执行自定义代码。
 
-[[CARD_01]]
 ```javascript
 // 在页面DOM加载完成时进行初始化
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,7 +26,6 @@ showHelpTips();
 ```
 YASA的分析流程中也提供了许多事件(例如，AtFunctionCallBefore, AtMemberAccess, AtEndOfAnalyze, ...)。Checker机制允许开发者为这些事件注册钩子(回调)函数，在事件发生时自动执行定制化的逻辑。
 
-[[CARD_02]]
 ```javascript
 // 事件钩子函数
 checkAtFunctionCallBefore(analyzer, scope, node, state, info) //当分析到函数调用前
@@ -49,7 +47,6 @@ Checker是YASA框架中用于执行程序分析任务的核心组件，其设计
 Checker的工作原理
 Checker的生命周期
 
-[[CARD_03]]
 ```plain
 Checker注册
 ↓
@@ -154,7 +151,6 @@ YASA初始化时，checkerManager会为每个事件注册checker：只要一个c
 以FunctionCallBefore事件举例，只要您实现的checker中定义了triggerAtFunctionCallBefore函数(即调用FunctionCall事件前的处理函数)，那么在初始化时，YASA的checkerManager就会将您的checker注册在check_at_function_call_before这个事件中。
 注册逻辑如下所示：
 
-[[CARD_04]]
 ```javascript
 // YASA初始化时，遍历所有checker类
 doRegister(CheckerClass, self, resultManager, desc) {
@@ -181,10 +177,10 @@ self.checkpoints.check_at_function_call_before.push(checker)
 ```
 Checker的调用流程
 
-[[CARD_05]] [图示文字：扫描开始 → 加载checker → 加载checker-pack → 语言及框架识别 → 语言1-Analyzer初始化 → 语言N-Analyzer执行 → 卸载语言checker → CheckerManager.constructor → CheckManager.checkAtEndOfAnalyze → 扫描结束 → 语言1 Analyzer结束 → 语言N Analyzer结束 → 语言1-Analyzer执行 → 语言N-Analyzer初始化]
+[图示文字：扫描开始 → 加载checker → 加载checker-pack → 语言及框架识别 → 语言1-Analyzer初始化 → 语言N-Analyzer执行 → 卸载语言checker → CheckerManager.constructor → CheckManager.checkAtEndOfAnalyze → 扫描结束 → 语言1 Analyzer结束 → 语言N Analyzer结束 → 语言1-Analyzer执行 → 语言N-Analyzer初始化]
 在analyzer进行符号解释的过程中，如果触发了某一事件，checkerManager会将注册在当前的事件的所有checker取出，依次遍历并执行该checker的事件处理方法。以FunctionCallBefore事件为例，在checkpoint会逐一执行每个checker，完成相应的逻辑处理，具体的工作流如下：
 
-[[CARD_06]] [图示文字：checkAtFunctionCallBefore → GinDefaultTaintChecker → MuxEntryPointCollectChecker → GRpcEntrypointCollectChecker → xxChecker → triggerAtFunctionCallBefore → 1 FunctionCallBefore 事件checkpoint → 2 checkerManager取出所有注册了该事件的checker → 3 执行每个checker的事件处理函数（若有） → xxChecker 中没有实现triggerAtFunctionCallBefore 函数， 故未在FunctionCallBefore事件处注册，不会被取到]
+[图示文字：checkAtFunctionCallBefore → GinDefaultTaintChecker → MuxEntryPointCollectChecker → GRpcEntrypointCollectChecker → xxChecker → triggerAtFunctionCallBefore → 1 FunctionCallBefore 事件checkpoint → 2 checkerManager取出所有注册了该事件的checker → 3 执行每个checker的事件处理函数（若有） → xxChecker 中没有实现triggerAtFunctionCallBefore 函数， 故未在FunctionCallBefore事件处注册，不会被取到]
 Checker的结果保存与输出
 设计目标
 灵活的结果输出
@@ -196,7 +192,6 @@ YASA中将保存结果逻辑和输出结果逻辑分离，checker只负责保存
 Checker保存结果
 类resultManager提供了newFinding()方法，checker中需要保存结果的时候，先按需构造finding，最后调用resultManager的newFinding(),其中参数TaintOutputStrategy.outputStrategyId为输出策略的id
 
-[[CARD_07]]
 ```javascript
 const taintFlowFinding = this.buildTaintFinding(
 this.getCheckerId(),
@@ -213,7 +208,6 @@ this.resultManager.newFinding(taintFlowFinding, TaintOutputStrategy.outputStrate
 ```
 所有checker的结果都将被保存在resultManager的findings字段中，以outputStrategyId作为key，如下所示：
 
-[[CARD_08]]
 ```json
 {
 outputStrategyId1 : [finding1, finding2,...],
@@ -223,7 +217,6 @@ outputStrategyId2 : [finding1, finding2,...]
 OutputStrategy输出结果设置
 Checker如需自定义输出，需要新建一个OutputStrategy的子类，设置outputStrategyId和outputFilePath，并实现outputFindings方法，在方法实现中可自定义输出格式、内容和路径。outputFindings方法中，还可以通过resultManager获取其他OutputStrategy的findings输出。
 
-[[CARD_09]]
 ```javascript
 outputFindings(resultManager, outputFilePath, config, printf) {
 let reportFilePath
@@ -242,7 +235,6 @@ FileUtil.writeJSONfile(reportFilePath, results)
 YASA整体结果输出
 YASA在输出结果的时候（starter.js中），会遍历各OutputStrategy，并执行对应的outputFindings方法，输出结果
 
-[[CARD_10]]
 ```javascript
 const outputStrategyAutoRegister = new OutputStrategyAutoRegister()
 outputStrategyAutoRegister.autoRegisterAllStrategies()
@@ -260,4 +252,4 @@ OutputStrategy类需要和OutputStrategyId建立相关关系，为了简化用�
 在/src/checker/common/output/目录下新建一个OutputStrategy子类，如AbcOutputStrategy，设定输出策略类id（static变量outputStrategyId）和输出文件名（成员变量outputFilePath），并实现outputFindings方法。
 checker检测到结果时，调用resultManager的new Finding方法，然后传入结果finding和输出策略的id（AbcOutputStrategy.outputStrategyId）。
 
-更多checker研发的细节，可参考Checker开发文档目录下的文档。
+更多checker研发的细节，可参考[Checker开发文档](https://www.yuque.com/u22090306/bebf6g/as70rglyr24h3tqc)目录下的文档。

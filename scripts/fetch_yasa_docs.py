@@ -48,9 +48,9 @@ class LakeExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.parts: list[str] = []
-        self.links: list[str] = []
         self.images: list[str] = []
         self.cards: list[dict] = []
+        self.anchor_hrefs: list[str | None] = []
         self.code_depth = 0
 
     def newline(self) -> None:
@@ -65,11 +65,16 @@ class LakeExtractor(HTMLParser):
             self.parts.append(" | ")
         if tag in {"pre", "code"}:
             self.code_depth += 1
-        if tag == "a" and data.get("href"):
-            self.links.append(data["href"])
+        if tag == "a":
+            href = data.get("href") or None
+            self.anchor_hrefs.append(href)
+            if href:
+                self.parts.append("[")
         if tag == "img" and data.get("src"):
             self.images.append(data["src"])
-            self.parts.append(f"\n[[IMAGE_{len(self.images):02d}]]\n")
+            self.parts.append(
+                f"\n![官方文档图片 {len(self.images):02d}]({data['src']})\n"
+            )
         if tag == "card":
             card = dict(data)
             value = card.get("value", "")
@@ -79,14 +84,21 @@ class LakeExtractor(HTMLParser):
                 except Exception:
                     card["decoded_value"] = unquote(value[5:])
             self.cards.append(card)
-            marker = f"[[CARD_{len(self.cards):02d}]]"
             decoded = card.get("decoded_value")
-            if isinstance(decoded, dict) and card.get("name") == "codeblock" and decoded.get("code"):
+            if card.get("name") == "hr":
+                self.parts.append("\n---\n")
+            elif isinstance(decoded, dict) and card.get("name") == "codeblock" and decoded.get("code"):
                 language = decoded.get("mode") or "text"
-                self.parts.append(f"\n{marker}\n```{language}\n{decoded['code']}\n```\n")
+                self.parts.append(f"\n```{language}\n{decoded['code']}\n```\n")
             elif isinstance(decoded, dict) and card.get("name") == "file":
                 self.parts.append(
-                    f"\n{marker} [附件：{decoded.get('name', '')}]({decoded.get('src', '')})\n"
+                    f"\n[附件：{decoded.get('name', '')}]({decoded.get('src', '')})\n"
+                )
+            elif isinstance(decoded, dict) and card.get("name") == "image" and decoded.get("src"):
+                self.images.append(decoded["src"])
+                self.parts.append(
+                    f"\n![{decoded.get('name') or f'官方文档图片 {len(self.images):02d}'}]"
+                    f"({decoded['src']})\n"
                 )
             elif isinstance(decoded, dict) and card.get("name") == "board":
                 labels: list[str] = []
@@ -98,11 +110,13 @@ class LakeExtractor(HTMLParser):
                         label = re.sub(r"\s+", " ", label).strip()
                         if label and label not in labels:
                             labels.append(label)
-                self.parts.append(f"\n{marker} [图示文字：{' → '.join(labels)}]\n")
-            else:
-                self.parts.append(f"\n{marker}\n")
+                self.parts.append(f"\n[图示文字：{' → '.join(labels)}]\n")
 
     def handle_endtag(self, tag: str) -> None:
+        if tag == "a" and self.anchor_hrefs:
+            href = self.anchor_hrefs.pop()
+            if href:
+                self.parts.append(f"]({href})")
         if tag in {"pre", "code"} and self.code_depth:
             self.code_depth -= 1
         if tag in BLOCKS:
@@ -139,7 +153,12 @@ def main() -> None:
         "X-Requested-With": "XMLHttpRequest",
         "Referer": f"{BOOK_BASE}/sr0y5fqg0kcua5nf",
     })
-    records = []
+    for stale in output.glob("*.assets.json"):
+        stale.unlink()
+    index_path = output / "index.json"
+    if index_path.exists():
+        index_path.unlink()
+
     for number, (slug, label) in enumerate(DOCS, start=1):
         response = client.get(
             f"https://www.yuque.com/api/docs/{slug}",
@@ -176,31 +195,7 @@ def main() -> None:
             "",
         ]
         destination.write_text("\n".join(header + extractor.lines()) + "\n", encoding="utf-8")
-        sidecar = destination.with_suffix(".assets.json")
-        sidecar.write_text(
-            json.dumps(
-                {"links": extractor.links, "images": extractor.images, "cards": extractor.cards},
-                ensure_ascii=False,
-                indent=2,
-            ) + "\n",
-            encoding="utf-8",
-        )
-        records.append({
-            "title": document.get("title", label),
-            "slug": slug,
-            "source_url": f"{BOOK_BASE}/{slug}",
-            "updated_at": document.get("updated_at"),
-            "word_count": document.get("word_count"),
-            "extracted_path": destination.as_posix(),
-            "assets_path": sidecar.as_posix(),
-            "image_count": len(extractor.images),
-            "card_count": len(extractor.cards),
-        })
         print(f"[{number}/{len(DOCS)}] {document.get('title', label)}", flush=True)
-    (output / "index.json").write_text(
-        json.dumps({"book_id": BOOK_ID, "documents": records}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
 
 
 if __name__ == "__main__":

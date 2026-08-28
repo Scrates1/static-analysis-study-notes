@@ -5,8 +5,7 @@
 - 官方知识库：<https://www.yuque.com/u22090306/bebf6g>
 - 文档数量：21
 - `01-*.md`～`21-*.md`：规范化正文，front matter 保留标题、slug、原始 URL、官方更新时间和统计信息；
-- `*.assets.json`：正文出现的链接、图片 URL、代码/附件/图示卡片元数据；
-- `index.json`：全部文档的来源、更新时间及本地路径索引。
+- 为便于 GitHub 阅读，本目录不再保留重复的 JSON sidecar；正文中的链接、代码、图片和附件信息均已写入 Markdown。
 
 更新命令：
 

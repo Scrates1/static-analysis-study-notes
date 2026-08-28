@@ -7,7 +7,7 @@
 > **发布时间**：2025-12-10T18:38:23+08:00<br>
 > **公众号原文**：[打开官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484237&idx=1&sn=10a647b65b32c94f9f40b542ed4d99b2&chksm=fbce3565ccb9bc73866013fe7f1dd649103e633983d25467cced5125ab2b4546d12fa4febff5)<br>
 > **配套视频**：[在 Bilibili 观看](https://www.bilibili.com/video/BV1y1mxBeEJu/)<br>
-> **归档说明**：正文顺序和原图来自原文；代码块由 HTML 结构恢复。复杂装饰样式可对照 [`article.html`](article.html)。
+> **归档说明**：正文顺序、原图和代码块均由公众号原文整理；本目录仅保留 GitHub 可直接阅读的 Markdown 版本。
 
 ---
 

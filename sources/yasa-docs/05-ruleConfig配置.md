@@ -4,7 +4,7 @@ slug: zkw8i3ffw8n884sd
 source_url: https://www.yuque.com/u22090306/bebf6g/zkw8i3ffw8n884sd
 updated_at: 2026-03-13T09:04:56.000Z
 word_count: 3162
-image_count: 0
+image_count: 1
 card_count: 41
 ---
 
@@ -13,7 +13,6 @@ card_count: 41
 ruleconfig是YASA中为checker提供用户指定的输入的配置模块，通过一个json文件指定，在YASA中每一个需要用户指定信息的checker（如污点追踪需要source、sink等）都会自动去加载ruleconfig中的配置。
 污点追踪场景需要用户提供的source、sink、sanitizer以及自定义entrypoint的配置如下。也可以参考YASA源码中的resource/example-rule-config 目录中的ruleconfig示例。
 
-[[CARD_01]]
 ```json
 [
 {
@@ -57,11 +56,10 @@ ruleconfig是YASA中为checker提供用户指定的输入的配置模块，通�
 },
 ]
 ```
-关于ruleconfig与checker的更多介绍，见这里。
+关于ruleconfig与checker的更多介绍，见[这里](https://www.yuque.com/u22090306/bebf6g/idrc3p344fz19h4g#MnwsR)。
 checkerIds
 checkerIds 是 rule-config.json 配置文件中的一个必需字段，用于指定当前规则配置对哪些安全检查器（Checker）生效。需要和您执行污点追踪命令时传入的--checkerIds或--checkerPackIds参数对应。该字段将规则配置与特定的检查器进行关联，确保每个检查器只加载和使用与其相关的规则。
 
-[[CARD_02]]
 ```json
 {
 "checkerIds": ["checker_id_1", "checker_id_2", "checker_id_3"]
@@ -72,12 +70,11 @@ checkerIds 是 rule-config.json 配置文件中的一个必需字段，用于指
 检查器关联: 如果某个检查器的 ID 在 checkerIds 数组中，则该规则配置会被加载到该检查器
 配置合并: 一个检查器可以匹配多个规则配置，这些配置会被合并使用
 内置checker
-请参考这里
+请参考[这里](https://www.yuque.com/u22090306/bebf6g/ouenen3i3en236ek)
 使用场景
 场景 1: 单一检查器配置
 为单个检查器配置规则：
 
-[[CARD_03]]
 ```json
 [
 {
@@ -90,7 +87,6 @@ checkerIds 是 rule-config.json 配置文件中的一个必需字段，用于指
 场景 2: 多检查器共享配置
 多个检查器共享相同的规则配置：
 
-[[CARD_04]]
 ```json
 [
 {
@@ -107,7 +103,6 @@ checkerIds 是 rule-config.json 配置文件中的一个必需字段，用于指
 场景 3: 分离配置
 为不同的检查器配置不同的规则：
 
-[[CARD_05]]
 ```json
 [
 {
@@ -131,7 +126,6 @@ source
 支持的source形式
 目前支持指定三种形式的source，分别体现在rule-config的三个字段中：TaintSource、FuncCallArgTaintSource和FuncCallReturnValueTaintSource
 
-[[CARD_06]]
 ```json
 "sources": {
 "TaintSource": [
@@ -156,7 +150,6 @@ TaintSource (对象属性访问污点源)
 作用：直接标记某个变量或者某个类型对象的特定属性为source
 配置示例：
 
-[[CARD_07]]
 ```json
 {
 "className": "*gin.Context", // 对象类型（可填）
@@ -170,7 +163,6 @@ FuncCallArgTaintSource (函数调用参数source)
 作用：将函数调用的指定参数标记为source
 配置示例：
 
-[[CARD_08]]
 ```json
 {
 "args": ["0"], // 指定第0个参数（第一个参数）
@@ -185,7 +177,6 @@ FuncCallReturnValueTaintSource (函数返回值污点源)
 作用：将函数调用的返回值标记为source
 配置示例：
 
-[[CARD_09]]
 ```json
 {
 "calleeType": "*gin.Context", // 调用对象的类型
@@ -232,7 +223,6 @@ calleeType, fsig, values, kind
 对象的名称_全局
 代码示例
 
-[[CARD_10]]
 ```plain
 export default class LevelTestBank extends Controller {
 async bankTest(advisorId, instId): Promise<any> {
@@ -244,7 +234,6 @@ return this.ctx.body;
 ```
 source配置
 
-[[CARD_11]]
 ```plain
 "TaintSource": [
 {
@@ -258,7 +247,6 @@ source配置
 对象的名称_特定范围
 代码示例
 
-[[CARD_12]]
 ```plain
 import { Controller } from 'chain';
 
@@ -273,7 +261,6 @@ return this.ctx.body;
 ```
 source配置
 
-[[CARD_13]]
 ```plain
 "TaintSource": [
 {
@@ -287,7 +274,6 @@ source配置
 强类型对象的属性
 代码示例
 
-[[CARD_14]]
 ```plain
 func main() {
 router := gin.Default()
@@ -312,7 +298,6 @@ router.Run()
 ```
 source配置
 
-[[CARD_15]]
 ```plain
 "TaintSource": [
 {
@@ -327,7 +312,6 @@ source配置
 强类型对象方法调用的参数
 代码示例
 
-[[CARD_16]]
 ```plain
 func main() {
 route := gin.Default()
@@ -346,7 +330,6 @@ route.Run(":8088")
 ```
 source配置
 
-[[CARD_17]]
 ```plain
 "FuncCallArgTaintSource":[
 {
@@ -364,7 +347,6 @@ source配置
 强类型对象函数调用的返回值
 代码示例
 
-[[CARD_18]]
 ```plain
 func main() {
 router := gin.Default()
@@ -384,7 +366,6 @@ router.Run(":8080")
 source配置
 其中，为了适配多返回值场景，values字段用于指代返回值的位置，例如以下示例中values值为0，指代标记第一个返回值为source
 
-[[CARD_19]]
 ```plain
 "FuncCallReturnValueTaintSource":[
 {
@@ -403,7 +384,6 @@ sink
 支持的sink形式
 目前只支持函数调用形式的sink点，用于标记接受污点数据的危险函数调用，支持全类名精确匹配和正则形式模糊匹配。
 
-[[CARD_20]]
 ```json
 "sinks": {
 "FuncCallTaintSink": [
@@ -443,7 +423,6 @@ sink
 弱类型对象/普通函数调用
 代码示例
 
-[[CARD_21]]
 ```plain
 export default class LevelTestBank extends Controller {
 async bankTest(advisorId, instId): Promise<any> {
@@ -456,7 +435,6 @@ return this.ctx.body;
 
 ```
 
-[[CARD_22]]
 ```plain
 const mysql2 = require("mysql2");
 
@@ -491,7 +469,6 @@ resolve(result);
 
 ```
 
-[[CARD_23]]
 ```plain
 async case0502(): Promise<void> {
 const payload: any = this.ctx.query.a;
@@ -503,7 +480,6 @@ slarkService.generate(payload);
 ```
 sink配置
 
-[[CARD_24]]
 ```plain
 "FuncCallTaintSink": [
 {
@@ -533,7 +509,6 @@ sink配置
 强类型对象函数调用
 代码示例
 
-[[CARD_25]]
 ```plain
 func (d *DataSelector) Parse(db *gorm.DB) *gorm.DB {
 exps := d.OrderBy.Parse()
@@ -559,7 +534,6 @@ return db.Debug()
 sink配置
 注：这里的sink是db.statement.addclause，我能知道db的类型是 *grom.DB ，而Statement的返回值我不知道类型，所以我可以把规则写为calleeType的类型是*gorm.DB，而fsig是Statement.AddClause
 
-[[CARD_26]]
 ```plain
 "FuncCallTaintSink": [
 {
@@ -577,7 +551,6 @@ sink配置
 链式调用模糊匹配
 代码示例
 
-[[CARD_27]]
 ```go
 // GetProductByName retrieves a product by name using Squirrel but still vulnerable
 func (db *DB) GetProductByName(name string) (*model.Product, error) {
@@ -606,7 +579,6 @@ return product, nil
 sink配置
 由于这里链式调用的参数是变量（无法唯一确定），因此可以使用正则匹配的形式匹配sink函数
 
-[[CARD_28]]
 ```json
 "FuncCallTaintSink": [
 {
@@ -625,7 +597,6 @@ Sanitizer
 Sanitizer在规则文件中定义，Sanitizer的id在文件中需唯一。sink可通过sanitizer的id引用一个或多个sanitizer
 规则示例
 
-[[CARD_29]]
 ```json
 {
 "FuncCallTaintSink": [
@@ -717,7 +688,7 @@ Sanitizer在规则文件中定义，Sanitizer的id在文件中需唯一。sink�
 ```
 Sanitizer字段说明
 
-[[CARD_30]]
+![image.png](https://cdn.nlark.com/yuque/0/2025/png/59228126/1757554205237-fef47a7b-56da-46ac-818d-2da9e8dd62d6.png)
 sanitizerType
 目前支持以下值：
 （1）FunctionCallSanitizer，表示Sanitizer通过函数调用实现
@@ -726,7 +697,6 @@ sanitizerScenario
 （1）SANITIZER.FILTER_BY_FUNCTIONCALL
 过滤用户输入中的危险字符，过滤后的结果用于后续其他操作
 
-[[CARD_31]]
 ```java
 String escapedUserName = AlipaySqlEscapeUtil.escapeSql(userName, new MySQLCodec(MySQLCodec.Mode.STANDARD));
 String sql = "select * from user where username='" + escapedUserName + "'";
@@ -734,7 +704,6 @@ String sql = "select * from user where username='" + escapedUserName + "'";
 （2）SANITIZER.VALIDATE_BY_FUNCTIONCALL
 调用特定API校验输入内容，通常情况下校验失败抛异常或返回
 
-[[CARD_32]]
 ```java
 ...
 String gitUrl = request.getParameter("gitUrl");
@@ -745,7 +714,6 @@ String cmd = "git clone " + gitUrl;
 Runtime.getRuntime().exec(cmd);
 ```
 
-[[CARD_33]]
 ```java
 if (!AlipaySSRFChecker.isHostVaild(host)) {
 //阻断业务
@@ -757,7 +725,6 @@ URLConnection urlConnection = url.openConnection();
 （3）SANITIZER.CONFIG_BY_FUNCTIONCALL
 在组件初始化配置中加入安全选项
 
-[[CARD_34]]
 ```java
 if (engine instanceof org.codehaus.groovy.jsr223.GroovyScriptEngineImpl) {
 CompilerConfiguration config = new CompilerConfiguration();
@@ -768,7 +735,6 @@ loader.parseClass(input);
 }
 ```
 
-[[CARD_35]]
 ```java
 public static List<Object> loadYaml(InputStream in) throws YAMLException
 {
@@ -785,7 +751,6 @@ return ret;
 （4）SANITIZER.CALLSTACK_HAS_FUNCTIONCALL
 sanitizer和sink在同一个调用栈中，hook特定操作
 
-[[CARD_36]]
 ```java
 ScriptEngineManager manager = new ScriptEngineManager();
 ScriptEngine engine = manager.getEngineByName("JavaScript");
@@ -803,7 +768,6 @@ AlipayCmdChecker.hookStop();
 （5）SANITIZER.VALIDATE_BY_BINARYOPERATION
 sanitizer为二元操作符，检查输入内容与其他特定内容的关系
 
-[[CARD_37]]
 ```java
 String safeCmd = "ls";
 if (cmd == safeCmd) {
@@ -816,7 +780,6 @@ EntryPoint
 基本属性
 代码示例
 
-[[CARD_38]]
 ```plain
 const Client = require('ssh2-sftp-client');
 
@@ -845,7 +808,6 @@ throw error;
 ```
 EntryPoint配置
 
-[[CARD_39]]
 ```plain
 "entrypoints": [
 {
@@ -859,7 +821,6 @@ EntryPoint配置
 Go语言特有属性-funcReceiverType
 代码示例
 
-[[CARD_40]]
 ```plain
 func (d *DataSelector) Parse(db *gorm.DB) *gorm.DB { //DataSelector为接收器类型
 exps := d.OrderBy.Parse()
@@ -891,7 +852,6 @@ return r
 ```
 EntryPoint配置
 
-[[CARD_41]]
 ```plain
 "entrypoints": [
 {

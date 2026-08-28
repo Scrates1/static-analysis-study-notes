@@ -14,7 +14,6 @@ card_count: 8
 step 1️⃣：创建并配置checker类
 首先，您需要新建一个xxx_checker.js，并配置checker类的必要信息。checkerManager以checkerId唯一标识一个checker，故新建checker时，您需要设置唯一的checkerId，并只需继承基类Checker即可。本例中，checkerId为gorilla-mux-entrypoint-collect-checker
 
-[[CARD_01]]
 ```javascript
 //gorilla-mux-entrypoint-collect-checker.js
 class MuxEntryPointCollectChecker extends Checker {
@@ -31,7 +30,6 @@ super(resultManager, 'gorilla-mux-entrypoint-collect-checker')
 ```
 随后，您需要将定义的checker添加到resource/checker/checker-config.json中，其中checkerPath为您定义的checker相对YASA-Engine的项目根目录。
 
-[[CARD_02]]
 ```json
 ...
 {
@@ -43,7 +41,6 @@ super(resultManager, 'gorilla-mux-entrypoint-collect-checker')
 ```
 YASA 除了支持指定单一checker独立执行外，也支持以checker-pack的形式绑定多个checker一并执行。若您希望该checker可以和其他checker绑定一并执行，那么可以同步将该checker添加到resource/checker/checker-pack-config.json中，例如：
 
-[[CARD_03]]
 ```json
 {
 "checkerPackId": "taint-flow-golang-default",
@@ -81,7 +78,6 @@ step 2️⃣：实现web框架适配逻辑
 要做的事：选取合适的生命周期事件 & 实现该事件的处理逻辑
 以mux框架为例，典型的路由注册方式如下，其中r.HandleFunc()为函数调用语句：
 
-[[CARD_04]]
 ```go
 r := mux.NewRouter()
 // 注册 GET 请求路由，HandlerFClos即被注册的api处理函数(我们要的entrypoint)
@@ -91,7 +87,6 @@ r.HandleFunc("/api_path",HandlerFClos).Methods("GET")
 应该选取的生命周期事件为：FunctionCallBefore (函数调用事件)
 事件处理逻辑为：如果当前语句是一条路由注册语句，则将被注册的路由函数采集为一个entrypoint，并将参数标记为source。
 
-[[CARD_05]]
 ```javascript
 // gorilla-mux-entrypoint-collect-checker.js
 
@@ -102,7 +97,6 @@ this.collectRouteRegistry(node, fclos, argvalues, scope, info)
 }
 ```
 
-[[CARD_06]]
 ```javascript
 // gorilla-mux-entrypoint-collect-checker.js
 collectRouteRegistry(callExpNode, calleeFClos, argValues, scope, info) {
@@ -142,9 +136,8 @@ analyzer.entryPoints.push(entryPoint)
 }
 }
 ```
-如<Checker的注册>中所述，只要您在checker中实现某个事件处理函数(如triggerAtFunctionCallBefore)，CheckerManager就会自动将该checker注册至对应的事件(如check_at_function_call_before)。
+如<[Checker的注册](https://www.yuque.com/u22090306/bebf6g/lwe1xqg1nw1gh1u8#w66yK)>中所述，只要您在checker中实现某个事件处理函数(如triggerAtFunctionCallBefore)，CheckerManager就会自动将该checker注册至对应的事件(如check_at_function_call_before)。
 
-[[CARD_07]]
 ```javascript
 // checker-manager.js
 doRegister(CheckerClass, self, resultManager) {
@@ -157,7 +150,6 @@ self.checkpoints.check_at_function_call_before.push(checker)
 ```
 在该事件发生时，您的checker会从该事件的注册表中取出，并执行您定义的事件处理函数triggerAtFunctionCallBefore。
 
-[[CARD_08]]
 ```javascript
 // checker-manager.js
 checkAtFunctionCall(node, calleeFClos, argvalues, scope, info) {

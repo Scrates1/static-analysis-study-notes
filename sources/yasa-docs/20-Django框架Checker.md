@@ -38,7 +38,6 @@ URL参数名需要从路由字符串中提取
 架构设计
 Django Checker采用分层设计：
 
-[[CARD_01]]
 ```plain
 DjangoTaintChecker (Django特定逻辑)
 ↓ 继承
@@ -50,7 +49,6 @@ Checker (Checker基类)
 ```
 核心流程设计
 
-[[CARD_02]]
 ```plain
 1. 识别urls.py文件
 ↓
@@ -79,7 +77,6 @@ Checker (Checker基类)
 详细实现
 类结构设计
 
-[[CARD_03]]
 ```typescript
 const registerFile = new Set<string>() // 注册的urls.py文件集合
 class DjangoTaintChecker extends PythonTaintAbstractChecker {
@@ -94,7 +91,6 @@ triggerAtAssignment() // 处理urlpatterns赋值
 触发点：triggerAtCompileUnit
 实现逻辑：
 
-[[CARD_04]]
 ```typescript
 triggerAtCompileUnit(analyzer: any, scope: any, node: any, state: any, info: any) {
 const fileName = node.loc?.sourcefile
@@ -125,7 +121,6 @@ registerFile.add(fileName) // 兼容旧版本django.conf.urls.url
 支持新版本（django.urls.path）和旧版本（django.conf.urls.url）
 示例代码：
 
-[[CARD_05]]
 ```python
 # urls.py
 from django.urls import path, re_path
@@ -135,7 +130,6 @@ from django.conf.urls import url # 旧版本
 触发点：triggerAtAssignment
 实现逻辑：
 
-[[CARD_06]]
 ```typescript
 // 处理 urlpatterns = [...]和urlpatterns += [...]
 triggerAtAssignment(analyzer: any, scope: any, node: any, state: any, info: any): boolean | undefined {
@@ -156,7 +150,6 @@ this.collectDjangoEntrypointAndSource(analyzer, scope, state, right)
 只处理已注册的urls.py文件中的urlpatterns
 示例代码：
 
-[[CARD_07]]
 ```python
 # urls.py
 urlpatterns = [
@@ -172,7 +165,6 @@ path('admin/', admin.site.urls),
 核心方法：collectDjangoEntrypointAndSource
 实现逻辑：
 
-[[CARD_08]]
 ```typescript
 collectDjangoEntrypointAndSource(analyzer: any, scope: any, state: any, value: any) {
 const elementGroups: any[] = []
@@ -232,7 +224,6 @@ analyzer, scope, state, viewFunction, targetSrcName
 区分函数视图和类视图
 示例代码：
 
-[[CARD_09]]
 ```python
 # urls.py
 urlpatterns = [
@@ -248,7 +239,6 @@ re_path(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive),
 核心方法：extractParamNames
 实现逻辑：
 
-[[CARD_10]]
 ```typescript
 extractParamNames(route: string): string[] {
 // 匹配 <type:param> 或 <param> 格式
@@ -271,7 +261,6 @@ return params
 <year> → 提取 year
 示例：
 
-[[CARD_11]]
 ```python
 # 路由：'user/<int:id>/profile/<str:name>'
 # 提取参数：['id', 'name']
@@ -280,7 +269,6 @@ return params
 核心方法：collectFuncViewEntrypointAndSource
 实现逻辑：
 
-[[CARD_12]]
 ```typescript
 collectFuncViewEntrypointAndSource(
 analyzer: any,
@@ -322,7 +310,6 @@ locEnd: param.loc.end.line,
 创建EntryPoint并标记污点源
 示例代码：
 
-[[CARD_13]]
 ```python
 # urls.py
 urlpatterns = [
@@ -338,7 +325,6 @@ return render(request, 'user.html', {'user': user})
 核心方法：collectClassViewEntrypointAndSource
 实现逻辑：
 
-[[CARD_14]]
 ```typescript
 collectClassViewEntrypointAndSource(
 analyzer: any,
@@ -396,7 +382,6 @@ analyzer.entryPoints.push(completeEntryPoint(ep))
 支持URL参数映射到类方法参数
 示例代码：
 
-[[CARD_15]]
 ```python
 # urls.py
 urlpatterns = [
@@ -418,7 +403,6 @@ pass
 Checker配置文件位于：resource/checker/checker-config.json
 在配置数组中添加新的配置项：
 
-[[CARD_16]]
 ```json
 {
 "checkerId": "taint_flow_python_django_input",
@@ -442,7 +426,6 @@ demoRuleConfigPath（可选）：示例规则配置文件的路径
 示例："demoRuleConfigPath": "resource/example-rule-config/rule_config_python.json"
 如果您希望以checker策略包的方式使用，可以同步将您的checker添加到checker-pack-config.json中
 
-[[CARD_17]]
 ```json
 {
 "checkerPackId": "taint-flow-python-default",

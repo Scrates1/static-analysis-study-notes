@@ -12,7 +12,7 @@ card_count: 2
 
 总体架构
 
-[[CARD_01]] [图示文字：Analyze → js-analyze → go-analyze → ...... → egg-analyze → 分析器规则配置文件(rule_config) → 规则解析 rules-basic-handler → → 污点追踪分析器 → js-taint-checker → egg-taint-checker → go-taint-checker → ..... → 模拟执行引擎 → 分析器（checkers） → UAST → checkAtCompileUnit → checkAtNewExpr → checkAtIdentifier → checkAtIfCondition → 事件管理器 checkerManager → 结果管理resultManager → Sarif → console → 结果输出 → 事件注册 doRegister → 事件触发 → Java → JS → Go → Python → Framework → Lang → Base → 事件监听 → CG分析器 → JSON → .......]
+[图示文字：Analyze → js-analyze → go-analyze → ...... → egg-analyze → 分析器规则配置文件(rule_config) → 规则解析 rules-basic-handler → → 污点追踪分析器 → js-taint-checker → egg-taint-checker → go-taint-checker → ..... → 模拟执行引擎 → 分析器（checkers） → UAST → checkAtCompileUnit → checkAtNewExpr → checkAtIdentifier → checkAtIfCondition → 事件管理器 checkerManager → 结果管理resultManager → Sarif → console → 结果输出 → 事件注册 doRegister → 事件触发 → Java → JS → Go → Python → Framework → Lang → Base → 事件监听 → CG分析器 → JSON → .......]
 总体分析流程
 YASA对程序的分析，主要可分成以下四个环节：
 将待分析的程序代码转换成UAST
@@ -28,7 +28,6 @@ YASA对程序的分析，主要可分成以下四个环节：
 符号化
 YASA会在分析代码的过程中建立如下的符号值，不一定与AST节点一一对应，当然，有的表示变量值、函数定义的符号值、字面量等类型的符号值可以和AST节点进行对应。
 
-[[CARD_02]]
 ```json
 unit 符号值的基类
 - ObjectValue 对象类型的符号值
@@ -65,4 +64,4 @@ YASA支持框架的entrypoint采集：egg（js）、gin（go）、mux（go）、
 注：自采集行为不是全部分析都会默认触发，而是在checker中的triggerAtStartOfAnalyze中进行使用，可以看各language的污点追踪default checker来参考。
 BOTH：包含用户在rule_config中指定的entrypoint进行模拟执行与YASA自采集的entrypoint。
 多语言语义建模
-详见这里
+详见[这里](https://www.yuque.com/u22090306/bebf6g/mucotdkpwzg1gn8e)

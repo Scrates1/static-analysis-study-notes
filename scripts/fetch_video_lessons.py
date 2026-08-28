@@ -63,7 +63,7 @@ def download(client: requests.Session, url: str, destination: Path) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=Path(".work/video-lessons"))
-    parser.add_argument("--metadata", type=Path, default=Path("sources/video-lessons.json"))
+    parser.add_argument("--metadata", type=Path, default=Path(".work/video-lessons.json"))
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     args.metadata.parent.mkdir(parents=True, exist_ok=True)

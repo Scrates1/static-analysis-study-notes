@@ -1,6 +1,6 @@
 # YASA 三次实验：从功能体验到 Checker 扩展
 
-> 研究对象：微信公众号合集中的开课公告及三篇实验文章（本地列表位置 01、06、07、08）；课程视频 BV1y1mxBeEJu、BV1RUqhB6EUG、BV1x4BxB5EBH；`sources/video-lessons*.json` 视频元数据；`sources/yasa-docs/` 内 21 篇语雀公开文档；YASA-Engine/YASA-UAST 公开仓库。语雀文档以刷新后的 `.md` 正文为准：代码块、附件名和图示文字均直接读取正文，不再依赖 `.assets.json` 推断。
+> 研究对象：微信公众号合集中的开课公告及三篇实验文章（本地列表位置 01、06、07、08）；课程视频 BV1y1mxBeEJu、BV1RUqhB6EUG、BV1x4BxB5EBH；`sources/yasa-docs/` 内 21 篇语雀公开 Markdown 文档；YASA-Engine/YASA-UAST 公开仓库。代码块、附件名、图示文字及来源信息均以 Markdown 正文和 front matter 为准。
 >
 > 版本说明：本文核验 `.work/YASA-Engine/` 的提交为 `249420d17656988138831956babebae456bfa6e1`，YASA-UAST 核验提交为 `4adfd7e93724aad1cf0abf2d1e73a29ed3a76c66`。公开仓库和文档会继续演进，因此当前实现不能自动等同于 2025 年课程现场版本；语雀操作文档的语言支持表也可能落后于最新源码。
 
@@ -657,9 +657,9 @@ UAST 的归一质量
 
 ## 21.0 本地固化证据
 
-- 21 篇语雀文档目录与更新时间：`sources/yasa-docs/index.json`
+- 21 篇语雀文档及来源 front matter：`sources/yasa-docs/README.md`、`sources/yasa-docs/01-*.md`～`21-*.md`
 - 官方教学页：`sources/yasa-docs/21-华中科技大学教学合作课程.md`
-- 三段视频元数据：`sources/video-lessons.json`、`sources/video-lessons-hd.json`
+- 三段公开视频：[BV1y1mxBeEJu](https://www.bilibili.com/video/BV1y1mxBeEJu/)、[BV1RUqhB6EUG](https://www.bilibili.com/video/BV1RUqhB6EUG/)、[BV1x4BxB5EBH](https://www.bilibili.com/video/BV1x4BxB5EBH/)
 - 时间戳 ASR（仅作定位，术语经画面/源码纠正）：`.work/transcripts/lesson-1-BV1y1mxBeEJu.md`、`lesson-2-BV1RUqhB6EUG.md`、`lesson-3-BV1x4BxB5EBH.md`
 - 92 个 720p 场景帧与 contact sheets：`.work/lesson-scenes/lesson-*`
 - 当前 Engine 源码快照：`.work/YASA-Engine/`（提交 `249420d17656988138831956babebae456bfa6e1`）

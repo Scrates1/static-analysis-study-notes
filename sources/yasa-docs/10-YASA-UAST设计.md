@@ -12,11 +12,11 @@ card_count: 4
 
 什么是UAST
 UAST全称为统一语法树中间表示（Unified Abstract Syntax Tree ），即将不同语言的代码解析为一套统一的中间表达，以便在此基础上进行通用的分析能力建设。
-UAST节点描述链接：点我跳转
+UAST节点描述链接：[点我跳转](https://github.com/antgroup/YASA-UAST/blob/main/specification/specification.md)
 
 例如，针对同样语义使用Java/Javascript/Python三种语言编写的一段类定义代码，在UAST上将会被统一转换为：
 
-[[CARD_01]] [图示文字：CompileUnit → ClassDefinition → VariableDeclaration name → FunctionDefinition _CTOR_ → FunctionDefinition getName → AssignmentExpression → MemberAccess → ThisExpression → Identifier name → ReturnStatement → UAST Parser]
+[图示文字：CompileUnit → ClassDefinition → VariableDeclaration name → FunctionDefinition _CTOR_ → FunctionDefinition getName → AssignmentExpression → MemberAccess → ThisExpression → Identifier name → ReturnStatement → UAST Parser]
 UAST设计原则
 极大元选取
 如果不同的语法节点有语义包含关系，在归一化过程当中，倾向选择最大包含关系的节点
@@ -92,7 +92,6 @@ return tmpList;
 明确设计边界（只保留分析需要的信息）
 示例：
 
-[[CARD_02]]
 ```json
 // 注解信息可通过meta字段保留,例如python的@property
 {
@@ -117,7 +116,6 @@ UAST节点结构介绍
 节点基本结构
 每个UAST节点包含以下基本字段：
 
-[[CARD_03]]
 ```json
 {
 "type": "节点类型",
@@ -186,9 +184,9 @@ DynamicType：动态类型
 VoidType：空类型
 解析器
 为了快速支持新语言到UAST，目前UAST 解析器的实现方式为针对每一种语言，选用业界支持较好的解析器生成AST，并将其进一步转化为UAST。目前已支持的解析器包括Java、Js、Go、Python四种语言。
-UAST解析器：点我跳转
+UAST解析器：[点我跳转](https://github.com/antgroup/YASA-UAST/)
 
-[[CARD_04]] [图示文字：source code(js ) → source code(golang) → source code(xxx) → . . . → AST → UAST Parser → UAST-Node → → js AST parser → golang AST parser → xxx AST parser → UAST-Spec]
+[图示文字：source code(js ) → source code(golang) → source code(xxx) → . . . → AST → UAST Parser → UAST-Node → → js AST parser → golang AST parser → xxx AST parser → UAST-Spec]
 技术选型 - 两种方案
 方案一：第三方解析工具
 代表：ANTLR、Tree-sitter等

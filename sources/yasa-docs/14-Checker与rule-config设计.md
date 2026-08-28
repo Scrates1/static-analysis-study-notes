@@ -21,7 +21,6 @@ CheckerPack
 Checkpoint
 YASA默认提供了以下checkpoints供checker访问
 
-[[CARD_01]]
 ```plain
 this.checkpoints = {
 check_at_start_analyze: [], // 开始分析前
@@ -53,11 +52,10 @@ CheckManager模块提供检查器（checker）模块的管理，包括注册管�
 引擎提供灵活的注册管理功能，检查器开发者仅需要按照Checker类编写对应规则，作对应命名，并且将其放置在指定目录，引擎就会自动加载检查器，从而完成注册。不需要对检查器进行硬编码或者配置，减少开发和维护成本。
 Checker本身可以理解成程序hook点集合，每个checker根据需要，都可以实现不同的程序点hook api。通过hook api获取程序运行时状态，并且通过前面介绍的state管理器，完成对需要状态的记录，最后通过判断状态，产出检查结果。
 RuleConfig
-Checker中需要的信息可以通过ruleconfig提供，如污点分析的checker需要用户指定的source、sink、sanitizer等内容，就可以通过rule_config文件来指定。YASA提供了每个需要用户输入的checker的rule_config示例，可以查看resources中的示例。为污点追踪指定rule_config的方式详见污点分析和ruleConfig配置部分。
+Checker中需要的信息可以通过ruleconfig提供，如污点分析的checker需要用户指定的source、sink、sanitizer等内容，就可以通过rule_config文件来指定。YASA提供了每个需要用户输入的checker的rule_config示例，可以查看resources中的示例。为污点追踪指定rule_config的方式详见[污点分析](https://www.yuque.com/u22090306/bebf6g/okuzgsdc66gbmk39#NKXvV)和[ruleConfig配置](https://www.yuque.com/u22090306/bebf6g/zkw8i3ffw8n884sd)部分。
 注意：rule_config文件中的checkerIds字段声明的是哪些checker具有处理该规则的能力，对应的checker需通过命令行参数--checkerIds或--checkerPackIds指定加载才会生效
 ruleconfig文件的结构如下：
 
-[[CARD_02]]
 ```plain
 [
 {
@@ -89,11 +87,10 @@ ruleconfig文件的结构如下：
 ]
 ```
 ResultManager、Finding与Strategy
-YASA将如何记录finding、打印finding的权利都交给了用户，可以灵活的打印自己需要的格式。在checker中记录finding时，可以自主定义一个任意结构的finding，通过this.resultManager.newFinding写入，在传入时除了finding外，还需要传入一个strategyId，就是结果的打印策略。有输出需求的checker需要实现一个strategy，放在src/checker/common/output 目录下，引擎会自动加载所有的策略。可以参考污点追踪/callgraph的checker或checker研发案例中的示例。
+YASA将如何记录finding、打印finding的权利都交给了用户，可以灵活的打印自己需要的格式。在checker中记录finding时，可以自主定义一个任意结构的finding，通过this.resultManager.newFinding写入，在传入时除了finding外，还需要传入一个strategyId，就是结果的打印策略。有输出需求的checker需要实现一个strategy，放在src/checker/common/output 目录下，引擎会自动加载所有的策略。可以参考污点追踪/callgraph的checker或[checker研发案例](https://www.yuque.com/u22090306/bebf6g/bow6bkg8xwm9flew)中的示例。
 【checker保存结果】类resultManager提供了newFinding()方法，checker中需要保存结果的时候，先按需构造finding，并做去重处理，最后调用resultManager的newFinding(), 以污点追踪输出策略为例，为了在加载多个污点追踪checker后，可以统一进行finding的去重与打印，所有污点追踪checker共用一个输出策略：
 其中参数TaintOutputStrategy.outputStrategyId为输出策略的id
 
-[[CARD_03]]
 ```javascript
 const taintFlowFinding = this.buildTaintFinding(
 this.getCheckerId(),
@@ -110,7 +107,6 @@ this.resultManager.newFinding(taintFlowFinding, TaintOutputStrategy.outputStrate
 ```
 resultManager中，字段findings用于保存所有checker的结果，outputStrategyId作为key，如下所示：
 
-[[CARD_04]]
 ```json
 {
 outputStrategyId1 : [finding1, finding2,...],
@@ -120,7 +116,6 @@ outputStrategyId2 : [finding1, finding2,...]
 【OutputStrategy输出结果设置】Checker如需自定义输出，需要新建一个OutputStrategy的子类，设置outputStrategyId和outputFilePath，并实现outputFindings方法，在方法实现中可自定义输出格式、内容和路径。outputFindings方法中，还可以通过resultManager获取其他OutputStrategy的findings输出。
 【YASA整体结果输出】yasa在输出结果的时候（starter.js中），会遍历各OutputStrategy，并执行对应的outputFindings方法，输出结果
 
-[[CARD_05]]
 ```plain
 const outputStrategyAutoRegister = new OutputStrategyAutoRegister()
 outputStrategyAutoRegister.autoRegisterAllStrategies()
@@ -150,7 +145,6 @@ Checker编写步骤
 步骤3：实现触发方法
 在触发方法中实现检查逻辑：
 
-[[CARD_06]]
 ```typescript
 triggerAtFunctionCallBefore(analyzer: any, scope: any, node: any, state: any, info: any) {
 const { fclos, argvalues } = info // 1. 获取相关信息
@@ -172,7 +166,6 @@ this.resultManager.newFinding(finding, 'output_strategy_id')
 步骤4：定义输出策略
 如果需要自定义输出格式，实现OutputStrategy：
 
-[[CARD_07]]
 ```typescript
 class MyOutputStrategy extends OutputStrategy {
 static outputStrategyId = 'my_output'
@@ -185,7 +178,6 @@ outputFindings(resultManager: any, outputFilePath: string, config: any, printf: 
 步骤5：注册Checker
 在checker-config.json中注册Checker：
 
-[[CARD_08]]
 ```json
 {
 "checkerId": "my_checker_id",
@@ -194,5 +186,5 @@ outputFindings(resultManager: any, outputFilePath: string, config: any, printf: 
 }
 ```
 如果您希望使用策略包，可以同时在checker-pack-config.json中注册Checker
-注：污点追踪的checker使用，ruleconfig中的source/sink/sanitizer/entrypoint配置污点分析和ruleConfig配置部分。
-了解更多Checker编写案例，您可以查看这里。
+注：污点追踪的checker使用，ruleconfig中的source/sink/sanitizer/entrypoint配置[污点分析](https://www.yuque.com/u22090306/bebf6g/okuzgsdc66gbmk39#NKXvV)和[ruleConfig配置](https://www.yuque.com/u22090306/bebf6g/zkw8i3ffw8n884sd)部分。
+了解更多Checker编写案例，您可以查看[这里](https://www.yuque.com/u22090306/bebf6g/bow6bkg8xwm9flew)。
