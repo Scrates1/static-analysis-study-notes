@@ -2,8 +2,11 @@
 
 ## 目录
 
-- `wechat-series/index.json`：官方微信合集元数据、8 篇文章的标题/URL/时间、抽取状态；
-- `wechat-series/articles/*/extracted.md`：从单篇微信页的 `#js_content` 规范化出的正文；
+- `wechat-series/README.md`、`wechat-series/index.html`：8 篇微信原文的 GitHub 索引与本地浏览入口；
+- `wechat-series/index.json`：官方微信合集元数据、8 篇文章的标题/URL/时间、抽取状态与 HTML 哈希；
+- `wechat-series/articles/*/article.html`：保留 `#js_content` 标签层次和内联样式、使用本地图片的安全阅读版；
+- `wechat-series/articles/*/original.raw.html`：抓取时收到的完整原始页面 HTML；
+- `wechat-series/articles/*/extracted.md`：供检索和审计的规范化正文；
 - `wechat-series/articles/*/images/`：正文按出现顺序下载的图片，共 109 张；
 - `video-lessons-hd.json`：三节 Bilibili 实验视频的标题、BV/CID、时长、播放地址与本地文件信息；
 - `video-lessons.json`：初次低清抓取的元数据，保留作历史记录；
@@ -44,7 +47,7 @@ python scripts/verify_materials.py --require-work-evidence # 连同本地视频/
 
 - 官方合集抓取时：`article_count=8`，取得 8 项，`continue_flag=0`；
 - 官方课程页列出的 4 次理论课 + 3 次实验课，与合集中的 7 篇课程材料逐一对应，另有 1 篇开课公告；
-- 所有 8 篇正文均成功提取；
+- 所有 8 篇正文均保留完整抓取页、`#js_content` 本地结构阅读版和规范化文本；
 - 所有正文知识图片已被课程笔记的逐图审计覆盖；
 - 三篇实验文章链接的三个视频均已获取；视频没有官方字幕；
 - 第二、三讲 PDF 的附件名和链接可核验，但匿名请求只返回语雀登录页；无效 HTML 未冒充 PDF 保存，正文不作为证据；
@@ -52,6 +55,7 @@ python scripts/verify_materials.py --require-work-evidence # 连同本地视频/
 
 ## 使用提醒
 
+- 微信原文阅读优先打开 `article.html`；`original.raw.html` 含微信页面脚本，仅用于原始结构核验，不建议脱离隔离环境直接执行；
 - `extracted.md` 是研究用规范化文本，不是重新发布的排版副本；
 - `yasa-docs/` 保留每篇文档的原始 URL、更新时间和抽取元数据；它是研究快照，不替代官方在线版本，公开再分发前仍应核对上游许可；
 - 最终学习笔记采用结构化转述、公式重建与纠错，不应以笔记替代原作者文章；

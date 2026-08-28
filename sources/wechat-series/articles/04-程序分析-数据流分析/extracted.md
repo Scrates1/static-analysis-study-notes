@@ -11,6 +11,7 @@ image_count: 51
 # 高校教学系列：程序分析—数据流分析
 
 > 研究用规范化抽取：保留原文信息顺序，以图片占位符关联本地图片；不含页面广告和脚本。
+> HTML 证据：[本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247484230&idx=1&sn=6a2191643d461d8d8585bc24c02ec136&chksm=fbce356eccb9bc783b460f2994ae1043e0de257204bb39bacaa4e06437bcaedc2e9987c2d7e0)
 
 在上一期中，我们探讨了静态分析中的中间表示。本期将为大家深入介绍数据流分析 (Data Flow Analysis) 的三个经典案例，探讨如何利用不动点算法自动求解这些复杂的分析问题。此外，本期会介绍如何将过程内的分析算法拓展到过程间，并且在跨过程分析中保证上下文敏感性。
 作者：

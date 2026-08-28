@@ -11,6 +11,7 @@ image_count: 3
 # 开课啦 | 华中科技大学与蚂蚁基础安全团队联合开设《静态程序分析原理与实践》课程
 
 > 研究用规范化抽取：保留原文信息顺序，以图片占位符关联本地图片；不含页面广告和脚本。
+> HTML 证据：[本地正文结构视图](article.html) · [抓取原页](original.raw.html) · [公众号官方页面](https://mp.weixin.qq.com/s?__biz=MzU1NTc1NDMxMQ==&mid=2247483856&idx=1&sn=b2d22f2b375edf8c0394b95b7a5e379f&chksm=fbce37f8ccb9beeed3edd35a67b02baefb2960c4c0a02c6289193437e79920ec8436b05399b9)
 
 2025年11月7日，蚂蚁基础安全团队与华中科技大学（以下简称华科）网络空间安全学院联合开设的研究生课程《静态程序分析原理与实践》正式开课。
 

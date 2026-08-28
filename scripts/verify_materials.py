@@ -74,12 +74,36 @@ def verify_sources(check: Verification) -> None:
     check.require(completeness.get("all_officially_listed_articles_extracted") is True, "article extraction flag is false")
     check.require(completeness.get("continue_flag_was_clear") is True, "album pagination was not exhausted")
 
+    archive_root = INDEX.parent
+    check.require((archive_root / "README.md").is_file(), "missing WeChat archive README")
+    check.require((archive_root / "index.html").is_file(), "missing WeChat local HTML index")
+
     total_images = 0
+    html_snapshots = 0
     for article in articles:
         number = article.get("series_number")
         extracted = resolve_source_path(article.get("extracted_path", ""))
+        local_html = resolve_source_path(article.get("local_html_path", ""))
+        raw_html = resolve_source_path(article.get("raw_html_path", ""))
         manifest = resolve_source_path(article.get("image_manifest_path", ""))
         check.require(extracted.is_file(), f"article {number}: missing extracted text {extracted}")
+        check.require(local_html.is_file(), f"article {number}: missing local HTML view {local_html}")
+        check.require(raw_html.is_file(), f"article {number}: missing raw HTML snapshot {raw_html}")
+        if local_html.is_file() and raw_html.is_file():
+            html_snapshots += 1
+            local_text = local_html.read_text(encoding="utf-8")
+            expected_html_images = article.get("content_images", 0)
+            check.require('id="js_content"' in local_text, f"article {number}: local HTML lacks js_content")
+            check.require("__WECHAT_LOCAL_IMAGE_" not in local_text, f"article {number}: unresolved HTML image placeholder")
+            check.require(
+                local_text.count('src="images/image-') == expected_html_images,
+                f"article {number}: local HTML image count differs from {expected_html_images}",
+            )
+            raw_bytes = raw_html.read_bytes()
+            check.require(b'id="js_content"' in raw_bytes, f"article {number}: raw HTML lacks js_content")
+            expected_raw_hash = article.get("raw_html_sha256")
+            if expected_raw_hash:
+                check.require(hashlib.sha256(raw_bytes).hexdigest() == expected_raw_hash, f"article {number}: raw HTML SHA-256 mismatch")
         check.require(manifest.is_file(), f"article {number}: missing image manifest {manifest}")
         if not manifest.is_file():
             continue
@@ -98,7 +122,11 @@ def verify_sources(check: Verification) -> None:
             if local.is_file() and record.get("sha256"):
                 check.require(sha256(local) == record["sha256"], f"article {number} image {position}: SHA-256 mismatch")
     check.require(total_images == 109, f"found {total_images} article images, expected 109")
-    check.note(f"official snapshot: {len(articles)}/8 articles, {total_images}/109 images")
+    check.require(html_snapshots == 8, f"found {html_snapshots} article HTML snapshots, expected 8")
+    check.note(
+        f"official snapshot: {len(articles)}/8 articles, {html_snapshots}/8 HTML views, "
+        f"{total_images}/109 images"
+    )
 
 
 def verify_yasa_docs(check: Verification) -> None:
